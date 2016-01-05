@@ -1,0 +1,821 @@
+/**
+* Theme Name: 3DaVinci-gray-ar
+* Theme URI: http://inspiration-inspection.ml/3DaVinci 
+* Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
+* Version: 1.0.0
+* Author: Hesham Hussain [adam adam]
+* Author URI: http://inspiration-inspection.ml/adam-curriculum-vitae/
+* Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+* 
+* Copyright: (c) 2015 Hesham (adam), Giza, Egypt
+* License: GNU General Public License v2.0 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
+.comment-form-comment textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
+.comment-form-comment label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
+.form-submit input{box-shadow: 5px 5px 8px #000;color: #000;}
+#reply-title {text-shadow: 5px 5px 8px #000;}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/*update*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*update group nicer name*/
+.group:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    }
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+/*update group */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+/* from    https://css-tricks.com/snippets/css/clear-fix/ */
+
+
+.table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:70%;border: 0px solid #777;}
+.table textarea {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color:#222;}
+.table input {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.table label {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.qwe_form {margin-left: 20px;}
+@media (max-width: 400px){
+.qwe-table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:80%;border-radius: 10px;border: 0px solid #777;}
+
+}
+
+
+/*
+********************
+****             ***
+****   ********  ***
+****   ********  ***
+****   ********  ***
+****   **        ***
+****   **    *******
+****   ***    ******
+****   ****    *****
+****   *****    ****
+****   ******    ***
+****   *******    **
+********************
+*/
+
+
+
+/* root */
+
+body {background-color: #222;}
+
+a:link {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
+a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
+a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_id','#999'); ?>;*/}
+
+html {
+  color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+
+
+
+/*
+*****************       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**            ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+*****************       
+*/
+
+/* header */
+.title-description {margin-left: 5%;margin-right: 5%;}
+
+section .title-description a {
+    color:#fff;/*<?php echo get_theme_mod('site_title_id','#fff'); ?>;*/
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 ;
+    text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
+    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
+     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
+     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
+     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
+     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
+     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444,
+     4px 4px 12px #000 ;
+}
+section.site-title p a {color:#fff;}
+section.site-title p {
+    color:#fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;margin: 0 10px;
+    border-radius:5px;
+    border:solid 1px #ccc;
+    box-shadow: 0px 9px 0px #444;
+    -webkit-box-shadow: 0px 9px 0px #444;
+        -moz-box-shadow: 0px 9px 0px #444 ;   
+
+      text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
+    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
+     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
+     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
+     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
+     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
+     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444
+     ,4px 4px 10px #000;
+}
+
+
+
+/*
+********************
+**            ******
+**   ***************
+**   ***************
+**   ***************
+**   ***************
+**            ******
+***********   ******
+***********   ******
+***********   ******
+***********   ******
+**            ******
+********************
+*/
+
+
+/* slideshow */
+
+.banner{position: relative;}
+
+.galleryPreviewContainer {
+    position: relative;
+}
+.galleryPreviewImage img{/*that mean all images disappear exept img.previewImage1 [Next]*/
+    display: none;
+    width: 90%;
+    position: absolute;/* new change - prev > position: relative;*/
+    top:0;
+    right: 5%;
+    box-shadow: 0px 9px 0px  #444 , 0px 10px 10px #111;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius:30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.galleryPreviewImage img.previewImage1 {
+    display: block;
+}
+
+img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
+
+img#btn { width:12%;margin:10px 5%;position:absolute;left:75%;top:460px;}
+img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-index: 10;}
+
+
+.galleryPreviewarrow{width: 90%}
+.galleryPreviewarrow a {
+    font-family: arial,sans-serif;
+    /*font-size: 30px;*/
+    /*z-index: 0;*/
+    font-size: 200%;
+    background-color:rgba(0,0,0,0.3);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;/*35px because of 70px width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+    position: absolute;
+}
+
+.previousslidearrow{
+    /*right: 60px;*/
+    left:5%;
+  margin-top: 15%;
+
+}
+
+.nextslidearrow {
+    right:5%;
+    margin-top: 15%;
+}
+
+
+.galleryPreviewarrow a:hover {
+    background-color: #000;
+    /*margin-top: -40px;*/
+}
+
+.gallerydescription > div {
+    display: none;
+    position:absolute;
+    width: 90%;
+    right:5%;
+    margin-top:25%;
+    padding:1% 0%;
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.gallerydescription > div a {color: #fff;text-decoration: none;}
+.gallerydescription .description1 {display: block;}
+
+.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);padding:1% 0;}
+
+.gallerydescription > div input {
+    margin-right: 5%;
+    margin-left: 5%;
+    color: #fff;
+    background-color: #222;
+    border-radius: 3px;
+    border:2px solid #444;
+    box-shadow: 2px 2px 4px #000;
+
+}
+
+.gallerydescription > div input:hover {
+    box-shadow: 0 0 0 #000;
+    
+}
+
+
+.galleryNavigationBullets {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top:35%;
+    
+
+}
+
+.galleryNavigationBullets span {
+    display: none;
+}
+
+.galleryNavigationBullets a {
+    background-color: #ddd;
+    width:20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 35px;/* new */
+}
+
+.galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {
+    background-color:#555;
+}
+
+/*for static image page template*/
+
+.galleryPreviewImage_static img{/*that mean all images disappear exept img.previewImage1 [Next]*/
+    width: 90%;
+    position: absolute;/* new change - prev > position: relative;*/
+    top:0;
+    right: 5%;
+    box-shadow: 0px 9px 0px  #444 , 0px 10px 10px #111;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius:30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.gallerydescription_static > div {
+
+    position:absolute;
+    width: 90%;
+    right:5%;
+    margin-top:25%;
+    padding:1% 0%;
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.gallerydescription_static > div a {color: #fff;text-decoration: none;}
+.gallerydescription_static .description1 {display: block;}
+
+.gallerydescription_static .desbg{background-color:rgba(0, 0, 0, 0.4);padding:1% 0;}
+
+.gallerydescription_static > div input {
+    margin-right: 5%;
+    margin-left: 5%;
+    color: #fff;
+    background-color: #222;
+    border-radius: 3px;
+    border:2px solid #444;
+    box-shadow: 2px 2px 4px #000;
+
+}
+
+.gallerydescription_static > div input:hover {
+    box-shadow: 0 0 0 #000;
+    
+}
+
+
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
+*/
+
+/* nav */
+
+/*use customizer.php to change from english to arabic and from arabic to english for navbare and others*/
+
+/*common in all levels*/
+.qwe-nav > nav > div > ul {
+  margin-top:0; margin-right:5%;margin-left:5%;float: none;width:90%;/*background-color: #333;*/
+
+}
+
+.qwe-nav > nav > div > ul  li  {list-style: none;}
+
+.qwe-nav li:nth-child(odd) {padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav li:nth-child(even){padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
+.qwe-nav li  { }
+.qwe-nav > nav > div > ul > li li {position: relative;}
+
+/*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
+
+
+/*0 level*/
+.qwe-nav > nav > div > ul > li {float:left;}
+.qwe-nav > nav > div > ul > li:nth-child(odd)  {float:left;background-color:orange;border-radius: 0 0 0 20px; }
+.qwe-nav > nav > div > ul > li:nth-child(odd) > a {border-radius: 0 0 0 20px; }
+.qwe-nav > nav > div > ul > li:nth-child(even) {float:left;background-color:white;border-radius: 0 0 20px 0; }
+.qwe-nav > nav > div > ul > li:nth-child(even) > a{border-radius: 0 0 20px 0 ; }
+/*.qwe-nav > nav > div > ul > li:first-child > a {border-radius: 0 0 0 20px;}*/
+/*.qwe-nav > nav > div > ul > li:last-child > a  {border-radius: 0 0 20px 0;}*/
+.qwe-nav > nav > div > ul > li > a {border-radius: 0 0 20px 0;background-color:#444;}
+.qwe-nav > nav > div > ul > li > a {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+
+/* 1st level */
+/*display:none problem is the next step to show menu because i will use display:block and that make problems */
+.qwe-nav > nav > div > ul > li >       ul {margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav > nav > div > ul > li:hover > ul {right:auto;}/* :nth-child(odd) */
+.qwe-nav > nav > div > ul > li >       ul  > li     {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav > nav > div > ul > li >       ul  > li     {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li >       ul  > li > a {background-color:#444;}
+
+
+
+/* 2nd level */
+.qwe-nav > nav > div > ul > li > ul > li>        ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+/* 3rd level */
+.qwe-nav > nav > div > ul > li > ul > li > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+/*4th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li >       ul {display:inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+/*5th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+
+/*6th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+/*7th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+/*8th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+
+/*9th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+
+/*10th level*/
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+
+/*nav media*/
+
+@media (max-width: 747px){
+
+.qwe-nav > nav {position: relative;}
+.qwe-nav > nav > div > ul {
+  margin-top:0; margin-right:5%;margin-left:5%;float: none;width:90%;/*background-color: #333;*/
+position: absolute;width:150px;
+
+}
+
+.qwe-nav > nav > div > ul  li  {list-style: none;}
+
+.qwe-nav li:nth-child(odd) {padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav li:nth-child(even){padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
+.qwe-nav li  { }
+.qwe-nav > nav > div > ul > li li {/*position: relative;*/}
+
+/*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
+
+
+/*0 level*/
+.qwe-nav > nav > div > ul > li {display: none;}
+.qwe-nav > nav > div > ul > li:first-child {display:block;}
+.qwe-nav > nav > div > ul:hover:first-child > li {display: block;}
+
+.qwe-nav > nav > div > ul {display: inline-block;}
+.qwe-nav > nav > div > ul > li {float:none;}
+.qwe-nav > nav > div > ul > li:nth-child(odd)  {float:none;background: transparent; border-radius: 0 0 0 20px; }
+.qwe-nav > nav > div > ul > li:nth-child(odd) > a {border-radius: 0 0 0 20px; border-top:1px solid orange;}
+.qwe-nav > nav > div > ul > li:nth-child(even) {float:none;background: transparent;border-radius: 0 0 20px 0; }
+.qwe-nav > nav > div > ul > li:nth-child(even) > a{border-radius: 0 0 20px 0 ; border-top:1px solid white;}
+.qwe-nav > nav > div > ul > li > a {border-radius: 0 0 20px 0;background-color:#444;}
+.qwe-nav > nav > div > ul > li > a {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+
+
+/* 1st level */
+/*display:none problem is the next step to show menu because i will use display:block and that make problems */
+.qwe-nav > nav > div > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav > nav > div > ul > li:hover > ul {right:auto;}/* :nth-child(odd) */
+.qwe-nav > nav > div > ul > li >       ul  > li     {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav > nav > div > ul > li >       ul  > li     {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li >       ul  > li > a {background-color:#444;}
+
+
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+
+
+/*.page h1 {margin-top:60px;}*/
+
+/* navbar.css*/
+
+/*.qwe-nav div {
+    margin: 0px auto ;
+    padding: 0px;
+    width: 30%; 
+position: absolute;
+
+    }
+
+.qwe-nav div > ul {
+    padding: 0;
+    background-color:<?php echo get_theme_mod('nav_ul_id','#444'); ?>;
+    border-radius:3px 3px 30px 30px;
+    width: 100%;
+}
+.qwe-nav div > ul:hover li{display: block;margin-top: 0;}
+
+
+.qwe-nav div > ul > li:first-child{
+display: inline-block;
+}
+
+.qwe-nav div a {
+    padding: 0px 15px; 
+    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;;
+}
+.qwe-nav div > ul > li {
+    margin: 0;
+    padding: 0px 0px;
+    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
+    height:50px;
+    width: 100%;
+    float: left;
+
+    display: none;
+
+    border-radius:3px 3px 30px 5px;
+    border:solid 1px #ccc;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+
+}
+
+.qwe-nav div > ul > li >a {
+    padding: 0px 15px;
+    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
+}
+.qwe-nav div > ul > li:nth-child(n+4)  {
+    margin: 0;
+    padding: 0px 5px;
+    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
+    border-radius:3px 3px 5px 30px;
+    border:solid 1px #ccc;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+
+}
+.qwe-nav div > ul > li:nth-child(n+4) >a {
+    padding: 0px 15px;
+    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
+}
+
+.qwe-nav div > ul > li >li {
+    margin:0px 0;
+    padding: 0px 0px;
+    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+
+}
+
+.qwe-nav div ul > li > ul {
+    margin:0px 0 ;
+    padding: 0px 0px;
+    background-color:<?php echo get_theme_mod('nav_ul_li_ul_id','#444'); ?>;
+    position: absolute;
+    left:-9999px;
+    border-radius:5px;
+    border:solid 1px #ccc;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+}
+.qwe-nav div > ul > li:hover > ul {left:30%;}
+.qwe-nav div > ul > li > ul > li > ul {position:absolute;left:-9999px;}
+
+.qwe-nav div > ul > li > ul > li:hover {}
+.qwe-nav div > ul > li > ul > li:hover > a {padding: 0px 200px 10px 20px; }
+.qwe-nav div > ul > li > ul > li:hover > ul {left:130px;top:auto;margin-top:-65px; }
+.qwe-nav div > ul > li > ul > li > ul > li {}
+*/
+}
+
+
+/*main*/
+
+/*add col-........ to main for more stable work*/
+
+.page {margin-top: 50px;}
+
+/*page*/
+
+/*for images , to not exceed page width*/
+.page .rect img {max-width:100%;height:auto;overflow: auto;}
+.page .rect div {max-width:100%;overflow: auto;}
+
+.page .rect {
+    margin:0 1%;
+    padding: 0 2%;
+    background-color:#222;/*<?php echo get_theme_mod('page_id','#222'); ?>;*/
+    border-bottom:1px solid #fff;/*<?php echo get_theme_mod('page_border_id','#fff'); ?>;*/
+    border-radius: 15px;
+}
+
+.page .rect .qwe-page-title {  
+     text-shadow:
+          -1px -1px 4px #000,  
+          1px -1px 4px #000,
+          -1px 1px 4px #000,
+           1px 1px 4px #000;
+}
+
+.page .postedby {
+    margin: 10px 2%;
+    padding: 0 2%;
+    background-color:#000;/*<?php echo get_theme_mod('postedby_id','#000'); ?>;*/
+    width:92%;
+    box-shadow:inset 0px -1px 1px #777;
+    display: inline-block;
+}
+.page .postedby a {margin: 1%;padding:0;float: left;text-decoration: none;}
+.page .postedby ul {margin: 0;padding:0;list-style: none;}
+.page .postedby li {list-style: none;}
+
+.page .rect .push_button a {color: #fff;text-decoration: none;}
+
+/****************************************************
+ *  Push Button
+ *****************************************************/
+.push_button{
+    position:relative;
+    width:70%;
+    color:#FFF;
+    display:block;
+    text-decoration:none;
+    margin:0 auto;
+    border-radius:5px;
+    border:solid 1px #D94E3B;
+    background:#cb3b27;
+    text-align:center;
+    padding:20px 30px;
+    
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+    
+    -webkit-box-shadow: 0px 9px 0px #84261a;
+        -moz-box-shadow: 0px 9px 0px #84261a;
+        box-shadow: 0px 9px 0px #84261a;
+}
+/*****************************************************/
+
+
+/*sidebar*/
+
+.sidebar >div {margin-top: 50px;}
+
+.sidebar ul,.sidebar li {list-style: none;padding: 0;margin: 0;}/* search for any problem may appear in future */
+
+
+.sidebar aside {
+    margin:0 1%;
+    padding: 3% 3%;
+    background-color:#222;/*<?php echo get_theme_mod('sidebar_id','#222'); ?>;*/
+    box-shadow: 0px 4px 8px #000;
+}
+
+.sidebar li.widget {padding-bottom:1%;border-bottom:5px solid #fff;}
+.sidebar .widgettitle {
+    color:#fff;/*<?php echo get_theme_mod('sidebar_titles_id','#fff'); ?>;*/
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+      -1px -1px 4px #000,  
+      1px -1px 4px #000,
+      -1px 1px 4px #000,
+       1px 1px 4px #000;
+}
+
+/*important components appear at widget >> search and find more */
+.sidebar select {color: #000;}
+.sidebar input {color: #000;}
+.sidebar #searchsubmit {color: #222;}
+.sidebar #s {color: #222;}
+
+
+/*footer*/
+/*important if any one add any image element to any footer widget >> support search and find others element that can be add */
+footer img {width: 100%;height: 100px; }
+
+footer ul, footer li {list-style: none;padding: 0;margin: 0;}/* search for any problem may appear in future */
+section.footer1 {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer1_id','#222'); ?>;*/
+    width:96%;
+    float: left;
+    box-shadow: 0px 4px 8px #000;
+}
+
+section.footer1 li.widget {float: left;padding: 30px;}
+
+
+section.footer2 {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer2_id','#222'); ?>;*/
+    width:96%;
+    float: left;
+    box-shadow: 0px 4px 8px #000;
+}
+section.footer2 li.widget {float: left;padding:30px;}
+section.footer2 li.widget:first-child { clear: left;}
+section.footer2 li.widget:last-child { clear: right;}
+
+section.footer3 {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer3_id','#222'); ?>;*/
+    width:96%;
+    float: left;
+    box-shadow: 0px 4px 8px #000;
+}
+section.footer3 li.widget {float: left;padding: 30px;}
+section.footer3 li.widget:first-child {clear:left;}
+
+
+/*.fl-ri{float: right;}*/
+
+
+

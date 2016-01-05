@@ -1,0 +1,450 @@
+/**
+* Theme Name: 3DaVinci-gray-ar
+* Theme URI: http://inspiration-inspection.ml/3DaVinci 
+* Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
+* Version: 1.0.0
+* Author: Hesham Hussain [adam adam]
+* Author URI: http://inspiration-inspection.ml/adam-curriculum-vitae/
+* Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+* 
+* Copyright: (c) 2015 Hesham (adam), Giza, Egypt
+* License: GNU General Public License v2.0 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
+.comment-form-comment textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
+.comment-form-comment label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
+.form-submit input{box-shadow: 5px 5px 8px #000;color: #000;}
+#reply-title {text-shadow: 5px 5px 8px #000;}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/*update*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*update group nicer name*/
+.group:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    }
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+/*update group */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+/* from    https://css-tricks.com/snippets/css/clear-fix/ */
+
+
+.table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:70%;border: 0px solid #777;}
+.table textarea {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color:#222;}
+.table input {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.table label {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.qwe_form {margin-left: 20px;}
+@media (max-width: 400px){
+.qwe-table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:80%;border-radius: 10px;border: 0px solid #777;}
+
+}
+
+
+/*
+********************
+****             ***
+****   ********  ***
+****   ********  ***
+****   ********  ***
+****   **        ***
+****   **    *******
+****   ***    ******
+****   ****    *****
+****   *****    ****
+****   ******    ***
+****   *******    **
+********************
+*/
+
+
+
+/* root */
+
+body {background-color: #222;}
+
+a:link {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
+a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
+a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_id','#999'); ?>;*/}
+
+html {
+  color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+
+
+
+/*
+*****************       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**            ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+**   ******   ***       
+*****************       
+*/
+
+/* header */
+.title-description {margin-left: 5%;margin-right: 5%;}
+
+section .title-description a {
+    color:#fff;/*<?php echo get_theme_mod('site_title_id','#fff'); ?>;*/
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 ;
+    text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
+    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
+     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
+     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
+     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
+     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
+     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444,
+     4px 4px 12px #000 ;
+}
+section.site-title p a {color:#fff;}
+section.site-title p {
+    color:#fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;margin: 0 10px;
+    border-radius:5px;
+    border:solid 1px #ccc;
+    box-shadow: 0px 9px 0px #444;
+    -webkit-box-shadow: 0px 9px 0px #444;
+        -moz-box-shadow: 0px 9px 0px #444 ;   
+
+      text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
+    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
+     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
+     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
+     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
+     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
+     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444
+     ,4px 4px 10px #000;
+}
+
+
+
+/*
+********************
+**            ******
+**   ***************
+**   ***************
+**   ***************
+**   ***************
+**            ******
+***********   ******
+***********   ******
+***********   ******
+***********   ******
+**            ******
+********************
+*/
+
+
+/* slideshow */
+
+.banner{position: relative;}
+
+.galleryPreviewContainer {
+    position: relative;
+}
+.galleryPreviewImage img{/*that mean all images disappear exept img.previewImage1 [Next]*/
+    display: none;
+    width: 90%;
+    position: absolute;/* new change - prev > position: relative;*/
+    top:0;
+    right: 5%;
+    box-shadow: 0px 9px 0px  #444 , 0px 10px 10px #111;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius:30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.galleryPreviewImage img.previewImage1 {
+    display: block;
+}
+
+img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
+
+img#btn { width:12%;margin:10px 5%;position:absolute;left:75%;top:460px;}
+img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-index: 10;}
+
+
+.galleryPreviewarrow{width: 90%}
+.galleryPreviewarrow a {
+    font-family: arial,sans-serif;
+    /*font-size: 30px;*/
+    /*z-index: 0;*/
+    font-size: 200%;
+    background-color:rgba(0,0,0,0.3);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;/*35px because of 70px width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+    position: absolute;
+}
+
+.previousslidearrow{
+    /*right: 60px;*/
+    left:5%;
+  margin-top: 15%;
+
+}
+
+.nextslidearrow {
+    right:5%;
+    margin-top: 15%;
+}
+
+
+.galleryPreviewarrow a:hover {
+    background-color: #000;
+    /*margin-top: -40px;*/
+}
+
+.gallerydescription > div {
+    display: none;
+    position:absolute;
+    width: 90%;
+    right:5%;
+    margin-top:25%;
+    padding:1% 0%;
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.gallerydescription > div a {color: #fff;text-decoration: none;}
+.gallerydescription .description1 {display: block;}
+
+.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);padding:1% 0;}
+
+.gallerydescription > div input {
+    margin-right: 5%;
+    margin-left: 5%;
+    color: #fff;
+    background-color: #222;
+    border-radius: 3px;
+    border:2px solid #444;
+    box-shadow: 2px 2px 4px #000;
+
+}
+
+.gallerydescription > div input:hover {
+    box-shadow: 0 0 0 #000;
+    
+}
+
+
+.galleryNavigationBullets {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top:35%;
+    
+
+}
+
+.galleryNavigationBullets span {
+    display: none;
+}
+
+.galleryNavigationBullets a {
+    background-color: #ddd;
+    width:20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 35px;/* new */
+}
+
+.galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {
+    background-color:#555;
+}
+
+
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
+*/
+
+/* nav */
+
+/*use customizer.php to change from english to arabic and from arabic to english for navbare and others*/
+
+.qwe-nav > nav > div > ul {
+    margin-right:5%;margin-left:5%;height: 50px;float: none;width:90%;/*background-color: #333;*/
+
+}
+.qwe-nav li:nth-child(odd){
+    /*height:50px;*/
+    padding:11px 0 10px 0;
+    margin-top: 15px;
+    /*border-radius: 0 0 0 20px;*/
+}
+.qwe-nav li:first-child{
+    /*height:50px;*/
+    padding:11px 0 10px 0;
+    margin-top: 15px;
+    border-radius: 0 0 0 20px;
+}
+.qwe-nav li:nth-child(even){
+    /*height:50px;*/
+    padding:11px 0 10px 0;
+    margin-top: 15px;
+    /*border-radius: 0 0 20px 0;*/
+}
+
+.qwe-nav li:last-child{
+    /*height:50px;*/
+    padding:11px 0 10px 0;
+    margin-top: 15px;
+    border-radius: 0 0 20px 0;
+}
+.qwe-nav li a {
+    /*margin:10px 0;*/
+    padding: 10px 15px;
+    background-color:#444;/*<?php echo get_theme_mod('nav_ul_id','#444'); ?>;*/
+    
+    border-bottom:solid 1px #fff;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+}
+
+/*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
+
+
+.qwe-nav > nav > div > ul li  {list-style: none;}
+.qwe-nav > nav > div > ul > li {float:left;}
+.qwe-nav > nav > div > ul > li:nth-child(odd){float:left;background-color:red; }
+.qwe-nav > nav > div > ul > li:nth-child(even){float:left;background-color: cyan; }
+
+
+
+.qwe-nav > nav > div > ul > li:first-child > a {border-radius: 0 0 0 20px;/*border: 1px solid #fff;*/ }
+.qwe-nav > nav > div > ul > li:last-child > a {border-radius: 0 0 20px 0;/*border: 1px solid #fff;*/ }
+
+/* 1st level */
+/*display:none problem is the next step to show menu because i will use display:block and that make problems */
+.qwe-nav > nav > div > ul > li > ul {margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav > nav > div > ul > li:hover > ul {padding: 0;position: absolute;right:auto;}/* :nth-child(odd) */
+/*.nav > nav > div > ul  li:hover:nth-child(even) > ul {padding: 0 0 0 2%;position: absolute;right:auto;}*/
+.qwe-nav > nav > div > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;   
+    border-bottom:solid 1px #fff;
+    border-radius: 0 0 0 0;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;   
+    border-bottom:solid 1px #fff;
+    border-radius: 0 0 0 0;
+    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav > nav > div > ul > li > ul > li a{background-color:#444;
+    border-bottom:solid 0px #fff;
+    box-shadow: 0px 0px 0px #444,0px 0px 0px #111;
+}
+
+
+/* 2nd level */
+.qwe-nav > nav > div > ul > li > ul > li> ul {margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul >li:hover > ul {padding: 0;position: absolute;left:0px;}/* :nth-child(odd) */
+.qwe-nav > nav > div > ul > li > ul >li > li {margin: 0;padding: 0;}
+
+
+
+/* 3rd level */
+.qwe-nav > nav > div > ul > li > ul > li> ul > li > ul {margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav > nav > div > ul > li > ul >li:hover > ul li > ul {padding: 0;position: absolute;right:0;}/* :nth-child(odd) */
+.qwe-nav > nav > div > ul > li > ul >li > li li > ul {margin: 0;padding: 0;}
+
+
+
+
+
+/*page*/
+
+
+
+/*sidebar*/
+.sidebar ul,.sidebar li {list-style: none;padding: 0;margin: 0;}/* search for any problem may appear in future */
+
+
+
+/*footer*/
+footer ul, footer li {list-style: none;padding: 0;margin: 0;}/* search for any problem may appear in future */
