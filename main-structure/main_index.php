@@ -19,23 +19,62 @@
 					
 					the_content('<br/><p class="push_button">Read more </p>');
 					echo '</div>';
+					
+					// echo '<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">';
+
 					echo '<div class="postedby">';
 					echo '<a href="';
 					the_author_link();
-					echo '">By : ';
+			 		
+			 		//rtl ltr
+			 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+
+			 		if ($qwe_dir=='ltr'){
+
+						echo '">By : ';
+
+			 		}
+			 		elseif($qwe_dir=='rtl'){ 
+
+						echo '">الناشر : ';
+
+			        }
+								
 					the_author();
 					echo "</a>";
 					echo '<a href="';
-					the_permalink();	
-					echo '">Posted on : ';
+					the_permalink();
+
+			 
+					//rtl ltr
+
+			 		if ($qwe_dir=='ltr'){
+
+						echo '">Posted on : ';
+
+			 		}
+			 		elseif($qwe_dir=='rtl'){ 
+
+						echo '">في : ';
+
+			        }
 					the_date('F Y');
 					echo '</a>';
 					the_category();
 					echo '<br/>';
 					echo '</div>';
+					// echo '</div>';//col-xs .... col-vs
 
 					echo '</div>';//post-id and post-class
 
 					}
 					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
 	?>	
+
+
+					<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
+						<div class="qwe-comments">
+						<?php comments_template(true, ''); ?>
+						</div>
+				    </div>
+				    

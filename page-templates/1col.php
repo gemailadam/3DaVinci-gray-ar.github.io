@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: 2 column Left Sidebar
+ * Template Name: 1 column Full Width
  * Description: Page template without sidebar
  */
 ?>
@@ -16,58 +16,44 @@
 <!--<![endif]-->
 <head>
 
-		<?php get_template_part('page-templates/head_html'); ?>
-<style>
+		<?php get_template_part('main-structure/head_html'); ?>
 
-.one-image-only{display: none;}
-.widget-banner {display: none;}
-
-</style>		
 </head>
 <body <?php body_class( ); ?> >
 <div class="container">
+	<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
 	<!-- 1) header-->
 	<header>
 		<div class="row">
-			<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                  <?php get_header(); ?>
             </div>
     </header>
 		<!-- 2 ) main -->
 		<div class="main">
 		<div class="row">
-			
-		    <!-- 2-2 ) left sidebar  -->
-			<div class="sidebar">
-				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-                	<?php get_sidebar(); ?>
-                	<br/>
-				</div>
-			</div>
-			<!-- end sidebar part -->
-
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
-					
-						<?php get_template_part('page-templates/main_page'); ?>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+						<?php get_template_part('main-structure/main_page'); ?>
 
 				</div>
 		    </div>
-			<!-- end page part -->            
+		    <!-- 2-2 ) sidebar part if you want -->
+
 
 		</div>
 		<!--End Row -->
 		</div>
 		<!--End main -->
-		<br>
+
 		<!-- 3 ) footer-->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<br/>
-					<?php get_footer(); ?>
+						<?php get_footer(); ?>
 				</div>
 			</div>
 		</footer>
@@ -75,7 +61,7 @@
 	
 	</div>
 	<!-- End Container-->
-	<?php get_template_part('page-templates/script'); ?>
+		<?php get_template_part('main-structure/script'); ?>
 
 </body>
 </html>

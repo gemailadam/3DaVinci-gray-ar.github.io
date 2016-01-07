@@ -1,7 +1,7 @@
 <?php 
 /*
 index.php
-    The main template. If your Theme provides its own templates, index.php must be present. 
+    The main template. If your Theme provides its own templates, index.php must be present. you can use home.php or front-page.php
 */
  ?>
 <?php/*
@@ -24,36 +24,29 @@ readfile("original.pdf");
 <html <?php language_attributes(); ?> >
 <!--<![endif]-->
 <head>
-
-
-		<?php get_template_part('page-templates/head_html'); ?>
-
+		<?php get_template_part('main-structure/head_html'); ?>
 </head>
 <body <?php body_class( ); ?> >
 <div class="container">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
-	<!-- 1) header-->
-	<header>
-		<div class="row">
-			<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
-                 <?php get_header(); ?>
-            </div>
-    </header>
+		<!-- 1) header-->
+		<header>
+			<div class="row">
+				<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+	            	 <?php get_header(); ?>
+	        	</div>
+	        </div>
+	    </header>
 		<!-- 2 ) main -->
 		<div class="main ">
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
 				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
-					
-				<?php get_template_part('page-templates/main_index'); ?>
-										
-
+				<?php get_template_part('main-structure/main_index'); ?>
 				</div>
 		    </div>
-
-                	<?php /*get_template_part('comments');*/?>
 		    <!-- 2-2 ) sidebar part if you want -->
 			<div class="sidebar">
 				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 col-vs-12">
@@ -81,7 +74,7 @@ readfile("original.pdf");
 </div>
 	<!-- End Container-->
 
-		<?php get_template_part('page-templates/script'); ?>
+<?php get_template_part('main-structure/script'); ?>
 
 </body>
 </html>

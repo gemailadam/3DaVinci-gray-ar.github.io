@@ -16,14 +16,13 @@
 <!--<![endif]-->
 <head>
 
-		<?php get_template_part('page-templates/head_html'); ?>
+		<?php get_template_part('main-structure/head_html'); ?>
 
 
 </head>
 <body <?php body_class( ); ?> >
 <div class="container">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
-
+	<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 	<!-- 1) header-->
 	<header>
 		<div class="row">
@@ -52,7 +51,7 @@
 			<div class="page">
 				<div class=" col-xs-6 col-lg-6 col-md-12 col-sm-12 ">
 					
-						<?php get_template_part('page-templates/main_page'); ?>
+						<?php get_template_part('main-structure/main_page'); ?>
 
 				</div>
 		    </div>
@@ -85,7 +84,7 @@
 	
 	</div>
 	<!-- End Container-->
-	<?php get_template_part('page-templates/script'); ?>
+	<?php get_template_part('main-structure/script'); ?>
 
 </body>
 </html>

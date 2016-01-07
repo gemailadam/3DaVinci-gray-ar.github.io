@@ -23,12 +23,12 @@ header("Pragma: no-cache");
 <head>
 
 
-		<?php get_template_part('page-templates/head_html'); ?>
+		<?php get_template_part('main-structure/head_html'); ?>
 
 </head>
 <body <?php body_class(); ?> >
 <div class="container">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
 		<!-- 1) header-->
 		<header>
@@ -45,7 +45,7 @@ header("Pragma: no-cache");
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9 col-vs-12">
 							
 
-						<?php get_template_part('page-templates/main_page'); ?>
+						<?php get_template_part('main-structure/main_page'); ?>
 
 						</div>
 					</div>
@@ -77,7 +77,7 @@ header("Pragma: no-cache");
 </div>
 <!-- End Container-->
 	
-	<?php get_template_part('page-templates/script'); ?>
+	<?php get_template_part('main-structure/script'); ?>
 
 	</body>
 	</html>

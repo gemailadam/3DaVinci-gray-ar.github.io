@@ -19,4 +19,9 @@
 								echo "No Content Found , or there is nothing Page By you yet";
 							endif;				            
 							?>	
-							
+							<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
+								<div class="qwe-comments">
+								<?php comments_template(true, ''); ?>
+								</div>
+						    </div>
+						    

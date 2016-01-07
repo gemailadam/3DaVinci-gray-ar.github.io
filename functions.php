@@ -3,7 +3,7 @@
 //require_once('functions/csscss.php');
 //require_once('functions/changetheme.php');
 //require_once('functions/changestyle.php');
-////////////////////////////////////////////////////////////////// 	require_once('functions/_customizer.php');
+require_once('functions/_customizer.php');
 //require_once('functions/layout.php');
 //require_once('functions/addbar.php');
 require_once('functions/_modules.php');
@@ -18,6 +18,6 @@ require_once('functions/_woocommerce_action.php');
 //require_once('functions/_backend.php');
 
 
-
-
 ?>
+
+

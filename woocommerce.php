@@ -26,12 +26,12 @@ header("Pragma: no-cache");
 </head>
 <body <?php body_class( ); ?> >
 <div class="container">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
 		<!-- 1) header-->
 		<header>
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 					<?php get_header(); ?>
 				</div>
 			</header>
@@ -40,7 +40,7 @@ header("Pragma: no-cache");
 				<div class="row">
 					<!-- 2-1 ) page part -->
 					<div class="page">
-						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
+						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9 col-vs-12">
 							
 						<?php woocommerce_content(); ?>
 
@@ -55,10 +55,16 @@ header("Pragma: no-cache");
 			</div>
 			<!--End main -->
 			<br>
+			<div class="qwe-comments">
+				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+				<?php comments_template(true, ''); ?>
+				</div>
+		    </div>
+		    <br>			
 			<!-- 3 ) footer-->
 			<footer>
 				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 						<br/>					
 						<?php get_footer(); ?>
 					</div>

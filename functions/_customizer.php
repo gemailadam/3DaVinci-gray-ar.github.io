@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 // require_once('functions/_slideshow.php');
 
@@ -25,14 +25,59 @@
 function qwe_slideshow($wp_customize)
 {
 
+
+// Panal container
+
+
+$wp_customize->add_panel( 'panel_id', array(
+ 'priority'       => 10,
+  'capability'     => 'edit_theme_options',
+  'theme_supports' => '',
+  'title'          => 'Theme Options',
+  'description'    => 'Change all Your Theme Colors',
+) );
+
+
+// slideshow
+
+    // $qwe_dir=get_bloginfo('language');//get_theme_mod( 'qwe-rtl', 'rtl' );  
+
+
+    // if ($qwe_dir=='ltr'){
+
+    // $wp_customize->add_section('slideshow',array(
+    //     'title' =>'Slide Show' ,
+    //     'description' => 'Upload your slideshow images , with 400 pixel exact height',
+    //     'priority' => '299' ));
+
+    // }
+    // elseif($qwe_dir=='rtl'){
+    // $wp_customize->add_section('slideshow',array(
+    //     'title' =>'عرض الشرائح' ,
+    //     'description' => 'Upload your slideshow images , with 400 pixel exact height',
+    //     'priority' => '299' ));
+
+    // }else{
+
     $wp_customize->add_section('slideshow',array(
         'title' =>'Slide Show' ,
         'description' => 'Upload your slideshow images , with 400 pixel exact height',
-        'priority' => '99' ));
+        'priority' => '1' ,
+        'panel'=> 'panel_id',
+        ));
+
+    // }
+
+
+
+
 
 //   logo
 
-        $wp_customize->add_setting('logo_id',array('default' => '' ));
+        $qwe_image=get_bloginfo('template_directory');
+        $qwe_logo=$qwe_image . '/images/logo.png';
+
+        $wp_customize->add_setting('logo_id',array('default' => $qwe_logo ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo_id',array(
             'label' =>'Upload Logo Image',
             'description'=>'add logo image [ for best performance add png image type with transperent background]',
@@ -42,7 +87,7 @@ function qwe_slideshow($wp_customize)
 
 // slide 1
 
-        $wp_customize->add_setting('image1_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image1.jpg' ));
+        $wp_customize->add_setting('image1_id',array('default' => $qwe_image . '/images/image1.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image1_id',array(
             'label' =>'Upload Image 1',
             'priority'=>1,
@@ -113,7 +158,7 @@ function qwe_slideshow($wp_customize)
 
 //slide 2
 
-        $wp_customize->add_setting('image2_id', array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image2.jpg' ));
+        $wp_customize->add_setting('image2_id', array('default' => $qwe_image . '/images/image2.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image2_id',array(
             'label' =>'Upload Image 2',
             'priority'=>6,
@@ -184,7 +229,7 @@ function qwe_slideshow($wp_customize)
 
 // slide 3
                         
-        $wp_customize->add_setting('image3_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image3.jpg' ));
+        $wp_customize->add_setting('image3_id',array('default' => $qwe_image . '/images/image3.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image3_id',array(
             'label' =>'Upload Image 3',
             'priority'=>11,
@@ -256,7 +301,7 @@ function qwe_slideshow($wp_customize)
 
 //slide 4
 
-        $wp_customize->add_setting('image4_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image4.jpg' ));
+        $wp_customize->add_setting('image4_id',array('default' => $qwe_image . '/images/image4.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image4_id',array(
             'label' =>'Upload Image 4',
             'priority'=>16,
@@ -325,7 +370,7 @@ function qwe_slideshow($wp_customize)
 
 //slide 5
 
-        $wp_customize->add_setting('image5_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image5.jpg' ));
+        $wp_customize->add_setting('image5_id',array('default' => $qwe_image . '/images/image5.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image5_id',array(
             'label' =>'Upload Image 5',
             'priority'=>21,
@@ -397,7 +442,7 @@ function qwe_slideshow($wp_customize)
 
 //slide 6
 
-        $wp_customize->add_setting('image6_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image6.jpg' ));
+        $wp_customize->add_setting('image6_id',array('default' => $qwe_image . '/images/image6.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image6_id',array(
             'label' =>'Upload Image 6',
             'priority'=>26,
@@ -468,7 +513,7 @@ function qwe_slideshow($wp_customize)
 //slide 7
 
 
-        $wp_customize->add_setting('image7_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image7.jpg' ));
+        $wp_customize->add_setting('image7_id',array('default' => $qwe_image . '/images/image7.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image7_id',array(
             'label' =>'Upload Image 7',
             'priority'=>31,
@@ -541,7 +586,7 @@ function qwe_slideshow($wp_customize)
 //slide 8  
 
 
-        $wp_customize->add_setting('image8_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg' ));
+        $wp_customize->add_setting('image8_id',array('default' => $qwe_image . '/images/image8.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image8_id',array(
             'label' =>'Upload Image 8',         
             'priority'=>36,
@@ -607,17 +652,51 @@ function qwe_slideshow($wp_customize)
                 
             )
         );
-                
+
+
+
+
+
+/*
+*********************************************************************************************
+**            *********               ******         *******    *****   ********         ****
+**   ************************   ***************   **********    ****   ************   *******
+**   ************************   ***************   **********    ***   *************   *******
+**   ************************   ***************   **********    **   **************   *******
+**   ************************   ***************   **********    *   ***************   *******
+**            ***************   ***************   **********     ******************   *******
+***********   ***************   ***************   **********    *   ***************   *******
+***********   ***************   ***************   **********    **   **************   *******
+***********   ***************   ***************   **********    ***   *************   *******
+***********   ***************   ***************   **********    ****   ************   *******
+**            ***************   ************          ******    *****   ********          ***
+*********************************************************************************************
+*/
+
 //indicators   indicator_image1_id
 
 
+ //   if ($qwe_dir=='ltr'){
+
     $wp_customize->add_section('sticky',array(
-        'title' =>'3 Sticky Indicators Images' ,
-        'description' => 'Change Sticky Images and there descriptions and buttons titles ',
-        'priority' => '99' ));
+        'title' =>'Three Sticky Images' ,
+        'description' => 'To Change Sticky Images and there descriptions and buttons titles you must use 3 indicator Template First',
+        'priority' => '3' ,
+        'panel'=> 'panel_id',
+ ));
+
+    // }
+    // elseif($qwe_dir=='rtl'){
+    // $wp_customize->add_section('sticky',array(
+    //     'title' =>'مؤشرات الصور الثلاثه' ,
+    //     'description' => 'تغيير الوصف اسفل الصوره وعنوان الزر',
+    //     'priority' => '299' ));
+    // } 
+
+
 
 //1
-        $wp_customize->add_setting('indicator_image1_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg' ));
+        $wp_customize->add_setting('indicator_image1_id',array('default' => $qwe_image . '/images/image1.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image1_id',array(
             'label' =>'Upload Indicator Image 1',         
             'priority'=>41,
@@ -686,7 +765,7 @@ function qwe_slideshow($wp_customize)
 
 // 2
 
-        $wp_customize->add_setting('indicator_image2_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg' ));
+        $wp_customize->add_setting('indicator_image2_id',array('default' => $qwe_image . '/images/image2.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image2_id',array(
             'label' =>'Upload Indicator Image 2',         
             'priority'=>46,
@@ -755,7 +834,7 @@ function qwe_slideshow($wp_customize)
 
 //3
 
-        $wp_customize->add_setting('indicator_image3_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg' ));
+        $wp_customize->add_setting('indicator_image3_id',array('default' => $qwe_image . '/images/image3.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image3_id',array(
             'label' =>'Upload Indicator Image 3',         
             'priority'=>51,
@@ -822,203 +901,73 @@ function qwe_slideshow($wp_customize)
         );
 
 
+// language direction 
 
 
-}
-add_action('customize_register','qwe_slideshow' );
+
+    // $qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+
+    // if ($qwe_dir=='ltr'){
+
+$wp_customize->add_section('rtl_id', array('title' => 'language direction' ,'panel'=> 'panel_id',)); 
+$wp_customize->add_setting(
+    'qwe-rtl',
+    array(
+        'default' => 'ltr',
+    )
+);
+ 
+$wp_customize->add_control(
+    'qwe-rtl',
+    array(
+        'type' => 'select',
+        'label' => 'change language direction',
+        'section' => 'rtl_id',
+        'priority'=>499 ,
+        'transport' => 'postMessage',
+        'choices' => array(
+            'ltr' => 'ltr',
+            'rtl' => 'rtl',
+            
+        ),
+    )
+);
+
+
+
+//     }
+//     elseif($qwe_dir=='rtl'){
+    
+//     $wp_customize->add_section('rtl_id', array('title' => 'غير اتجاه اللغه للانكليزيه' )); 
+// $wp_customize->add_setting(
+//     'qwe-rtl',
+//     array(
+//         'default' => 'ltr',
+//     )
+// );
+ 
+// $wp_customize->add_control(
+//     'qwe-rtl',
+//     array(
+//         'type' => 'select',
+//         'label' => 'غير الى اللغه الانجليزيه',
+//         'section' => 'rtl_id',
+//         'priority'=>499 ,
+//         'transport' => 'postMessage',
+//         'choices' => array(
+//             'ltr' => 'ltr',
+//             'rtl' => 'rtl',
+            
+//         ),
+//     )
+// );
+// }
+
+
+
 
 /* _slideshow.php end*/
  
-
-/**********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************
-***********************************************************************************/
-
-/******************
-**            *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**            *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-*******************
-
-*******************
-**   **************
-**   **************
-**   **************
-**   **************
-**   **************
-**            *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**   *******  *****
-**            *****
-*******************
-
-/****************
-**            ***
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**            ***
-*****************
-
-*******************
-************   ****
-************   ****
-************   ****
-************   ****
-************   ****
-**             ****
-**   *******   ****
-**   *******   ****
-**   *******   ****
-**   *******   ****
-**             ****
-*******************
-
-********************
-**            ******
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-**            ******
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-**            ******
-********************
-
-
-********************
-**            ******
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-**            ******
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-********************
-
-
-********************
-**            ******
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-**   ***************
-**   ****        ***
-**   **********  ***
-**   **********  ***
-**   **********  ***
-**               ***
-********************
-
-*****************       
-**   ******   ***       
-**   ******   ***       
-**   ******   ***       
-**   ******   ***       
-**   ******   ***       
-**            ***       
-**   ******   ***       
-**   ******   ***       
-**   ******   ***       
-**   ******   ***       
-*****************       
-
-****************
-***         ****
-******   *******
-******   *******
-******   *******
-******   *******
-******   *******
-******   *******
-******   *******
-******   *******
-***         ****
-****************
-
-*******************
-*********       ***
-*************   ***
-*************   ***
-*************   ***
-*************   ***
-*************   ***
-***      ****   ***
-***   *******   ***
-***   *******   ***
-***   *******   ***
-***             ***
-*******************
-
-
-*****************
-***    *****   **
-***    ****   ***
-***    ***   ****
-***    **   *****
-***    *   ******
-***     *********
-***    *   ******
-***    **   *****
-***    ***   ****
-***    ****   ***
-***    *****   **
-*****************
-/*
-*****************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**   ************
-**             **
-*****************
-
-*/
 
 
 /***************************************************************************************************
@@ -1038,32 +987,24 @@ add_action('customize_register','qwe_slideshow' );
 
 
 /** qwe_customize_theme */
-function qwe_customize_theme($wp_customize){
-
-// add panel
-//     $wp_customize->add_panel( 'panel_id', array(
-//     'priority'       => 10,
-//     'capability'     => 'edit_theme_options',
-//     'theme_supports' => '',
-//     'title'          => 'panel',
-//     'description'    => 'ok ok ok ',
-// ));
 
 
     $wp_customize->add_section('colors',array(
         'title' =>'colors' ,
-        'description' => 'Change any part of the theme colors',
-        'priority' => '88' ));
+        'description' => 'Change any part of the theme color',
+        'priority' => '88' ,
+        'panel'  => 'panel_id',
+        ));
 
 
 //HTML color
 
-    $wp_customize->add_setting('html_id',array('default' => '#fff' ));
+    // $wp_customize->add_setting('html_id',array('default' => '#fff' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'html_id',array(
-        'label' =>'all site font default color',
-        'section' => 'colors' ,
-        'settings' => 'html_id' )));
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'html_id',array(
+    //     'label' =>'all site font default color',
+    //     'section' => 'colors' ,
+    //     'settings' => 'html_id' )));
 
 //body color
 
@@ -1071,31 +1012,136 @@ function qwe_customize_theme($wp_customize){
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'body_id',array(
         'label' =>'Background Color',
-        'description' =>'Change Background Color',
+        // 'description' =>'Change Background Color',
         'section' => 'colors' ,
         'settings' => 'body_id' )));
 
-//.row color
-   
-/*    $wp_customize->add_setting('row_id',array('default' => '#222' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'row_id',array(
-        'label' =>'Container Colors',
-        'description' =>'Change Container Background Color',
+// container_id
+
+
+    $wp_customize->add_setting('container_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'container_id',array(
+        'label' =>'Container Background Color',
+        // 'description' =>'Change Container Background Color',
         'section' => 'colors' ,
-        'settings' => 'row_id' )));
-*/
+        'settings' => 'container_id' )));
+
+
+//container shadow 
+// $wp_customize->add_section('colors', array('title' => 'language direction' ,'panel'=> 'panel_id',)); 
+$wp_customize->add_setting(
+    'shadow_id',
+    array(
+        'default' => '',
+    )
+);
+ 
+$wp_customize->add_control(
+    'shadow_id',
+    array(
+        'type' => 'radio',
+        'label' => 'change language direction',
+        'section' => 'colors',
+        'priority'=>499 ,
+        'transport' => 'postMessage',
+        'choices' => array(
+            '#000' => 'enable',
+            '' => 'disable',
+            
+        ),
+    )
+);
+
+
+
 
 //page_id
 
     $wp_customize->add_setting('page_id',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'page_id',array(
-        'label' =>'Pages & Posts Colors',
-        'description' =>'Change posts and pages Background Color',
+        'label' =>'Pages & Posts Background Colors',
+        // 'description' =>'Change posts and pages Background Color',
         'section' => 'colors' ,
         'settings' => 'page_id' )));
 
+
+//postedby_id
+
+    $wp_customize->add_setting('postedby_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'postedby_id',array(
+        'label' =>'Posts footer tail',
+        'description' =>'Change posts tails [ that contain Posted By and Date of Post ] Background Color',
+        'section' => 'colors' ,
+        'settings' => 'postedby_id' )));
+
+
+//sidebar_id background
+
+
+    $wp_customize->add_setting('sidebar_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_id',array(
+        'label' =>'Sidebar Background Colors',
+        // 'description' =>'Change Sidebar Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'sidebar_id' )));
+
+
+// footer background footer_id
+    $wp_customize->add_setting('footer_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_id',array(
+        'label' =>'Footers background Colors',
+        // 'description' =>'Change Footers Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'footer_id' )));
+
+
+
+// bullets background bullets_id
+    $wp_customize->add_setting('bullets_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'bullets_id',array(
+        'label' =>'bullets Colors',
+        // 'description' =>'Change Footers Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'bullets_id' )));
+
+
+// bullets background bullets_active_id
+    $wp_customize->add_setting('bullets_active_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'bullets_active_id',array(
+        'label' =>'bullets active Colors',
+        // 'description' =>'Change Footers Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'bullets_active_id' )));
+
+
+
+// button background button_id
+    $wp_customize->add_setting('button_id',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'button_id',array(
+        'label' =>'buttons Colors',
+        // 'description' =>'Change Footers Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'button_id' )));
+
+
+
+// button text button_txt_id
+    $wp_customize->add_setting('button_txt_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'button_txt_id',array(
+        'label' =>'buttons text Color',
+        // 'description' =>'Change Footers Background Colors',                
+        'section' => 'colors' ,
+        'settings' => 'button_txt_id' )));
 
 
 //page links [a]
@@ -1112,36 +1158,48 @@ function qwe_customize_theme($wp_customize){
 
 
 
+
+// site description color
+    
+    $wp_customize->add_setting('site_description_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_description_id',array(
+        'label' =>'Site Description Colors',
+        'section' => 'colors' ,
+        'settings' => 'site_description_id' )));
+
+
+
 // a link color
 
-    $wp_customize->add_setting('a_id',array('default' => '#fff' ));
+    // $wp_customize->add_setting('a_id',array('default' => '#fff' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_id',array(
-        'label' =>'linls colors',
-        'description' =>'all links Colors',        
-        'section' => 'colors' ,
-        'settings' => 'a_id' )));
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_id',array(
+    //     'label' =>'linls colors',
+    //     'description' =>'all links Colors',        
+    //     'section' => 'colors' ,
+    //     'settings' => 'a_id' )));
 
 // a visited color
 
-    $wp_customize->add_setting('a_visited_id',array('default' => '#aaa' ));
+    // $wp_customize->add_setting('a_visited_id',array('default' => '#aaa' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_id',array(
-        'label' =>'Visited Links Colors',
-        'description' =>'all visisted links Colors',        
-        'section' => 'colors' ,
-        'settings' => 'a_visited_id' )));
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_id',array(
+    //     'label' =>'Visited Links Colors',
+    //     'description' =>'all visisted links Colors',        
+    //     'section' => 'colors' ,
+    //     'settings' => 'a_visited_id' )));
 
 
 // a Hover color
 
-    $wp_customize->add_setting('a_hover_id',array('default' => '#999' ));
+    // $wp_customize->add_setting('a_hover_id',array('default' => '#999' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_id',array(
-        'label' =>'Hover Links Colors',
-        'description' =>'all links Colors',                
-        'section' => 'colors' ,
-        'settings' => 'a_hover_id' )));
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_id',array(
+    //     'label' =>'Hover Links Colors',
+    //     'description' =>'all links Colors',                
+    //     'section' => 'colors' ,
+    //     'settings' => 'a_hover_id' )));
 
 //page_titles_id    
 
@@ -1153,63 +1211,127 @@ function qwe_customize_theme($wp_customize){
         'section' => 'colors' ,
         'settings' => 'page_titles_id' )));
 
-// navbar 
-    // $wp_customize->add_section('section_nav_id',array(
-    //     'title' =>'navigation menus' ,
-    //     'description' => 'add your favorite colors and background for your navigation menu',
-    //     'priority' => '1' ));
 
-   // ul bg color 
-    $wp_customize->add_setting('nav_ul_id',array('default' => '#444' ));
+// posted by text color
+    $wp_customize->add_setting('postedby_txt_id',array('default' => '#fff' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_ul_id',array(
-        'label' =>'navigation background color',
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'postedby_txt_id',array(
+        'label' =>'Post Tails Texts',
+        'description' =>'Change Posted By Texts Color',        
         'section' => 'colors' ,
-        'settings' => 'nav_ul_id' )));
+        'settings' => 'postedby_txt_id' )));
 
-    $wp_customize->add_setting('nav_a_id',array('default' => '#444' ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_a_id',array(
-        'label' =>'menu background color',
+
+// sidebar_txt_id color
+
+
+    $wp_customize->add_setting('sidebar_widget_txt_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_widget_txt_id',array(
+        'label' =>'Sidebar Widget text color',
+        // 'description' =>'Change Page Title Color',        
         'section' => 'colors' ,
-        'settings' => 'nav_a_id' )));
-
-    // na a hover
-    $wp_customize->add_setting('nav_a_hover_id',array('default' => '#444' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_a_hover_id',array(
-        'label' =>'menu background hover color',
-        'discription'=>'change menu background color when hoer',
-        'section' => 'colors' ,
-        'settings' => 'nav_a_hover_id' )));
-
-    $wp_customize->add_setting('nav_a_bg_hover_id',array('default' => '#444' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_a_bg_hover_id',array(
-        'label' =>'menu background hover color',
-        'discription'=>'change menu background color when hoer',
-        'section' => 'colors' ,
-        'settings' => 'nav_a_bg_hover_id' )));
-
-
-
-
-//sidebar_titles_id
-
+        'settings' => 'sidebar_widget_txt_id' )));
 
     $wp_customize->add_setting('sidebar_titles_id',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_titles_id',array(
-        'label' =>'Sidebar Widget Titles Colors',
-        'description' =>'Change Sidebar Widget Titles Colors',                
+        'label' =>'Sidebar Titles Colors',
+        'description' =>'',        
         'section' => 'colors' ,
         'settings' => 'sidebar_titles_id' )));
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// navbar //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   // nav bg color 
+    $wp_customize->add_setting('nav_bg_id',array('default' => '#444' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_bg_id',array(
+        'label' =>'menu background color',
+        'section' => 'colors' ,
+        'settings' => 'nav_bg_id' )));
+
+    // nav text color
+    $wp_customize->add_setting('nav_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_id',array(
+        'label' =>'menu text link color',
+        'section' => 'colors' ,
+        'settings' => 'nav_id' )));
+
+    // nav a hover
+    $wp_customize->add_setting('nav_hover_id',array('default' => '#ddd' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_hover_id',array(
+        'label' =>'menu text hover color',
+        // 'discription'=>'change menu background color when hoer',
+        'section' => 'colors' ,
+        'settings' => 'nav_hover_id' )));
+
+    // $wp_customize->add_setting('nav_a_bg_hover_id',array('default' => '#444' ));
+
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_a_bg_hover_id',array(
+    //     'label' =>'menu background hover color',
+    //     'discription'=>'change menu background color when hoer',
+    //     'section' => 'colors' ,
+    //     'settings' => 'nav_a_bg_hover_id' )));
+
+
+// 404 oops color
+
+
+    $wp_customize->add_setting('404_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'404_id',array(
+        'label' =>'404 Redirected',
+        'description' =>'Wrong Page That any user Search from any search engine like google ',        
+        'section' => 'colors' ,
+        'settings' => '404_id' )));
+
+// enable disble footer image 
+
+
+    $wp_customize->add_section('footer_img_id',array(
+        'title' =>'disable footer image' ,
+        // 'description' => 'disable end footer image',
+        'priority' => '88' ,
+        'panel'  => 'panel_id',
+        ));
+
+
+$wp_customize->add_setting('disable_id',array('default' => ''));
+
+
+ // 'enable' => 'initial',
+ 
+$wp_customize->add_control(
+    'disable_id',
+    array(
+        'type' => 'select',
+        'label' => 'disable footer image',
+        'section' => 'footer_img_id',
+        'priority'=>499 ,
+        'transport' => 'postMessage',
+        'default'=>'',
+        'choices' => array(
+            'block' => 'enable',
+            'none' => 'disable',
+            
+        ),
+    )
+);
+
+
+
 
 }
+add_action('customize_register','qwe_slideshow' );
 
-add_action('customize_register','qwe_customize_theme');
+
+
 
 
 
@@ -1219,902 +1341,317 @@ function qwe_select_css()
 
 ?>
 
-
 <style type="text/css">
 
-/*****************************************
-******************************************
-******************************************
-******************************************
-*****        ***         ****       ******
-*****   ********  *****  ****  ***  ******
-*****   ********  *****  ****  ***  ******
-*****   ********  *****  ****  ***  ******
-*****   ********         ****       ******
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
+
+/*background-color*/
+/*background-color*/
+/*background-color*/
+/*background-color*/
+/*background-color*/
+
+/*main background change*/
+
+body {background-color:<?php echo get_theme_mod('body_id','#222'); ?>;}
+
+/*change row_id to container_id*/
+
+.container .contain{
+    background-color:<?php echo get_theme_mod('container_id','#222'); ?>;
+    box-shadow: 3px 3px 8px <?php echo get_theme_mod('shadow_id',''); ?> , -3px -3px 8px <?php echo get_theme_mod('shadow_id',''); ?>;
+} 
+
+/*page*/
+
+.page .rect {
+    background-color:<?php echo get_theme_mod('page_id','#222'); ?>;
+    border-bottom:1px solid <?php echo get_theme_mod('page_border_id','#fff'); ?>;
+}
+
+.page .postedby {background-color:<?php echo get_theme_mod('postedby_id','#000'); ?>;
+    
+    box-shadow:inset 0px -1px 1px #777;
+}
+
+
+
+/*sidebar*/
+
+div.sidebar aside {background-color:<?php echo get_theme_mod('sidebar_id','#222'); ?>;}
+
+
+
+/* footer */
+/*change foter1_id foter2_id foter3_id to footer_id*/
+section.footer1 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer2 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer3 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+
+section.footer1-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer2-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer3-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+
+
+
+/* 3 indicators */
+/* add */
+.gallerythumContainer input {background-color:<?php echo get_theme_mod('3indicators_id','#222'); ?>;}
+
+
+
+/* end main background change*/
+
+
+/*
+.galleryPreviewarrow a {background-color:rgba(0,0,0,0.3);}
+
+.galleryPreviewarrow a:hover {background-color: #000;}
+
+.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);}
 */
 
+/*add button_id color */
+.gallerydescription > div input {<?php echo get_theme_mod('button_bg_id','#222'); ?>;}
 
-/* roots.css root_part_qwe */
+/*add bullets_id color */
+.galleryNavigationBullets a {<?php echo get_theme_mod('bullets_id','#222'); ?>;}
+
+/*add bullets_active_id color */
+.galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {<?php echo get_theme_mod('bullets_active_id','#555'); ?>;}
+    
+
+/*.gallerydescription_static .desbg{background-color:rgba(0, 0, 0, 0.4);}*/
+
+.gallerydescription_static > div input {<?php echo get_theme_mod('button_bg_id','#222'); ?>;}
+
+/*add upper widget banner bg if used */
+section.qwe-banner {<?php echo get_theme_mod('widjet_id','#222'); ?>;}
+
+
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
+*/
+
+/* nav background colors*/
+
+/*
+.qwe-nav > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
+.qwe-nav > nav > div > ul > li:nth-child(even) {background-color:white; }*/
+.qwe-nav > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav > nav > div > ul > li > ul {background-color:transparent; }
+.qwe-nav > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+
+/*
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) {background-color:white; }*/
+.qwe-nav-rtl > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav-rtl > nav > div > ul > li > ul {background-color:transparent; }
+.qwe-nav-rtl > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav-rtl > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+
+
+/* 3 indicator button bg*/
+.gallerythumContainer input {background:<?php echo get_theme_mod('button_id','#222')?>;}
+
+.gallerydescription > div input {background:<?php echo get_theme_mod('button_id','#fff'); ?>;}
+
+.gallerydescription_static > div input {background:<?php echo get_theme_mod('button_id','#fff'); ?>;}
+
+.galleryNavigationBullets a {background-color:<?php echo get_theme_mod('bullets_id','#fff'); ?>;;}
+
+
+.galleryNavigationBullets a.active ,.galleryNavigationBullets a:hover {
+    background-color:<?php echo get_theme_mod('bullets_active_id','#fff'); ?>;;
+}
+
+
+
+/*@media (max-width: 768px){
+
+}
+*/
+/* media_part_lte_500__qwe */
+
+/*@media (max-width: 500px){
+
+
+}
+
+*/
+
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
+
+/* all links color */
+
+a {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
+a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
+a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_id','#999'); ?>;*/}
+
 html {
-  color:<?php echo get_theme_mod('html_id','#fff'); ?>;
+  color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
-p{color:<?php echo get_theme_mod('html_id','#fff'); ?>;}
-h1{color:<?php echo get_theme_mod('html_id','#fff'); ?>;}
-h2{color:<?php echo get_theme_mod('html_id','#fff'); ?>;}
-
-body {
-    background-color:<?php echo get_theme_mod('body_id','#222'); ?>;
-    padding:0;margin:0;
-
- }
-
-a:link {color:<?php echo get_theme_mod('a_id','#fff'); ?>;}
-a:visited {color:<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;}
-a:hover {color:<?php echo get_theme_mod('a_hover_id','#999'); ?>;}
-
-ul,li {list-style: none;padding: 0;margin: 0;}
-
-/* essential classes */
-.gap {clear:both;}
-.container {background-color:<?php echo get_theme_mod('row_id','#222'); ?>;} 
-.row {background-color:<?php echo get_theme_mod('row_id','#222'); ?>;}
+p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
 
 
-/* header.css header_part_qwe*/
-/*section.site-title a:visited {color:<?php echo get_theme_mod('site_title_visited_id','#fff'); ?>;}*/
-section.site-title a {
-    color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;
-    font-size: 120%;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0 80px;
-    text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
-    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
-     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
-     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
-     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
-     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
-     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444;
-}
-section.site-title p  {
-    font-size: 160%;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;margin: 0 10px;
-    border-radius:5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 9px 0px #444;
-    -webkit-box-shadow: 0px 9px 0px #444;
-        -moz-box-shadow: 0px 9px 0px #444 ;   
-  
-}
 
-/**/
-/*section.site-title p a:link{color:<?php echo get_theme_mod('site_title_p_a_id','#fff'); ?>;}*/
+/* site title color*/
 
-/*section.site-title a:link{color: #fff;}*/
+section.site-title p a {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
+section.site-title p {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
 
-/**/
-
-.banner {position: relative;}
-
-.banner img {width:90%;margin:10px 5%;
-      text-shadow: 0px 7px 0 #444, 0px 6px 0 #444, 0 5px 0 #444,0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444;
-    }
+/* site description color*/
+section .title-description a {color:<?php echo get_theme_mod('site_description_id','#fff'); ?>;}
 
 
-img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
+/* slideshow description and button colors*/
 
-img#btn { width:12%;margin:10px 5%;position:absolute;left:75%;top:460px;}
-img#logo {position: absolute;width:12%;margin-right:0px;margin-top: 10px;box-shadow:5px 5px 40px #000;z-index: 10;}
+.gallerydescription > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
 
-.circlarrow:hover {color: #ff7f00;}
+.gallerydescription > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
 
-/* slideshow slideshow_part_qwe */
-a,.galleryThumbnil img{
-transition:all 150 ms linear;
--webkit-transition:all 150 ms linear;
--moz-transition:all 150 ms linear;
+.gallerydescription_static > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
 
-}
+.gallerydescription_static > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
+
+.gallerythumContainer input {background:<?php echo get_theme_mod('button_txt_id','#222')?>;}
 
 
-.gallerycontainer{
-    margin: 40px auto;
-    /*width: 900px;*/
-}
-
-.galleryPreviewContainer {
-    position: relative;
-}
-.galleryPreviewImage img{/*that mean all images disappear exept img.previewImage1 [Next]*/
-      display: none;/* new cut*/
-    width: 90%;
-    position: absolute;/* new change - prev > position: relative;*/
-    top:0;
-    left:0;
-    box-shadow: 0px 9px 0px  #444 , 0px 10px 10px #111;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
-    -webkit-border-bottom-right-radius:30px;
-    -webkit-border-bottom-left-radius: 30px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 30px;
-    -moz-border-radius-bottomleft: 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-img.previewImage1 {
-    display: block;/* new cut*/
-}
-
-.desbg {}
-.gallerydescription > div {
-    /*display: none;*/
-    margin: 0;
-    padding:1% 5% 0 5%;
-    background-color:rgba(0, 0, 0, 0.4);
-    position: absolute;
-    border-radius: 0px 0px 0px 0px;
-    top:60%;
-    left:5%;
-    width:80%;
-
-}
-
-.gallerydescription > div a  {
-   -webkit-text-stroke: 1px black;
-   color: white;
-   text-shadow:
-      -1px -1px 4px #000,  
-      1px -1px 4px #000,
-      -1px 1px 4px #000,
-       1px 1px 4px #000;
-    display: block;
-    font-size:100%;
-    text-decoration: none;
-}
-
-.gallerydescription > div a:visited {color: #fff;}
-
-.gallerydescription > div input {
-    color: #fff;
-    background-color: #222;
-    border-radius: 3px;
-    border:2px solid #444;
-    box-shadow: 2px 2px 4px #000;
-}
-
-.gallerydescription > div input:hover {
-    box-shadow: 0 0 0 #000;
-    
-}
-
-.gallerydescription > div.visible {
-    display: block;
-}
-.galleryPreviewarrow a {
-    font-family: arial,sans-serif;
-    /*font-size: 30px;*/
-    z-index: 0;
-    font-size: 200%;
-    background-color:rgba(0,0,0,0.3);
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: block;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 100px;/*35px because of 70px width and height*/
-        -webkit-border-radius: 100px;
-        -moz-border-radius: 100px;
-    position: absolute;
-    left:60px;
-    top:160px; /* new *//* top:50%;*/
-
-    
-}
-
-a.nextslidearrow{
-    right: 60px;
-    left:auto;
-}
-
-.galleryPreviewarrow a:hover {
-    background-color: #000;
-    /*margin-top: -40px;*/
-}
-
-.galleryNavigationBullets {
-    text-align: center;
-    margin:30px auto 30px auto;
-
-
-}
-
-.galleryNavigationBullets span {
-    display: none;
-}
-
-.galleryNavigationBullets a {
-    background-color: #ddd;
-    width:20px;
-    height: 20px;
-    display: inline-block;
-    margin-right: 5px;
-    border-radius: 35px;/* new */
-}
-
-.galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {
-    background-color:#555;
-}
-
-
-/******************************************
-*******************************************
-**      *********    *****            *****
-**    *   *******    *****   *******  *****
-**    **   ******    *****   *******  *****
-**    ***   *****    *****   *******  *****
-**    ****   ****    *****   *******  *****
-**    *****   ***    *****            *****
-**    ******   **    *****   *******  *****
-**    *******   *    *****   *******  *****
-**    ********       *****   *******  *****
-**    *********      *****   *******  *****
-**    **********     *****   *******  *****
-*******************************************
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
 */
 
+.qwe-nav li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
+.qwe-nav li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>;}
+/*.qwe-nav li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
 
-/* navbar.css nav_part_qwe*/
-.nav div {
-    margin: 0px auto ;
-    padding: 0px;
-    height:50px;
-    width:90%;
-    border-radius:2px 2px 30px 30px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-
-    }
-
-.nav div > ul {
-    padding: 0 30px;
-    background-color:<?php echo get_theme_mod('nav_ul_id','#444'); ?>;
-    border-radius:3px 3px 30px 30px;
-    height:50px;
-}
-.nav div a:link ,.nav div a:visited {
-    color: <?php echo get_theme_mod('nav_a_color_id','#fff'); ?>;
-}
-.nav div a:hover {
-  color:<?php echo get_theme_mod('nav_a_hover_id','#aaa'); ?>;
-  background-color:<?php echo get_theme_mod('nav_a_bg_hover_id','#333'); ?>;
-}
-
-.nav div a {
-    padding: 15px 15px; 
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;
-    border-radius:3px 3px 30px 30px;
-}
-.nav div > ul > li {
-    margin:15px 0;
-    padding: 0px 0px;
-    height:50px;
-    float: left;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-}
-.nav div > ul > li:nth-child(n+4)  {
-    margin:25px 0 ;
-    padding: 0px 5px;
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;
-    border-radius:3px 3px 5px 30px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-
-}
-.nav div > ul > li:hover:nth-child(n+4),.nav div > ul > li:hover:nth-child(n+4) a{
-    background-color:<?php echo get_theme_mod('nav_a_bg_hover_id','#555'); ?>;
-    border-radius:3px 3px 30px 3px;
-}
-
-.nav div > ul > li:nth-child(n+4) >a {
-    padding: 0px 15px;
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;
-    /*border-radius:0px 0px 0px 0px;*/
-}
+.qwe-nav-rtl li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
+.qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>}
+/*.qwe-nav-rtl li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
 
 
-.nav div > ul > li:nth-child(n+4) >a:hover {
-    background-color:<?php echo get_theme_mod('nav_a_bg_hover_id','#555'); ?>;
-    color:<?php echo get_theme_mod('nav_a_hover_id','#eee'); ?>;
-}
+/* 3 indicators */
+
+/*sticky indicator 3 images*/
 
 
-.nav div > ul > li li {
-    margin:50px 0;
-    padding: 0px 0px;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-
-}
-
-.nav div ul > li > ul {
-    margin:15px 0 ;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;
-    position: absolute;
-    left:-9999px;
-    border-radius:5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-}
-.nav div > ul > li:hover > ul {left:auto;}
-.nav div > ul > li > ul > li > ul {position:absolute;left:-9999px;}
-
-.nav div > ul > li > ul > li:hover { }
-.nav div > ul > li > ul > li:hover > a {padding: 10px 200px 10px 20px; }
-.nav div > ul > li > ul > li:hover > ul {left:130px;top:auto;margin-top:-65px; }
-.nav div > ul > li > ul > li > ul > li {}
-
-/*navbar Primary */
-.navbar-fixed-top{top:0;}
-
-
-/*page.css page_part_qwe*/
-.page .rect img {width: 100%;height: auto;}
-
-.page .rect {
-    margin:0 5px;
-    padding: 0 20px;
-    background-color:<?php echo get_theme_mod('page_id','#222'); ?>;
-    border-bottom:1px solid <?php echo get_theme_mod('page_border_id','#fff'); ?>;
-    border-radius: 15px;
-}
-
-.page div.archive{font-size: 16px;padding-left: 20px;color: #fff;text-shadow: 0px 6px 4px #000;}
+.gallerythumContainer input {color:<?php echo get_theme_mod('button_id','#fff');?>;}
 
 
 
-.postedby {
-    margin: 10px 2%;
-    padding: 0 2%;
-    background-color:<?php echo get_theme_mod('postedby_id','#000'); ?>;
-    width:92%;
-    box-shadow:inset 0px -1px 1px #777;
-    display: inline-block;
-}
-.postedby a {margin: 10px;padding:0;float: left;}
-.postedby ul {margin: 0;padding:0;}
 
-.rect .push_button a ,.push_button a:link,.push_button a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-.rect .push_button{ border-top: solid 5px #fff;}
-.rect .push_button a:hover {color:#ccc;}
+/*page*/
 
 
-.rect h1 a{
-       -webkit-text-stroke: 1px black;
-   color:<?php echo get_theme_mod('page_titles_id','#fff'); ?>;
-   text-shadow:
-      -2px -2px 8px #000,  
-      2px -2px 8px #000,
-      -2px 2px 8px #000,
-       2px 2px 8px #000;
-}
+.page div.archive {color: #fff;}
+
+.page .rect .push_button a {color: #fff;}
+
+.page .rect .push_button a:hover {color:#ccc;}
 
 
-/* sidebar.css sidebar_part_qwe*/
+.page .rect h1 a{color:<?php echo get_theme_mod('page_titles_id','#fff'); ?>;}
 
-div.sidebar aside {
-    margin:0 5px;
-    padding: 10px 10px;
-    background-color:<?php echo get_theme_mod('sidebar_id','#222'); ?>;
-    box-shadow: 0px 4px 8px #000;
-}
-.sidebar li.widget {border-bottom:5px solid #fff;}
-.sidebar .widgettitle {
-    color:<?php echo get_theme_mod('sidebar_titles_id','#fff'); ?>;
-   -webkit-text-stroke: 1px black;
-   color: white;
-   text-shadow:
-      -1px -1px 4px #000,  
-      1px -1px 4px #000,
-      -1px 1px 4px #000,
-       1px 1px 4px #000;
-}
-.sidebar select {color: #000;}
-.sidebar input {color: #000;}
-/* new 20151205 */
-
-#searchsubmit {color: #222;}
-#s {color: #222;}
-/* end new 20151205 */
-
+.postedby li , a , span {color:<?php echo get_theme_mod('postedby_txt_id','#fff'); ?>;}
 /****************************************************
  *  Push Button
  *****************************************************/
 .push_button{
-    position:relative;
-    width:70%;
     color:#FFF;
-    display:block;
-    text-decoration:none;
-    margin:0 auto;
     border-radius:5px;
     border:solid 1px #D94E3B;
     background:#cb3b27;
-    text-align:center;
-    padding:20px 30px;
-    
-    -webkit-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    transition: all 0.1s;
-    
+  
     -webkit-box-shadow: 0px 9px 0px #84261a;
         -moz-box-shadow: 0px 9px 0px #84261a;
         box-shadow: 0px 9px 0px #84261a;
 }
+/*****************************************************/
 
 
-/* footer.css fopoter_part_qwe*/
+/*sidebar*/
 
-section.footer1 {
-    margin:5px 2%;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('footer1_id','#222'); ?>;
-    width:96%;
-    float: left;
-    box-shadow: 0px 4px 8px #000;
-}
+.sidebar a {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+/*.sidebar h2 {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}*/
+.sidebar span {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+.sidebar li {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+.sidebar li.widget {border-bottom:5px solid #fff;}
+.sidebar .widgettitle {color:<?php echo get_theme_mod('sidebar_titles_id','#fff'); ?>;}
 
-section.footer1 li.widget {float: left;padding: 30px;}
-
-
-section.footer2 {
-    margin:5px 2%;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('footer2_id','#222'); ?>;
-    width:96%;
-    float: left;
-    box-shadow: 0px 4px 8px #000;
-}
-section.footer2 li.widget {float: left;padding:30px;}
-section.footer2 li.widget:first-child { clear: left;}
-section.footer2 li.widget:last-child { clear: right;}
-
-section.footer3 {
-    margin:5px 2%;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('footer3_id','#222'); ?>;
-    width:96%;
-    float: left;
-    box-shadow: 0px 4px 8px #000;
-}
-section.footer3 li.widget {float: left;padding: 30px;}
-section.footer3 li.widget:first-child {clear:left;}
-
-
-.fl-ri{float: right;}
-footer img {width: 100%;height: 100px; }
+/*important components appear at widget >> search and find more */
+.sidebar select {color: #000;}
+.sidebar input {color: #000;}
+.sidebar #searchsubmit {color: #222;}
+.sidebar #s {color: #222;}
 
 
 
+/* ooopppsss */
+.oops h1 {color:<?php echo get_theme_mod('404_id','#D94E3B;'); ?>;}
 
 
-
-
-/* 404 404_part_qwe*/
-
-.oops h1 {
-    color:#D94E3B;
-    padding: 10px 20px;margin:10px 10px;
-    box-shadow:2px 2px 4px #111;
-    text-shadow:2px 2px 4px #111;
-}
-
-
-
-
-
-
-
-/* sitemap.css sitemap_part_qwe*/
-
-.wrapper{position: relative;width: 100%;}
-img.sitemap {
-    position: absolute;
-    z-index: 1;
-    margin:0 auto;
-    padding: 0;
-    width: 100%;    
-
-}
-img.sitemapback {
-    position: relative;
-    z-index: -1;
-    margin:0 auto;
-    padding: 0;
-    width: 100%;    
-
-}
-
-.maplinks table {
-    z-index: 1;
-    width:98%;
-    position: relative;
-    padding: 0px;margin: 0px auto 20px auto ;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
-    -webkit-border-bottom-right-radius:30px;
-    -webkit-border-bottom-left-radius: 30px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 30px;
-    -moz-border-radius-bottomleft: 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 0px 6px 0px #444,0px -3px 0px #444,0px 20px 15px #111,0px -6px 15px #111;;
-}
-
-.maplinks table tr td {width: 20%;}
-.maplinks table tr {float: none;}
-#gmap{position: relative;z-index: 1;}
-.map {z-index: 2;}
-.tabs {text-align: center;}
-.tabs a {
-    color:#ff0033;
-    box-shadow: 2px 2px 4px #000,-2px -2px 4px #000;
-    margin: 0 auto;
-    padding: 2px 5px;
-    text-align: center;
-    text-shadow:2px 2px 4px #000;
-    background-color:rgba(0,0,0,0.2); 
-}
-.tabs a:hover {
-    box-shadow: 1px 1px 0px #000;
-}
-.description {}    
-.description p {    
-    background-color:rgba(0,0,0,0.3);
-
-    padding: 2% 2%;
-}
-#portfolioID {box-shadow: 2px 2px 0px #000;border-radius: 5px;border: 2px solid #ff0033;text-align: center;color:black;}
-#articlesID {box-shadow: 2px 2px 0px #000;border-radius: 5px;border: 2px solid #ff0033;text-align: center;color:black;}
-#portfolioID {
-    width:60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-#articlesID {
-    width:60%;
-    margin-left: auto;
-    margin-right: auto; }
-
-
-
-
-/* indicator curasul_part_qwe */
-
-.gallerythumContainer {
-    margin:1% 4% 2% 4%;
-    padding: 1% 1%;
-    border-radius: 20px 20px 50px 50px;
-    float: left;
-    width: 90%;
-      -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
-    border: 1px solid #666;
-}
-
-.galleryThumbnil img {
-    margin:10px 2%;
-    padding: 2% 2%;
-    border-radius: 20px 20px 50px 50px;
-    width:92%;
-    float: left;
-      -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
-    border: 1px solid #666;
-     }
-.thumbwrapper{float: left;width: 33%;}
-
-
-
-
-
-/*****************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
-******************************************
+/*
+<?php 
+$bloginfoo=get_bloginfo('template_directory');
+$footerimg='url("'. $bloginfoo . '/images/blur4.png'.'")';
+ ?>
 */
-
-/* media.css media_part_qwe */
-
-/* media_part_lte_768__qwe */
-
-@media (max-width: 768px){
-
-.gallerythumContainer {
-        margin:0px 1%;
-    padding: 1% 1%;
-    border-radius: 0px 0px 0px 0px;
-    float: left;
-    
-      -moz-box-shadow: 0 0 0 #000000;
-   -webkit-box-shadow: 0 0 0 #000000;
-   box-shadow:0 0 0 #000000 ;
-    border: 0px solid #666;
+.footer3-rtl {position: relative;clear:both;
 }
+.footer-img {
+    background:url("https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png");/*<?php echo $footerimg; ?>;*/
+    /*background: linear-gradient(rgba(51% , 86% , 24% , 0.3), rgba(51% , 86% , 24% , 1));*/
 
-    .thumbwrapper {
-    margin:0px 1%;
-    padding: 1% 1%;
-    border-radius: 20px 20px 50px 50px;
-    float: left;
-    width:45%;
-      -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
-    border: 1px solid #666;
-     }
+    background-size: cover, cover;
+    width:100%;
+    height: 200px;
+    /*position: relative;*/
+    /*background: rgba(0,0,0,0.6);*/
+    /*opacity: 0.3;*/
+    display: <?php echo get_theme_mod('disable_id','') ?>;
+}   
 
-}
+</style>    
 
-/* media_part_lte_500__qwe */
-
-@media (max-width: 500px){
-    .thumbwrapper {
-    margin:10px 1%;
-    padding: 1% 1%;
-    border-radius: 20px 20px 50px 50px;
-    width:92%;
-      -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
-    border: 1px solid #666;
-     }
-
-}
-.gallerythumContainer input {
-    margin-left: 4%;
-    /*margin-bottom: 0;*/
-           -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:0 5px 5px #000000 , 0 9px 5px #000000;
-    border: 1px solid #666;
-    color: #fff;
-    text-align: center;
-    background-color: #222;
-    width:30%;
-    height: 25px;
-    border-radius: 10px;
-}
-.des p{
-    margin:0px 4%;
-    padding: 0% 2%;
-    
-}
-
-
-/* media_part_lte_992__qwe */
-
-@media (max-width: 992px){
-.galleryPreviewarrow a {width: 60px;height: 60px;line-height: 60px;top:110px;}
-.gallerydescription > div{top:55%;}
-.gallerydescription > div a{font-size:80%;line-height: 15px;text-decoration: none;}
-.gallerydescription > div input{font-size:80%;}
-
-}
-
-/* media_part_lte_768__qwe */
-
-
-@media (max-width: 750px){
-.galleryPreviewarrow a {width: 50px;height: 50px;line-height: 50px;top:95px;}
-.gallerydescription > div{top:53%;}
-.gallerydescription > div a{font-size:75%;line-height: 14px;text-decoration: none;}
-.gallerydescription > div input{font-size:70%;margin-top: 0;}
-section.site-title p {font-size: 100%; }/*section.site-title p a {font-size: 100%; }*/
-section.site-title a {font-size: 100%;padding: 0 10px;}
-}
-
-
-@media (max-width: 640px){
-.galleryPreviewarrow a {width: 50px;height: 50px;line-height: 50px;top:95px;}
-.gallerydescription > div{top:45%;}
-.gallerydescription > div a{font-size:80%;line-height: 14px;text-decoration: none;}
-.gallerydescription > div input{font-size:70%; display: none;}
-section.site-title p {font-size: 100%; } /*section.site-title p a {font-size: 100%; }*/ 
-section.site-title a {font-size: 100%;padding: 0 10px;}
-}
-
-@media (max-width: 500px){
-section.site-title p {font-size: 80%;}
-section.site-title a {font-size: 80%;padding: 0 10px;}
-.galleryPreviewarrow a {top:40px;font-size: 80%;width: 40px;height: 40px;line-height: 40px;}
-.galleryPreviewarrow a:hover {top:60px;}
-.gallerydescription > div{top:40%;}
-.gallerydescription > div a{font-size:70%;line-height: 10px;text-decoration: none;}
-.gallerydescription > div input{font-size:60%;display: none;}
-.galleryNavigationBullets a{width: 15px;height: 15px;}
-
-.nav {}
-.cut {display: none;}   
-
-}
-
-@media (max-width: 340px){
-section.site-title p {font-size: 70%;}
-section.site-title a {font-size: 70%;padding: 0 10px;text-shadow:0 0 0;}
-.galleryNavigationBullets a{width: 10px;height: 10px;text-shadow:0 0 0;}
-
-.gallerydescription > div {
-    /*display: none;*/
-    margin: 0;
-    padding:0 5% 0 5%;
-    background-color:rgba(0, 0, 0, 0.4);
-    position: absolute;
-    border-radius: 0px 0px 30px 30px;
-    top:40%;
-    left:5%;
-    width:80%;
-
-}
-
-.gallerydescription > div a  {display: block;font-size:70%;text-decoration: none;}
-.gallerydescription > div input{font-size:60%;display: none;}
-
-}
-
-
-/* media_part_lte_1200__qwe */
-
-
-@media (max-width: 1200px){
-
-}
-
-
-/* media_part_lte_500__qwe */
-
-
-@media (max-width: 747px){
-.page h1 {margin-top:60px;}
-
-/* navbar.css*/
-.nav div {
-    margin: 0px auto ;
-    padding: 0px;
-    width: 30%; 
-position: absolute;
-
-    }
-
-.nav div > ul {
-    padding: 0;
-    background-color:<?php echo get_theme_mod('nav_ul_id','#444'); ?>;
-    border-radius:3px 3px 30px 30px;
-    width: 100%;
-}
-.nav div > ul:hover li{display: block;margin-top: 0;}
-
-
-.nav div > ul > li:first-child{
-display: inline-block;
-}
-
-.nav div a {
-    padding: 0px 15px; 
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;;
-}
-.nav div > ul > li {
-    margin: 0;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-    height:50px;
-    width: 100%;
-    float: left;
-
-    display: none;
-
-    border-radius:3px 3px 30px 5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-
-}
-
-.nav div > ul > li >a {
-    padding: 0px 15px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-}
-.nav div > ul > li:nth-child(n+4)  {
-    margin: 0;
-    padding: 0px 5px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-    border-radius:3px 3px 5px 30px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-
-}
-.nav div > ul > li:nth-child(n+4) >a {
-    padding: 0px 15px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-}
-
-.nav div > ul > li >li {
-    margin:0px 0;
-    padding: 0px 0px;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
-
-}
-
-.nav div ul > li > ul {
-    margin:0px 0 ;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_ul_id','#444'); ?>;
-    position: absolute;
-    left:-9999px;
-    border-radius:5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-}
-.nav div > ul > li:hover > ul {left:30%;}
-.nav div > ul > li > ul > li > ul {position:absolute;left:-9999px;}
-
-.nav div > ul > li > ul > li:hover {}
-.nav div > ul > li > ul > li:hover > a {padding: 0px 200px 10px 20px; }
-.nav div > ul > li > ul > li:hover > ul {left:130px;top:auto;margin-top:-65px; }
-.nav div > ul > li > ul > li > ul > li {}
-
-}
-
-/* custome_part_qwe */
-
-.box_shadow_qwe{box-shadow:1px 1px 12px #000;}
-.box_shadow_qwe a:hover{box-shadow:0px 0px 0px #000,0px 0px 0px #000;}
-
-    </style>
     <?php
+  
 }
 
 add_action('wp_head','qwe_select_css' );
+
+
 
 ?>

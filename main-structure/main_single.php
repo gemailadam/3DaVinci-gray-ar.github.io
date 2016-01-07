@@ -39,15 +39,18 @@
 
 							?>	
 
-							<span class="">
+							<span class="qwe-prev-post">
 								<?php previous_post_link(); ?>
 							</span>
 
-							<span class="fl-ri">
+							<span class="qwe-next-post">
 								
 								<?php next_post_link(); ?>
 							</span>  
-
-			<?php // get_template_part('/page-templates/comments.php' ); ?>
-			<?php // comments_template( 'page-templates/comments.php' ); ?> 
-			<?php comment_form( ); ?> 
+							
+							<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
+								<div class="qwe-comments">
+								<?php comments_template(true, ''); ?>
+								</div>
+						    </div>
+						    

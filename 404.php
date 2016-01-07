@@ -20,12 +20,12 @@ The 404 Not Found template. Used when WordPress cannot find a post or page that 
 echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" />';
  ?>
 
-		<?php get_template_part('page-templates/head_html'); ?>
+		<?php get_template_part('main-structure/head_html'); ?>
 
 </head>
 <body <?php body_class( ); ?> >
 	<div class="container">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
 		<!-- 1) header-->
 		<header>
@@ -38,8 +38,34 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 						<!-- yon add a function to get user searched page to redirect to google with the same name -->
+
+
+					<?php 
+					 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+
+
+					if ($qwe_dir=='ltr'){
+					 ?>
+
+
 						<h1>Oops The Page You Request Is not Found , You will be redirected To Home Page after 5 secands , or click google button to search for this missing page at google cache</h1> 
 						<a href="http://www.google.com/"><button style="color:#fff;background:orange;width:100px;height:50px;padding:10px;margin:10px;box-shadow:4px 4px 8px #000;">Google</button></a>
+					
+										
+					<?php 
+					}
+					elseif($qwe_dir=='rtl')
+						{ 
+					?>
+
+						<h1>الصفحة التي تبحث عنها ليسة موجوده , وسوف يتم توجيهك الى الصفحه الرئيسيه بعد 5 ثواني , او يمكنك الضغط على زر جوجل للبحث عن هذه الصفحه المفقوده في مخازن جوجل للصفحات المفقوده او الممسوحه</h1> 
+						<a href="http://www.google.com/"><button style="color:#fff;background:orange;width:100px;height:50px;padding:10px;margin:10px;box-shadow:4px 4px 8px #000;">جوجل</button></a>
+
+
+					<?php } ?>
+
+
+
 					</div>
 				</div>
 			</div>   
@@ -54,7 +80,7 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 								<!-- <h1 style="color:#2288BD;"><u>HOME</u></h1> -->
 
 
-									<?php //get_template_part('page-templates/main_index'); ?>
+									<?php //get_template_part('main-structure/main_index'); ?>
 								
 							</div>	
 
@@ -73,7 +99,6 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 				<!--End Row -->
 			</div>
 			<!--End main -->
-
 			<!-- 3 ) footer-->
 			<footer>
 				<div class="row">
@@ -86,7 +111,7 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 		</div>	
 		</div>
 		<!-- End Container-->
-			<?php get_template_part('page-templates/script'); ?>
+			<?php get_template_part('main-structure/script'); ?>
 
 	</body>
 	</html>

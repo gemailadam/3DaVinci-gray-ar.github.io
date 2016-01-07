@@ -15,17 +15,12 @@ Template Name: 3 indicator images & links
 <head>
 
 
-		<?php get_template_part('page-templates/head_html'); ?>
-<style>
+		<?php get_template_part('main-structure/head_html'); ?>
 
-.one-image-only{display: none;}
-.widget-banner {display: none;}
-</style>
 </head>
 <body <?php body_class( ); ?> >
 <div class="container ">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
+	<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 		<!-- 1) header-->
 		<header>
 			<div class="row">
@@ -102,7 +97,7 @@ Template Name: 3 indicator images & links
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
 							
 
-						<?php get_template_part('page-templates/main_page'); ?>
+						<?php get_template_part('main-structure/main_page'); ?>
 
 						</div>
 					</div>
@@ -134,7 +129,7 @@ Template Name: 3 indicator images & links
 </div>
 <!-- End Container-->
 	
-	<?php get_template_part('page-templates/script'); ?>
+	<?php get_template_part('main-structure/script'); ?>
 
 	</body>
 	</html>

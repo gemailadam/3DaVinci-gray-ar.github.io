@@ -1,5 +1,5 @@
 /**
-* Theme Name: 3DaVinci-gray-ar
+* Theme Name: 3DaVinci-one
 * Theme URI: http://inspiration-inspection.ml/3DaVinci 
 * Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
 * Version: 1.0.0
@@ -7,16 +7,122 @@
 * Author URI: http://inspiration-inspection.ml/adam-curriculum-vitae/
 * Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
 * 
-* Copyright: (c) 2015 Hesham (adam), Giza, Egypt
+* Copyright: (c) 2016 Hesham (adam), Giza, Egypt , tel : 201021789775
 * License: GNU General Public License v2.0 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
-.comment-form-comment textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
-.comment-form-comment label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
-.form-submit input{box-shadow: 5px 5px 8px #000;color: #000;}
-#reply-title {text-shadow: 5px 5px 8px #000;}
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+.bypostauthor {}
+
+/* END WordPress Core */
+
 
 .clearfix:after {
      visibility: hidden;
@@ -118,7 +224,7 @@ p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
 h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
 h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
 
-
+/*.contain {background-color: green;}*/
 
 /*
 *****************       
@@ -317,8 +423,10 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
     display: none;
 }
 
+
 .galleryNavigationBullets a {
-    background-color: #ddd;
+    background-color: #fff;
+    box-shadow:inset 3px 3px 8px #000;
     width:20px;
     height: 20px;
     display: inline-block;
@@ -327,7 +435,8 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
 }
 
 .galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {
-    background-color:#555;
+    background-color: #222;
+    box-shadow: 3px 3px 8px #000;
 }
 
 /*for static image page template*/
@@ -385,6 +494,29 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
 }
 
 
+/*strange module place*/
+.qwe-banner img {width: 100%;height: 100px; }
+
+.qwe-banner ul, .qwe-banner li {list-style: none;padding: 0;margin: 0;}/* search for any problem may appear in future */
+
+
+section.qwe-banner {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer1_id','#222'); ?>;*/
+    width:96%;
+    float: left;
+    box-shadow: 0px 4px 8px #000;
+}
+
+section.qwe-banner li.widget {float: left;padding: 30px;}
+section.qwe-banner li.widget:first-child { clear: left;}
+section.qwe-banner li.widget:last-child { clear: right;}
+
+
+
+
+
 /*
 ***********************
 **     **********   ***
@@ -418,7 +550,11 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
 .qwe-nav li:nth-child(even){padding:11px 0 10px 0;margin-top: 15px;}
 
 .qwe-nav li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
-.qwe-nav li  { }
+
+.qwe-nav li a {}
+.qwe-nav li a:hover {}
+.qwe-nav li a:visited {} 
+
 .qwe-nav > nav > div > ul > li li {position: relative;}
 
 /*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
@@ -426,9 +562,9 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
 
 /*0 level*/
 .qwe-nav > nav > div > ul > li {float:left;}
-.qwe-nav > nav > div > ul > li:nth-child(odd)  {float:left;background-color:orange;border-radius: 0 0 0 20px; }
+.qwe-nav > nav > div > ul > li:nth-child(odd)  {/*float:left;*/background-color:orange;border-radius: 0 0 0 20px; }
 .qwe-nav > nav > div > ul > li:nth-child(odd) > a {border-radius: 0 0 0 20px; }
-.qwe-nav > nav > div > ul > li:nth-child(even) {float:left;background-color:white;border-radius: 0 0 20px 0; }
+.qwe-nav > nav > div > ul > li:nth-child(even) {/*float:left;*/background-color:white;border-radius: 0 0 20px 0; }
 .qwe-nav > nav > div > ul > li:nth-child(even) > a{border-radius: 0 0 20px 0 ; }
 /*.qwe-nav > nav > div > ul > li:first-child > a {border-radius: 0 0 0 20px;}*/
 /*.qwe-nav > nav > div > ul > li:last-child > a  {border-radius: 0 0 20px 0;}*/
@@ -563,126 +699,289 @@ position: absolute;width:150px;
 .qwe-nav > nav > div > ul > li >       ul  > li > a {background-color:#444;}
 
 
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-/**************************************************/
-
-
-/*.page h1 {margin-top:60px;}*/
-
-/* navbar.css*/
-
-/*.qwe-nav div {
-    margin: 0px auto ;
-    padding: 0px;
-    width: 30%; 
-position: absolute;
-
-    }
-
-.qwe-nav div > ul {
-    padding: 0;
-    background-color:<?php echo get_theme_mod('nav_ul_id','#444'); ?>;
-    border-radius:3px 3px 30px 30px;
-    width: 100%;
-}
-.qwe-nav div > ul:hover li{display: block;margin-top: 0;}
-
-
-.qwe-nav div > ul > li:first-child{
-display: inline-block;
 }
 
-.qwe-nav div a {
-    padding: 0px 15px; 
-    background-color:<?php echo get_theme_mod('nav_a_id','#444'); ?>;;
+
+/*arabic nav */
+
+/*common in all levels*/
+.qwe-nav-rtl > nav > div > ul {
+  margin-top:0; margin-right:5%;margin-left:5%;float: none;width:90%;/*background-color: #333;*/
+
 }
-.qwe-nav div > ul > li {
-    margin: 0;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-    height:50px;
-    width: 100%;
+
+.qwe-nav-rtl > nav > div > ul  li  {list-style: none;}
+
+.qwe-nav-rtl li:nth-child(odd) {padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav-rtl li:nth-child(even){padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav-rtl li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
+
+.qwe-nav-rtl li a {}
+.qwe-nav-rtl li a:hover {}
+.qwe-nav-rtl li a:visited {} 
+
+
+.qwe-nav-rtl > nav > div > ul > li li {position: relative;}
+
+/*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
+
+
+/*0 level*/
+.qwe-nav-rtl > nav > div > ul > li {float:right;}
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd)  {/*float:left;*/background-color:orange;border-radius: 0 0 0 20px; }
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd) > a {border-radius: 0 0 0 20px; }
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) {/*float:left;*/background-color:white;border-radius: 0 0 20px 0; }
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) > a{border-radius: 0 0 20px 0 ; }
+.qwe-nav-rtl > nav > div > ul > li > a {border-radius: 0 0 20px 0;background-color:#444;}
+.qwe-nav-rtl > nav > div > ul > li > a {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+
+/* 1st level */
+/*display:none problem is the next step to show menu because i will use display:block and that make problems */
+.qwe-nav-rtl > nav > div > ul > li >       ul {margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav-rtl > nav > div > ul > li:hover > ul {right:auto;}/* :nth-child(odd) */
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li     {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li     {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li > a {background-color:#444;}
+
+
+
+/* 2nd level */
+.qwe-nav-rtl > nav > div > ul > li > ul > li>        ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+/* 3rd level */
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+/*4th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li >       ul {display:inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+/*5th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li >       ul > li > a {background-color:#444;}
+
+
+
+/*6th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+/*7th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+/*8th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+
+/*9th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+
+/*10th level*/
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:hover > ul {right:auto;top:-15px;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {margin: 0;padding: 0;background-color:#444;border-top:solid 1px white;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {background-color:#444;}
+
+/*arabic nav*/
+
+@media (max-width: 747px){
+
+.qwe-nav-rtl > nav {position: relative;}
+.qwe-nav-rtl > nav > div > ul {
+  margin-top:0; margin-right:5%;margin-left:5%;float: none;width:90%;/*background-color: #333;*/
+position: absolute;width:150px;
+
+}
+
+.qwe-nav-rtl > nav > div > ul  li  {list-style: none;}
+
+.qwe-nav-rtl li:nth-child(odd) {padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav-rtl li:nth-child(even){padding:11px 0 10px 0;margin-top: 15px;}
+
+.qwe-nav-rtl li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
+.qwe-nav-rtl li  { }
+.qwe-nav-rtl > nav > div > ul > li li {/*position: relative;*/}
+
+/*.qwe-nav > nav > div > ul > li:nth-child(10) {float: none;}*/
+
+
+/*0 level*/
+.qwe-nav-rtl > nav > div > ul > li {display: none;}
+.qwe-nav-rtl > nav > div > ul > li:first-child {display:block;}
+.qwe-nav-rtl > nav > div > ul:hover:first-child > li {display: block;}
+
+.qwe-nav-rtl > nav > div > ul {display: inline-block;}
+.qwe-nav-rtl > nav > div > ul > li {float:none;}
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd)  {float:none;background: transparent; border-radius: 0 0 0 20px; }
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd) > a {border-radius: 0 0 0 20px; border-top:1px solid orange;}
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) {float:none;background: transparent;border-radius: 0 0 20px 0; }
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) > a{border-radius: 0 0 20px 0 ; border-top:1px solid white;}
+.qwe-nav-rtl > nav > div > ul > li > a {border-radius: 0 0 20px 0;background-color:#444;}
+.qwe-nav-rtl > nav > div > ul > li > a {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+
+
+/* 1st level */
+/*display:none problem is the next step to show menu because i will use display:block and that make problems */
+.qwe-nav-rtl > nav > div > ul > li >       ul {display: inline-block;margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav-rtl > nav > div > ul > li:hover > ul {right:auto;}/* :nth-child(odd) */
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li     {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li     {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
+.qwe-nav-rtl > nav > div > ul > li >       ul  > li > a {background-color:#444;}
+
+
+/**************************************************/
+/**************************************************/
+}
+
+
+/*sticky indicator 3 images*/
+
+/* indicator curasul_part_qwe */
+
+.gallerythumContainer {
+    margin:1% 4% 2% 4%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
     float: left;
+    width: 90%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+}
 
-    display: none;
+.galleryThumbnil img {
+    margin:10px 2%;
+    padding: 2% 2%;
+    border-radius: 20px 20px 50px 50px;
+    width:92%;
+    float: left;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
+.thumbwrapper{float: left;width: 33%;}
 
-    border-radius:3px 3px 30px 5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+
+
+.gallerythumContainer input {
+    margin-left: 4%;
+    /*margin-bottom: 0;*/
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:0 5px 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
+    width:30%;
+    height: 25px;
+    border-radius: 10px;
+}
+.des p{
+    margin:0px 4%;
+    padding: 0% 2%;
+    
+}
+
+@media (max-width: 768px){
+
+.gallerythumContainer {
+        margin:0px 1%;
+    padding: 1% 1%;
+    border-radius: 0px 0px 0px 0px;
+    float: left;
+    
+      -moz-box-shadow: 0 0 0 #000000;
+   -webkit-box-shadow: 0 0 0 #000000;
+   box-shadow:0 0 0 #000000 ;
+    border: 0px solid #666;
+}
+
+    .thumbwrapper {
+    margin:0px 1%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
+    float: left;
+    width:45%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
 
 }
 
-.qwe-nav div > ul > li >a {
-    padding: 0px 15px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-}
-.qwe-nav div > ul > li:nth-child(n+4)  {
-    margin: 0;
-    padding: 0px 5px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-    border-radius:3px 3px 5px 30px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+/* media_part_lte_500__qwe */
 
-}
-.qwe-nav div > ul > li:nth-child(n+4) >a {
-    padding: 0px 15px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_id','#444'); ?>;
-}
+@media (max-width: 500px){
 
-.qwe-nav div > ul > li >li {
-    margin:0px 0;
-    padding: 0px 0px;
-    text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+    .thumbwrapper {
+    margin:10px 1%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
+    width:92%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
+
 
 }
 
-.qwe-nav div ul > li > ul {
-    margin:0px 0 ;
-    padding: 0px 0px;
-    background-color:<?php echo get_theme_mod('nav_ul_li_ul_id','#444'); ?>;
-    position: absolute;
-    left:-9999px;
-    border-radius:5px;
-    border:solid 1px #ccc;
-    box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-}
-.qwe-nav div > ul > li:hover > ul {left:30%;}
-.qwe-nav div > ul > li > ul > li > ul {position:absolute;left:-9999px;}
 
-.qwe-nav div > ul > li > ul > li:hover {}
-.qwe-nav div > ul > li > ul > li:hover > a {padding: 0px 200px 10px 20px; }
-.qwe-nav div > ul > li > ul > li:hover > ul {left:130px;top:auto;margin-top:-65px; }
-.qwe-nav div > ul > li > ul > li > ul > li {}
-*/
-}
 
 
 /*main*/
 
 /*add col-........ to main for more stable work*/
 
-.page {margin-top: 50px;}
 
 /*page*/
 
-/*for images , to not exceed page width*/
+/*Very Important for images , to not exceed page width [ Wordpress test ]*/
 .page .rect img {max-width:100%;height:auto;overflow: auto;}
 .page .rect div {max-width:100%;overflow: auto;}
+
+
+.page {margin-top: 50px;}
 
 .page .rect {
     margin:0 1%;
@@ -739,6 +1038,41 @@ display: inline-block;
         box-shadow: 0px 9px 0px #84261a;
 }
 /*****************************************************/
+
+
+.qwe-next-post {float: right;}
+
+.qwe-prev-post {}
+
+
+/* Comments */
+.qwe-comments{padding: 2%;}
+.qwe-comments #comments {
+         text-shadow:
+          -1px -1px 4px #000,  
+          1px -1px 4px #000,
+          -1px 1px 4px #000,
+           1px 1px 4px #000;
+}
+.qwe-comments #respond {
+         text-shadow:
+          -1px -1px 4px #000,  
+          1px -1px 4px #000,
+          -1px 1px 4px #000,
+           1px 1px 4px #000;
+}
+
+.qwe-comments ol {box-shadow:inset 2px 2px 6px #000;padding: 1% 3%;}
+.qwe-comments li:nth-child(odd) {padding:2%;border-radius:0 0 4% 4%;margin:1%; border-bottom: 5px solid #fff; background:#333;}
+.qwe-comments li:nth-child(even) {padding: 2%;border-radius:0 0 4% 4%;margin:1%;  border-bottom: 5px solid #fff; background:#555;}
+
+/* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
+#commentform textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
+#commentform label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
+#commentform input{box-shadow: 5px 5px 8px #000;color: #000;}
+#reply-title {text-shadow: 5px 5px 8px #000;}
+
+
 
 
 /*sidebar*/
@@ -815,7 +1149,45 @@ section.footer3 li.widget {float: left;padding: 30px;}
 section.footer3 li.widget:first-child {clear:left;}
 
 
-/*.fl-ri{float: right;}*/
+/*arabic footer*/
+
+section.footer1-rtl {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer1_id','#222'); ?>;*/
+    width:96%;
+    float: right;
+    box-shadow: 0px 4px 8px #000;
+}
+
+section.footer1-rtl li.widget {float: right;padding: 30px;}
 
 
+section.footer2-rtl {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer2_id','#222'); ?>;*/
+    width:96%;
+    float: right;
+    box-shadow: 0px 4px 8px #000;
+}
+section.footer2-rtl li.widget {float: right;padding:30px;}
+section.footer2-rtl li.widget:first-child { clear: left;}
+section.footer2-rtl li.widget:last-child { clear: right;}
+
+section.footer3-rtl {
+    margin:1% 2%;
+    padding: 0px;
+    background-color:#222;/*<?php echo get_theme_mod('footer3_id','#222'); ?>;*/
+    width:96%;
+    float: right;
+    box-shadow: 0px 4px 8px #000;
+}
+section.footer3-rtl li.widget {float: right;padding: 30px;}
+section.footer3-rtl li.widget:first-child {clear:left;}
+
+
+.oops h1 {
+    color:#D94E3B;
+}
 

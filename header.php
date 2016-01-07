@@ -98,57 +98,108 @@
  			?>
  		</div>
 
- 		<div class="galleryPreviewarrow">
- 			<a class="previousslidearrow row-static-1" href="#" >&lt;</a>
- 			<a href="#" class="nextslidearrow row-static-1">&gt;</a>
- 		</div>
- 	</div>
- 	<div class="gallerydescription">
+
  		<?php 
+ 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+
+ 		if ($qwe_dir=='ltr'){
+ 			?>
+
+ 			<div class="galleryPreviewarrow">
+ 				<a class="previousslidearrow row-static-1" href="#" >&lt;</a>
+ 				<a href="#" class="nextslidearrow row-static-1">&gt;</a>
+ 			</div>
+
+ 			<?php 
+ 		}
+ 		elseif($qwe_dir=='rtl')
+ 		{ 
+ 			?>
+
+ 			<div class="galleryPreviewarrow">
+ 				<a class="previousslidearrow row-static-1" href="#" >&gt;</a>
+ 				<a href="#" class="nextslidearrow row-static-1">&lt;</a>
+ 			</div>
+
+
+ 			<?php } ?>
+
+ 		</div>
+ 		<div class="gallerydescription">
+ 			<?php 
 			// for ($x=1; $x <=$imageTotal ; $x++) { 
 				//echo '<div class="description'.$x.'"><a>'.$description[$x].'</a><br/><input type="submit" name="button'.$x.'" value="';
- 		echo '<div class="description1"><div class="desbg"><a href="';echo get_theme_mod('text_description_link1_id','');echo '">';echo get_theme_mod('description1_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link1_id','');echo '"><input type="submit" onClick="" name="button1" value="';echo get_theme_mod( 'button1_id','اضغط 1' );echo '"/></a></div>';
- 		echo '<div class="description2"><div class="desbg"><a href="';echo get_theme_mod('text_description_link2_id','');echo '">';echo get_theme_mod('description2_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link2_id','');echo '"><input type="submit" onClick="" name="button2" value="';echo get_theme_mod( 'button2_id','اضغط 2' );echo '"/></a></div>';
- 		echo '<div class="description3"><div class="desbg"><a href="';echo get_theme_mod('text_description_link3_id','');echo '">';echo get_theme_mod('description3_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link3_id','');echo '"><input type="submit" onClick="" name="button3" value="';echo get_theme_mod( 'button3_id','اضغط 3' );echo '"/></a></div>';
- 		echo '<div class="description4"><div class="desbg"><a href="';echo get_theme_mod('text_description_link4_id','');echo '">';echo get_theme_mod('description4_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link4_id','');echo '"><input type="submit" onClick="" name="button4" value="';echo get_theme_mod( 'button4_id','اضغط 4' );echo '"/></a></div>';
- 		echo '<div class="description5"><div class="desbg"><a href="';echo get_theme_mod('text_description_link5_id','');echo '">';echo get_theme_mod('description5_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link5_id','');echo '"><input type="submit" onClick="" name="button5" value="';echo get_theme_mod( 'button5_id','اضغط 5' );echo '"/></a></div>';
- 		echo '<div class="description6"><div class="desbg"><a href="';echo get_theme_mod('text_description_link6_id','');echo '">';echo get_theme_mod('description6_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link6_id','');echo '"><input type="submit" onClick="" name="button6" value="';echo get_theme_mod( 'button6_id','اضغط 6' );echo '"/></a></div>';
- 		echo '<div class="description7"><div class="desbg"><a href="';echo get_theme_mod('text_description_link7_id','');echo '">';echo get_theme_mod('description7_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link7_id','');echo '"><input type="submit" onClick="" name="button7" value="';echo get_theme_mod( 'button7_id','اضغط 7' );echo '"/></a></div>';
- 		echo '<div class="description8"><div class="desbg"><a href="';echo get_theme_mod('text_description_link8_id','');echo '">';echo get_theme_mod('description8_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link8_id','');echo '"><input type="submit" onClick="" name="button8" value="';echo get_theme_mod( 'button8_id','اضغط 8' );echo '"/></a></div>';
+ 			echo '<div class="description1"><div class="desbg"><a href="';echo get_theme_mod('text_description_link1_id','');echo '">';echo get_theme_mod('description1_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link1_id','');echo '"><input type="submit" onClick="" name="button1" value="';echo get_theme_mod( 'button1_id','اضغط 1' );echo '"/></a></div>';
+ 			echo '<div class="description2"><div class="desbg"><a href="';echo get_theme_mod('text_description_link2_id','');echo '">';echo get_theme_mod('description2_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link2_id','');echo '"><input type="submit" onClick="" name="button2" value="';echo get_theme_mod( 'button2_id','اضغط 2' );echo '"/></a></div>';
+ 			echo '<div class="description3"><div class="desbg"><a href="';echo get_theme_mod('text_description_link3_id','');echo '">';echo get_theme_mod('description3_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link3_id','');echo '"><input type="submit" onClick="" name="button3" value="';echo get_theme_mod( 'button3_id','اضغط 3' );echo '"/></a></div>';
+ 			echo '<div class="description4"><div class="desbg"><a href="';echo get_theme_mod('text_description_link4_id','');echo '">';echo get_theme_mod('description4_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link4_id','');echo '"><input type="submit" onClick="" name="button4" value="';echo get_theme_mod( 'button4_id','اضغط 4' );echo '"/></a></div>';
+ 			echo '<div class="description5"><div class="desbg"><a href="';echo get_theme_mod('text_description_link5_id','');echo '">';echo get_theme_mod('description5_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link5_id','');echo '"><input type="submit" onClick="" name="button5" value="';echo get_theme_mod( 'button5_id','اضغط 5' );echo '"/></a></div>';
+ 			echo '<div class="description6"><div class="desbg"><a href="';echo get_theme_mod('text_description_link6_id','');echo '">';echo get_theme_mod('description6_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link6_id','');echo '"><input type="submit" onClick="" name="button6" value="';echo get_theme_mod( 'button6_id','اضغط 6' );echo '"/></a></div>';
+ 			echo '<div class="description7"><div class="desbg"><a href="';echo get_theme_mod('text_description_link7_id','');echo '">';echo get_theme_mod('description7_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link7_id','');echo '"><input type="submit" onClick="" name="button7" value="';echo get_theme_mod( 'button7_id','اضغط 7' );echo '"/></a></div>';
+ 			echo '<div class="description8"><div class="desbg"><a href="';echo get_theme_mod('text_description_link8_id','');echo '">';echo get_theme_mod('description8_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link8_id','');echo '"><input type="submit" onClick="" name="button8" value="';echo get_theme_mod( 'button8_id','اضغط 8' );echo '"/></a></div>';
 
 			// }
- 		?>
- 	</div>	
- 	<!--img id="shadow" src="<?php bloginfo('template_directory'); ?>/images/shadow.gif" alt=""-->
+ 			?>
+ 		</div>	
+ 		<!--img id="shadow" src="<?php bloginfo('template_directory'); ?>/images/shadow.gif" alt=""-->
 
- 	<div class="galleryNavigationBullets">
- 		<?php 
- 		for ($b=1; $b <=$imageTotal ; $b++) { 
- 			echo '<a href="javascript: changeimage('.$b.')" class="galleryBullets'.$b.'"><span>Bullet</span></a>';			 			
- 		}
- 		?>
+ 		<div class="galleryNavigationBullets">
+ 			<?php 
+
+ 			if ($qwe_dir=='ltr'){
+ 				for ($b=1; $b <=$imageTotal ; $b++) { 
+ 					echo '<a href="javascript: changeimage('.$b.')" class="galleryBullets'.$b.'"><span>Bullet</span></a>';			 			
+ 				}
+ 			}
+ 			elseif($qwe_dir=='rtl'){
+ 				for ($b=8; $b >=1 ; $b--) { 
+ 					echo '<a href="javascript: changeimage('.$b.')" class="galleryBullets'.$b.'"><span>Bullet</span></a>';			 			
+ 				}
+ 			} 
+
+ 			?>
+
+
+ 		</div>
+
  	</div>
-
- </div>
-</section>
+ </section>
 
 
 
-			<!--img id="btn" src="<?php bloginfo('template_directory'); ?>/images/btn.png" alt="" usemap="#planetmap"-->
-<div class="row-xs-5 row-lg-5 row-md-5 row-sm-5 row-vs-5"></div> 
-<!-- <div class="clearfix"></div> -->
-<map name="planetmap">
-  <area class="circlarrow" shape="poly" coords="0,0,0,150,75,75" href="#" alt="Sun" onmouseover="this.style.Color='#FF7f00';" onmouseout="this.blur();">
-  <area class="circrarrow" shape="poly" coords="150,150,150,0,75,75" href="#" alt="Mercury" onmouseover="this.focus();this.style.backgroundColor='#00FF00';" onmouseout="this.blur();">
-  <area class="circtarrow" shape="poly" coords="150,0,150,150,75,75" href="venus.htm" alt="Venus">
-  <area class="circbarrow" shape="poly" coords="0,0,0,1500,75,75" href="venus.htm" alt="Venus">
-</map> 
-<br/>
-<div class="row">
-<section class="qwe-nav row col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12 " >
-	<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
-</section>
-</div>
-<br/>
-<br/>
+ <!--img id="btn" src="<?php bloginfo('template_directory'); ?>/images/btn.png" alt="" usemap="#planetmap"-->
+ <div class="row-xs-5 row-lg-5 row-md-5 row-sm-5 row-vs-5"></div> 
+ <!-- <div class="clearfix"></div> -->
+ <br/>
+ 
+
+ 	<div class="row">
+
+ 	<?php 
+
+ 	if ($qwe_dir=='ltr'){
+ 		?>
+
+ 		<section class="qwe-nav row col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12 " >
+ 			<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
+
+ 		</section>
+
+ 		<?php 
+ 	}
+ 	elseif($qwe_dir=='rtl')
+ 	{ 
+ 		?>
+
+ 		<section class="qwe-nav-rtl row col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12 " >
+ 			<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
+
+ 		</section>
+
+
+ 		<?php } ?>
+
+ 	</div>
+ 	<br/>
+ 	<br/>
 
