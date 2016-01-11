@@ -23,8 +23,9 @@
 							echo '">  ';
 							the_date('F Y');
 							echo '</a>';
-
 							the_category();
+							echo "<a> , Tags :</a>";
+							the_tags();							
 							echo '<br/>';
 
 							echo '</div>';

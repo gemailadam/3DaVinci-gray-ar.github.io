@@ -41,7 +41,7 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 
 
 					<?php 
-					 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+					$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 
 					if ($qwe_dir=='ltr'){
@@ -72,6 +72,8 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 			<!-- 2 ) main -->
 			<div class="main">
 				<div class="row">
+				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+
 					<!-- 2-1 ) page part -->
 					<div class="page">
 						<div class="col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
@@ -89,23 +91,19 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 					
 					<!-- 2-2 ) sidebar part if you want -->
 					<div class="sidebar">
-						<div class="col-xs-3 col-lg-3 col-md-12 col-sm-12 col-vs-12">
 							<?php get_sidebar(); ?>
-							<br/>
-						</div>
 					</div>
 
+				</div>
+				<!-- end columns -->
 				</div>
 				<!--End Row -->
 			</div>
 			<!--End main -->
 			<!-- 3 ) footer-->
 			<footer>
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 						<?php get_footer(); ?>
-					</div>
-				</div>
+
 			</footer>
 			<!-- End footer-->
 		</div>	

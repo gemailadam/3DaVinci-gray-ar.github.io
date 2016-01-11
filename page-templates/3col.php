@@ -25,11 +25,7 @@
 	<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 	<!-- 1) header-->
 	<header>
-		<div class="row">
-			<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
                  <?php get_header(); ?>
-            </div>
-        </div>    
     </header>
 		<!-- 2 ) main -->
 		<div class="main">
@@ -59,10 +55,7 @@
 
 		    <!-- 2-3 ) right sidebar  -->
 			<div class="sidebar">
-				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
                 	<?php get_sidebar(); ?>
-                	<br/>
-				</div>
 			</div>
 			<!-- end right sidebar part -->
 
@@ -73,12 +66,7 @@
 		<br>
 		<!-- 3 ) footer-->
 		<footer>
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<br/>
 					<?php get_footer(); ?>
-				</div>
-			</div>
 		</footer>
 		<!-- End footer-->
 	

@@ -27,7 +27,7 @@
 					the_author_link();
 			 		
 			 		//rtl ltr
-			 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+			 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 			 		if ($qwe_dir=='ltr'){
 
@@ -36,7 +36,7 @@
 			 		}
 			 		elseif($qwe_dir=='rtl'){ 
 
-						echo '">الناشر : ';
+						echo '">by a : ';
 
 			        }
 								
@@ -55,12 +55,14 @@
 			 		}
 			 		elseif($qwe_dir=='rtl'){ 
 
-						echo '">في : ';
+						echo '">in a : ';
 
 			        }
 					the_date('F Y');
 					echo '</a>';
 					the_category();
+					echo "<a> , Tags :</a>";
+					the_tags();
 					echo '<br/>';
 					echo '</div>';
 					// echo '</div>';//col-xs .... col-vs

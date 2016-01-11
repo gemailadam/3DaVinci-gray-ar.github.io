@@ -1,7 +1,13 @@
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+<br/>					
+
+
+
 <!-- Start footer -->
 
 <?php 
-$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 if ($qwe_dir=='ltr'){
  ?>
@@ -27,7 +33,7 @@ elseif($qwe_dir=='rtl')
 <!-- Start footer 2 -->
 
 <?php 
-$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 if ($qwe_dir=='ltr'){
  ?>
@@ -53,7 +59,7 @@ elseif($qwe_dir=='rtl')
 <!-- Start footer 3-->
 
 <?php 
-$qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
+$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 if ($qwe_dir=='ltr'){
  ?>
@@ -89,6 +95,7 @@ elseif($qwe_dir=='rtl')
 
 
 <?php 
+$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 if ($qwe_dir=='ltr'){
  ?>
@@ -107,3 +114,5 @@ elseif($qwe_dir=='rtl')
 
 <?php } ?>
 
+</div>
+</div>

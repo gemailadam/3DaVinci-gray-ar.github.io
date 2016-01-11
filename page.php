@@ -30,16 +30,15 @@ header("Pragma: no-cache");
 <div class="container">
 		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 
-		<!-- 1) header-->
-		<header>
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+			<!-- 1) header-->
+			<header>
 					<?php get_header(); ?>
-				</div>
 			</header>
 			<!-- 2 ) main -->
 			<div class="main">
 				<div class="row">
+				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+
 					<!-- 2-1 ) page part -->
 					<div class="page">
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9 col-vs-12">
@@ -52,12 +51,11 @@ header("Pragma: no-cache");
 
 					<!-- 2-2 ) sidebar part if you want -->
 					<div class="sidebar">
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3 col-vs-12">
 							<?php get_sidebar(); ?>
-							<br/>
-						</div>
 					</div>
-
+			
+				</div>
+				<!-- end columns -->
 				</div>
 				<!--End Row -->
 			</div>
@@ -65,12 +63,7 @@ header("Pragma: no-cache");
 			<br>
 			<!-- 3 ) footer-->
 			<footer>
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
-						<br/>					
 						<?php get_footer(); ?>
-					</div>
-				</div>
 			</footer>
 			<!-- End footer-->
 	</div>			

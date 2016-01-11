@@ -1,8 +1,8 @@
 	<!--script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script-->
 	<!--script src="//code.jquery.com/jquery-1.11.3.min.js"></script-->
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.3.min.js"></script>
+	<script src="<?php echo get_template_directory_uri();?>/js/jquery-1.11.3.min.js"></script>
 	<!--script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script-->
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="<?php echo get_template_directory_uri();?>/js/jquery-migrate-1.2.1.min.js"></script>
 	<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
 
 
@@ -13,7 +13,7 @@
 	<!-- IE 9 use different method than IE 7 & 8 to start good -->		
 
 
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/selectivizr-min.js"></script>
 <!--[if (gte IE 6)&(lte IE 8)]>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/selectivizr-min.js"></script>
   <noscript><link rel="stylesheet" href="fallback_css" /></noscript>
@@ -23,7 +23,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/rem.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/PIE.js"></script>
-<![endif]--> 
+	<![endif]--> 
 
 	<!--[if lt IE 9]>
 	
@@ -39,20 +39,21 @@
 
 <!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
-<![endif]-->
+	<![endif]-->
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-        
-    <title><?php the_permalink(); the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	
+	<title><?php wp_title('');echo ' || ';bloginfo('name' );?></title>
+	<!-- <title><?php the_permalink(); the_title( '' , ' || ', 'left' );bloginfo('name' );?></title> -->
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skeleton-col-dynamic.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-static.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skeleton-row-dynamic.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-static-row.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/skeleton-col-dynamic.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/skelaton-static.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/skeleton-row-dynamic.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/skelaton-static-row.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/elements.css"/>
 
 
 
-    <?php wp_head(); ?>
+	<?php wp_head(); ?>
