@@ -1,18 +1,3 @@
-<?php 
-/*
-index.php
-    The main template. If your Theme provides its own templates, index.php must be present. you can use home.php or front-page.php
-*/
- ?>
-<?php/*
-header("Content-type:application/pdf");
-
-// It will be called downloaded.pdf
-header("Content-Disposition:attachment;filename=downloaded.pdf");
-
-// The PDF source is in original.pdf
-readfile("original.pdf");
-*/?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -26,7 +11,7 @@ readfile("original.pdf");
 <head>
 		<?php get_template_part('main-structure/head_html'); ?>
 </head>
-<body <?php body_class( ); ?> >
+<body <?php body_class(); ?> >
 <div class="container">
 <div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
 

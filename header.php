@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
 
 <section class="site-title" >
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
@@ -33,7 +33,25 @@
 	$imagelink[8]='';
 
 	$logo2=get_template_directory_uri();
-	$logo="".$logo2 .'/images/logo.png';
+	$logo=$logo2 .'/images/logo.png';
+	
+	$image11=get_template_directory_uri();
+	$image21=get_template_directory_uri();
+	$image31=get_template_directory_uri();
+	$image41=get_template_directory_uri();
+	$image51=get_template_directory_uri();
+	$image61=get_template_directory_uri();
+	$image71=get_template_directory_uri();
+	$image81=get_template_directory_uri();
+
+	$image1=$image11 .'/images/image1.jpg';
+	$image2=$image21 .'/images/image2.jpg';
+	$image3=$image31 .'/images/image3.jpg';
+	$image4=$image41 .'/images/image4.jpg';
+	$image5=$image51 .'/images/image5.jpg';
+	$image6=$image61 .'/images/image6.jpg';
+	$image7=$image71 .'/images/image7.jpg';
+	$image8=$image81 .'/images/image8.jpg';
 
 	?>
 	<div class="gallerycontainer">
@@ -41,14 +59,15 @@
  	<div class="galleryPreviewContainer">
  		<div class="galleryPreviewImage">
  			<?php 
- 			echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image1.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image2.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image3.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image4.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image5.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image6.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image7.jpg');echo '" alt=""/>';
- 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image8.jpg');echo '" alt=""/>';
+
+			echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id',$image1);echo '" alt=""/>';
+			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id',$image2);echo '" alt=""/>';
+			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id',$image3);echo '" alt=""/>';
+			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id',$image4);echo '" alt=""/>';
+			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id',$image5);echo '" alt=""/>';
+			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id',$image6);echo '" alt=""/>';
+			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id',$image7);echo '" alt=""/>';
+			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id',$image8);echo '" alt=""/>';
 
  			?>
  		</div>

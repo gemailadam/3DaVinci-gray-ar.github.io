@@ -40,14 +40,19 @@
 							$imageTotal=1;
 							$description[1]='First article about 3DaVinci Portfolio theme designed for WordPress , its compleatly free with GPL v2 licences for more information click the button';
 							$imagelink[1]='';
-							$logo2=get_bloginfo('template_directory');//different than bloginfo , bloginfo make echo , echo must print on screen if there is no " "
+							$logo2=get_template_directory_uri() ;//different than bloginfo , bloginfo make echo , echo must print on screen if there is no " "
 							$logo="".$logo2 .'/images/logo.png';
+							
+							$image11=get_template_directory_uri();
+							$image1=$image11 .'/images/image1.jpg';
+
+
 							?>
 							<div class="gallerycontainer">
 								<div class="galleryPreviewContainer">
 									<div class="galleryPreviewImage_static">
 										<?php 
-										echo '<img class="previewImage" src="';echo get_theme_mod('image1_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/images/image1.jpg');echo '" alt=""/>';
+										echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id',$image1);echo '" alt=""/>';
 										?>
 									</div>
 									<div class="logo">
@@ -57,7 +62,7 @@
 								</div>
 								<div class="gallerydescription_static">
 									<?php 
-									echo '<div class="description1"><div class="desbg"><a href="';echo get_theme_mod('text_description_link1_id','');echo '">';echo get_theme_mod('description1_id','هذا وصف بلينك للصوه ويمكنك الضغط على الزر للوصول للصفحه المطلوبه');echo '</a></div><a href="';echo get_theme_mod('button_description_link1_id','');echo '"><input type="submit" onClick="" name="button1" value="';echo get_theme_mod( 'button1_id','اضغط 1' );echo '"/></a></div>';
+									echo '<div class="description1"><div class="desbg"><a href="';echo get_theme_mod('text_description_link1_id','');echo '">';echo get_theme_mod('description1_id','write your description here');echo '</a></div><a href="';echo get_theme_mod('button_description_link1_id','');echo '"><input type="submit" onClick="" name="button1" value="';echo get_theme_mod( 'button1_id','button 1' );echo '"/></a></div>';
 									?>
 								</div>	
 							</div>

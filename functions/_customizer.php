@@ -40,24 +40,7 @@ $wp_customize->add_panel( 'panel_id', array(
 
 // slideshow
 
-    // $qwe_dir=get_bloginfo('language');//get_theme_mod( 'qwe-rtl', 'rtl' );  
-
-
-    // if ($qwe_dir=='ltr'){
-
-    // $wp_customize->add_section('slideshow',array(
-    //     'title' =>'Slide Show' ,
-    //     'description' => 'Upload your slideshow images , with 400 pixel exact height',
-    //     'priority' => '299' ));
-
-    // }
-    // elseif($qwe_dir=='rtl'){
-    // $wp_customize->add_section('slideshow',array(
-    //     'title' =>'عرض الشرائح' ,
-    //     'description' => 'Upload your slideshow images , with 400 pixel exact height',
-    //     'priority' => '299' ));
-
-    // }else{
+    
 
     $wp_customize->add_section('slideshow',array(
         'title' =>'Slide Show' ,
@@ -74,8 +57,12 @@ $wp_customize->add_panel( 'panel_id', array(
 
 //   logo
 
-        $qwe_image=get_bloginfo('template_directory');
+        $qwe_image=get_template_directory_uri();
         $qwe_logo=$qwe_image . '/images/logo.png';
+    
+
+        // $qwe_image=get_bloginfo('template_directory');
+        // $qwe_logo=$qwe_image . '/images/logo.png';
 
         $wp_customize->add_setting('logo_id',array('default' => $qwe_logo ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo_id',array(
@@ -685,14 +672,6 @@ $wp_customize->add_panel( 'panel_id', array(
         'panel'=> 'panel_id',
  ));
 
-    // }
-    // elseif($qwe_dir=='rtl'){
-    // $wp_customize->add_section('sticky',array(
-    //     'title' =>'مؤشرات الصور الثلاثه' ,
-    //     'description' => 'تغيير الوصف اسفل الصوره وعنوان الزر',
-    //     'priority' => '299' ));
-    // } 
-
 
 
 //1
@@ -905,10 +884,6 @@ $wp_customize->add_panel( 'panel_id', array(
 
 
 
-    // $qwe_dir=get_theme_mod( 'qwe-rtl', 'rtl' );
-
-    // if ($qwe_dir=='ltr'){
-
 $wp_customize->add_section('rtl_id', array('title' => 'language direction' ,'panel'=> 'panel_id',)); 
 $wp_customize->add_setting(
     'qwe-rtl',
@@ -935,35 +910,24 @@ $wp_customize->add_control(
 
 
 
-//     }
-//     elseif($qwe_dir=='rtl'){
-    
-//     $wp_customize->add_section('rtl_id', array('title' => 'غير اتجاه اللغه للانكليزيه' )); 
-// $wp_customize->add_setting(
-//     'qwe-rtl',
-//     array(
-//         'default' => 'ltr',
-//     )
-// );
- 
-// $wp_customize->add_control(
-//     'qwe-rtl',
-//     array(
-//         'type' => 'select',
-//         'label' => 'غير الى اللغه الانجليزيه',
-//         'section' => 'rtl_id',
-//         'priority'=>499 ,
-//         'transport' => 'postMessage',
-//         'choices' => array(
-//             'ltr' => 'ltr',
-//             'rtl' => 'rtl',
-            
-//         ),
-//     )
-// );
-// }
+        $qwe_imagewww=get_template_directory_uri();
+        $qwe_logowww=$qwe_imagewww . '/images/blur4.png';
+
+        $wp_customize->add_setting('footerwww',array('default' => $qwe_logowww));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'footerwww',array(
+            'label' =>'Upload Footer Image',         
+            'priority'=>51,
+            'section' => 'sticky' ,
+            'settings' => 'footerwww' )));
 
 
+
+// $qwe_strang="url('".$qwe_logowww."');";
+
+//         array('logowww' =>$qwe_logowww , );
+//         $logowww="https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png";
+//  
+   
 
 
 /* _slideshow.php end*/
@@ -1169,40 +1133,6 @@ $wp_customize->add_control(
         'settings' => 'site_description_id' )));
 
 
-
-// a link color
-
-    // $wp_customize->add_setting('a_id',array('default' => '#fff' ));
-
-    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_id',array(
-    //     'label' =>'linls colors',
-    //     'description' =>'all links Colors',        
-    //     'section' => 'colors' ,
-    //     'settings' => 'a_id' )));
-
-// a visited color
-
-    // $wp_customize->add_setting('a_visited_id',array('default' => '#aaa' ));
-
-    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_id',array(
-    //     'label' =>'Visited Links Colors',
-    //     'description' =>'all visisted links Colors',        
-    //     'section' => 'colors' ,
-    //     'settings' => 'a_visited_id' )));
-
-
-// a Hover color
-
-    // $wp_customize->add_setting('a_hover_id',array('default' => '#999' ));
-
-    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_id',array(
-    //     'label' =>'Hover Links Colors',
-    //     'description' =>'all links Colors',                
-    //     'section' => 'colors' ,
-    //     'settings' => 'a_hover_id' )));
-
-//page_titles_id    
-
     $wp_customize->add_setting('page_titles_id',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'page_titles_id',array(
@@ -1267,17 +1197,9 @@ $wp_customize->add_control(
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_hover_id',array(
         'label' =>'menu text hover color',
-        // 'discription'=>'change menu background color when hoer',
         'section' => 'colors' ,
         'settings' => 'nav_hover_id' )));
 
-    // $wp_customize->add_setting('nav_a_bg_hover_id',array('default' => '#444' ));
-
-    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_a_bg_hover_id',array(
-    //     'label' =>'menu background hover color',
-    //     'discription'=>'change menu background color when hoer',
-    //     'section' => 'colors' ,
-    //     'settings' => 'nav_a_bg_hover_id' )));
 
 
 // 404 oops color
@@ -1290,6 +1212,41 @@ $wp_customize->add_control(
         'description' =>'Wrong Page That any user Search from any search engine like google ',        
         'section' => 'colors' ,
         'settings' => '404_id' )));
+
+
+
+// using jquery real time color customization
+
+
+$wp_customize->get_setting( 'body_id' )->transport = 'postMessage';
+$wp_customize->get_setting( 'container_id' )->transport = 'postMessage';
+$wp_customize->get_setting( 'page_id' )->transport = 'postMessage';
+$wp_customize->get_setting( 'postedby_id' )->transport = 'postMessage';
+$wp_customize->get_setting( 'sidebar_id' )->transport = 'postMessage';
+$wp_customize->get_setting( 'footer_id' )->transport = 'postMessage';
+
+/**
+ * Used by hook: 'customize_preview_init'
+ * 
+ * @see add_action('customize_preview_init',$func)
+ */
+// public static function mytheme_customizer_live_preview()
+function mytheme_customizer_live_preview()
+{
+    wp_enqueue_script( 
+          'mytheme-themecustomizer',            //Give the script an ID
+          get_template_directory_uri().'/js/theme-customizer.js',//Point to file
+          array( 'jquery','customize-preview' ),    //Define dependencies
+          '',                       //Define a version (optional) 
+          true                      //Put script in footer?
+    );
+}
+add_action( 'customize_preview_init', 'mytheme_customizer_live_preview' );
+
+
+
+
+
 
 // enable disble footer image 
 
@@ -1345,6 +1302,299 @@ function qwe_select_css()
 
 
 
+/*background-color*/
+/*background-color*/
+/*background-color*/
+/*background-color*/
+/*background-color*/
+
+/*main background change*/
+
+body {background-color:<?php echo get_theme_mod('body_id','#222'); ?>;}
+
+/*change row_id to container_id*/
+
+.container .contain{
+    background-color:<?php echo get_theme_mod('container_id','#222'); ?>;
+    /*box-shadow: 3px 3px 8px <?php echo get_theme_mod('shadow_id','#000'); ?> , -3px -3px 8px <?php echo get_theme_mod('shadow_id','#000'); ?>;*/
+} 
+
+/*page*/
+
+.page .rect {
+    background-color:<?php echo get_theme_mod('page_id','#222'); ?>;
+    border-bottom:1px solid <?php echo get_theme_mod('page_border_id','#fff'); ?>;
+}
+
+.page .postedby {background-color:<?php echo get_theme_mod('postedby_id','#000'); ?>;
+    
+    box-shadow:inset 0px -1px 1px #777;
+}
+
+
+
+/*sidebar*/
+
+div.sidebar aside {background-color:<?php echo get_theme_mod('sidebar_id','#222'); ?>;}
+
+
+
+/* footer */
+/*change foter1_id foter2_id foter3_id to footer_id*/
+section.footer1 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer2 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer3 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+
+section.footer1-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer2-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+section.footer3-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
+
+
+
+/* 3 indicators */
+/* add */
+.gallerythumContainer input {background-color:<?php echo get_theme_mod('3indicators_id','#222'); ?>;}
+
+
+
+/* end main background change*/
+
+
+/*
+.galleryPreviewarrow a {background-color:rgba(0,0,0,0.3);}
+
+.galleryPreviewarrow a:hover {background-color: #000;}
+
+.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);}
+*/
+
+/*add button_id color */
+.gallerydescription > div input {background: <?php echo get_theme_mod('button_id','#222'); ?>;}
+
+/*add bullets_id color */
+.galleryNavigationBullets a {background: <?php echo get_theme_mod('bullets_id','#222'); ?>;}
+
+/*add bullets_active_id color */
+
+.galleryNavigationBullets a.active ,.galleryNavigationBullets a:hover {
+    background-color:<?php echo get_theme_mod('bullets_active_id','#fff'); ?>;;
+}
+
+/*.gallerydescription_static .desbg{background-color:rgba(0, 0, 0, 0.4);}*/
+
+.gallerydescription_static > div input {<?php echo get_theme_mod('button_id','#222'); ?>;}
+
+/*add upper widget banner bg if used */
+section.qwe-banner {<?php echo get_theme_mod('widjet_id','#222'); ?>;}
+
+
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
+*/
+
+/* nav background colors*/
+
+/*
+.qwe-nav > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
+.qwe-nav > nav > div > ul > li:nth-child(even) {background-color:white; }*/
+.qwe-nav > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav > nav > div > ul > li > ul {background-color:transparent; }
+.qwe-nav > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+
+/*
+.qwe-nav-rtl > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
+.qwe-nav-rtl > nav > div > ul > li:nth-child(even) {background-color:white; }*/
+.qwe-nav-rtl > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav-rtl > nav > div > ul > li > ul {background-color:transparent; }
+.qwe-nav-rtl > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+.qwe-nav-rtl > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
+
+
+/* 3 indicator button bg*/
+.gallerythumContainer input {background:<?php echo get_theme_mod('button_id','#222')?>;}
+
+.gallerydescription > div input {background:<?php echo get_theme_mod('button_id','#222'); ?>;}
+
+.gallerydescription_static > div input {background:<?php echo get_theme_mod('button_id','#222'); ?>;}
+
+
+
+
+
+/*@media (max-width: 768px){
+
+}
+*/
+/* media_part_lte_500__qwe */
+
+/*@media (max-width: 500px){
+
+
+}
+
+*/
+
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
+
+/* all links color */
+
+a {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
+a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
+a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_id','#999'); ?>;*/}
+
+html {
+  color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+
+
+
+/* site title color*/
+
+section.site-title p a {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
+section.site-title p {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
+
+/* site description color*/
+section .title-description a {color:<?php echo get_theme_mod('site_description_id','#fff'); ?>;}
+
+/* slideshow description and button colors*/
+
+.gallerydescription > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
+
+.gallerydescription > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
+
+.gallerydescription_static > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
+
+.gallerydescription_static > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
+
+.gallerythumContainer input {background:<?php echo get_theme_mod('button_txt_id','#222')?>;}
+
+
+/*
+***********************
+**     **********   ***
+**      *********   ***
+**   *   ********   ***
+**   **   *******   ***
+**   ***   ******   ***
+**   ****   *****   ***
+**   *****   ****   ***
+**   ******   ***   ***
+**   *******   **   ***
+**   ********   *   ***
+**   *********      ***
+***********************
+*/
+
+.qwe-nav li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
+.qwe-nav li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>;}
+/*.qwe-nav li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
+
+.qwe-nav-rtl li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
+.qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>}
+/*.qwe-nav-rtl li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
+
+
+/* 3 indicators */
+
+/*sticky indicator 3 images*/
+
+
+.gallerythumContainer input {color:<?php echo get_theme_mod('button_id','#fff');?>;}
+
+
+
+
+/*page*/
+
+
+.page div.archive {color: #fff;}
+
+.page .rect .push_button a {color: #fff;}
+
+.page .rect .push_button a:hover {color:#ccc;}
+
+
+.page .rect h1 a{color:<?php echo get_theme_mod('page_titles_id','#fff'); ?>;}
+
+.postedby li , a , span {color:<?php echo get_theme_mod('postedby_txt_id','#fff'); ?>;}
+/****************************************************
+ *  Push Button
+ *****************************************************/
+.push_button{
+    color:#FFF;
+    border-radius:5px;
+    border:solid 1px #D94E3B;
+    background:#cb3b27;
+  
+    -webkit-box-shadow: 0px 9px 0px #84261a;
+        -moz-box-shadow: 0px 9px 0px #84261a;
+        box-shadow: 0px 9px 0px #84261a;
+}
+/*****************************************************/
+
+
+/*sidebar*/
+
+.sidebar a {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+/*.sidebar h2 {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}*/
+.sidebar span {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+.sidebar li {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
+.sidebar li.widget {border-bottom:5px solid #fff;}
+.sidebar .widgettitle {color:<?php echo get_theme_mod('sidebar_titles_id','#fff'); ?>;}
+
+/*important components appear at widget >> search and find more */
+.sidebar select {color: #000;}
+.sidebar input {color: #000;}
+.sidebar #searchsubmit {color: #222;}
+.sidebar #s {color: #222;}
+
+
+
+/* ooopppsss */
+.oops h1 {color:<?php echo get_theme_mod('404_id','#D94E3B;'); ?>;}
+
+
+.footer3-rtl {position: relative;clear:both;
+}
+.footer-img {
+    /*background:<?php printf($qwe_strang); ?> */
+    background:url("<?php echo get_theme_mod('footerwww','') ?>"); 
+    /*background:<?php printf('url(" %s ")',$qwe_logowww); ?>*//* "https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png");/*<?php echo $footerimg; ?>;*/
+
+    background-size: cover, cover;
+    width:100%;
+    height: 100px;
+    display: <?php echo get_theme_mod('disable_id','') ?>;
+}   
+
+/********************************************************************************************************/
+/*******************************    css only less code important   **************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+
 /*
 ********************
 ****             ***
@@ -1365,7 +1615,7 @@ function qwe_select_css()
 
 /* root */
 
-body {}
+body {margin: 0;padding: 0;}
 
 a:link {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
 a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
@@ -1377,11 +1627,12 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
-h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
-h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
+p {color:#fff;}
+h1{color:#fff;}
+h2{color:#fff;}
 
-/*.contain {background-color: green;}*/
+.container {}
+.contain {}
 
 /*
 *****************       
@@ -1401,8 +1652,9 @@ h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
 /* header */
 .title-description {margin-left: 5%;margin-right: 5%;}
 
+section .title-description a:before { content: open-quote; }
+section .title-description a:after { content: close-quote; }
 section .title-description a {
-    /*<?php echo get_theme_mod('site_title_id','#fff'); ?>;*/
     font-size: 1.5em;
     text-decoration: none;
     font-weight: bold;
@@ -1416,7 +1668,7 @@ section .title-description a {
      0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444,
      4px 4px 12px #000 ;
 }
-section.site-title p a {}
+section.site-title p:first-letter {font-size: 1.5em;}
 section.site-title p {
     
     font-size: 2em;
@@ -2022,6 +2274,7 @@ position: absolute;width:150px;
 }
 
 
+
 /*sticky indicator 3 images*/
 
 /* indicator curasul_part_qwe */
@@ -2129,6 +2382,7 @@ position: absolute;width:150px;
 
 /*Very Important for images , to not exceed page width [ Wordpress test ]*/
 .page .rect img {max-width:100%;height:auto;overflow: auto;}
+.page .rect iframe {max-width:100%;overflow: auto;}
 .page .rect div {max-width:100%;overflow: auto;}
 
 
@@ -2211,18 +2465,46 @@ position: absolute;width:150px;
            1px 1px 4px #000;
 }
 
-.qwe-comments ol {box-shadow:inset 2px 2px 6px #000;padding: 1% 3%;}
-.qwe-comments li:nth-child(odd) {padding:2%;border-radius:0 0 4% 4%;margin:1%; border-bottom: 5px solid #fff; background:#333;}
-.qwe-comments li:nth-child(even) {padding: 2%;border-radius:0 0 4% 4%;margin:1%;  border-bottom: 5px solid #fff; background:#555;}
+/*.qwe-comments ul {box-shadow:inset 2px 2px 6px #000;padding: 1% 3%;list-style: none;}*/
+.qwe-comments li {list-style: none;}
+.qwe-comments li:nth-child(odd) {padding:2%;border-radius:0 0 4% 4%;margin:1%; border-bottom: 5px solid #fff; background:#333;border-left:1px solid orange ;}
+.qwe-comments li:nth-child(even) {padding: 2%;border-radius:0 0 4% 4%;margin:1%;  border-bottom: 5px solid #fff; background:#555;border-left:1px solid orange ;}
+
 
 /* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
 #commentform textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
 #commentform label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
-#commentform input{box-shadow: 5px 5px 8px #000;color: #000;}
+#commentform input {box-shadow: 5px 5px 8px #000;color: #000;margin: 20px ;}
 #reply-title {text-shadow: 5px 5px 8px #000;}
 
+#commentform span.required {
+
+    color:red;
+    text-shadow:
+          -1px -1px 4px #000,  
+          1px -1px 4px #000,
+          -1px 1px 4px #000,
+           1px 1px 4px #000;
+}
+
+.comment-form-author label {display: inline-block;width:20%;}
+.comment-form-author input {display: inline-block;width:50%;}
+
+.comment-form-email label {display: inline-block;width:20%;}
+.comment-form-email input {display: inline-block;width:50%;}
+
+.comment-form-url label {display: inline-block;width:21%;}
+.comment-form-url input {display: inline-block;width:50%;}
 
 
+.comment p {padding: 3%;
+     text-shadow:
+          -1px -1px 4px #000,  
+          1px -1px 4px #000,
+          -1px 1px 4px #000,
+           1px 1px 4px #000;
+box-shadow: 0px 1px 1px #000,0px -1px 1px #000;
+} 
 
 /*sidebar*/
 
@@ -2253,6 +2535,21 @@ position: absolute;width:150px;
 .sidebar #searchsubmit {color: #222;}
 .sidebar #s {color: #222;}
 
+
+/* float sidebar*/
+.sidebar3 {position: absolute;right: -160px;}
+.sidebar3 .col-width{width:200px}
+.sidebar3 li {list-style: none;}
+.sidebar3 .subside {width: 15%;float: left;margin:auto auto;height: 100%;padding: 20px 0;background-color: transparent;}
+.sidebar3 .subside p{box-shadow: -3px 3px 8px #000; text-align: center; font-size: 2em;background-color:#dd3333; color: white;line-height: 40px;float: none;border-radius: 10px 0 0 10px;}
+.sidebar3 .side {display: none; float: left;width: 79%;padding: 3%;background-color: #222;height: 100%;box-shadow: -3px 3px 8px #000;border-radius: 10px 0 0 10px;}
+.sidebar3:hover .side{display: block;}
+.sidebar3:hover {right: 0px;}
+
+.sidebar3-fixed-top-0{top:0;}
+.sidebar3-fixed-top{top:0;}
+.sidebar3-fixed-top2{top:300px;}
+.sidebar3-fixed-top3{top:600px;}
 
 /*footer*/
 /*important if any one add any image element to any footer widget >> support search and find others element that can be add */
@@ -2330,304 +2627,6 @@ section.footer3-rtl li.widget:first-child {clear:left;}
 .oops h1 {
     color:#D94E3B;
 }
-
-
-/*background-color*/
-/*background-color*/
-/*background-color*/
-/*background-color*/
-/*background-color*/
-
-/*main background change*/
-
-body {background-color:<?php echo get_theme_mod('body_id','#222'); ?>;}
-
-/*change row_id to container_id*/
-
-.container .contain{
-    background-color:<?php echo get_theme_mod('container_id','#222'); ?>;
-    box-shadow: 3px 3px 8px <?php echo get_theme_mod('shadow_id',''); ?> , -3px -3px 8px <?php echo get_theme_mod('shadow_id',''); ?>;
-} 
-
-/*page*/
-
-.page .rect {
-    background-color:<?php echo get_theme_mod('page_id','#222'); ?>;
-    border-bottom:1px solid <?php echo get_theme_mod('page_border_id','#fff'); ?>;
-}
-
-.page .postedby {background-color:<?php echo get_theme_mod('postedby_id','#000'); ?>;
-    
-    box-shadow:inset 0px -1px 1px #777;
-}
-
-
-
-/*sidebar*/
-
-div.sidebar aside {background-color:<?php echo get_theme_mod('sidebar_id','#222'); ?>;}
-
-
-
-/* footer */
-/*change foter1_id foter2_id foter3_id to footer_id*/
-section.footer1 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-section.footer2 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-section.footer3 {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-
-section.footer1-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-section.footer2-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-section.footer3-rtl {background-color:<?php echo get_theme_mod('footer_id','#222'); ?>;}
-
-
-
-/* 3 indicators */
-/* add */
-.gallerythumContainer input {background-color:<?php echo get_theme_mod('3indicators_id','#222'); ?>;}
-
-
-
-/* end main background change*/
-
-
-/*
-.galleryPreviewarrow a {background-color:rgba(0,0,0,0.3);}
-
-.galleryPreviewarrow a:hover {background-color: #000;}
-
-.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);}
-*/
-
-/*add button_id color */
-.gallerydescription > div input {background: <?php echo get_theme_mod('button_id','#222'); ?>;}
-
-/*add bullets_id color */
-.galleryNavigationBullets a {background: <?php echo get_theme_mod('bullets_id','#222'); ?>;}
-
-/*add bullets_active_id color */
-
-.galleryNavigationBullets a.active ,.galleryNavigationBullets a:hover {
-    background-color:<?php echo get_theme_mod('bullets_active_id','#fff'); ?>;;
-}
-
-/*.gallerydescription_static .desbg{background-color:rgba(0, 0, 0, 0.4);}*/
-
-.gallerydescription_static > div input {<?php echo get_theme_mod('button_id','#222'); ?>;}
-
-/*add upper widget banner bg if used */
-section.qwe-banner {<?php echo get_theme_mod('widjet_id','#222'); ?>;}
-
-
-/*
-***********************
-**     **********   ***
-**      *********   ***
-**   *   ********   ***
-**   **   *******   ***
-**   ***   ******   ***
-**   ****   *****   ***
-**   *****   ****   ***
-**   ******   ***   ***
-**   *******   **   ***
-**   ********   *   ***
-**   *********      ***
-***********************
-*/
-
-/* nav background colors*/
-
-/*
-.qwe-nav > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
-.qwe-nav > nav > div > ul > li:nth-child(even) {background-color:white; }*/
-.qwe-nav > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-.qwe-nav > nav > div > ul > li > ul {background-color:transparent; }
-.qwe-nav > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-.qwe-nav > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-
-/*
-.qwe-nav-rtl > nav > div > ul > li:nth-child(odd)  {background-color:orange;}
-.qwe-nav-rtl > nav > div > ul > li:nth-child(even) {background-color:white; }*/
-.qwe-nav-rtl > nav > div > ul > li > a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-.qwe-nav-rtl > nav > div > ul > li > ul {background-color:transparent; }
-.qwe-nav-rtl > nav > div > ul > li > ul  li {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-.qwe-nav-rtl > nav > div > ul > li > ul  li  a {background-color:<?php echo get_theme_mod('nav_bg_id','#444'); ?>;}
-
-
-/* 3 indicator button bg*/
-.gallerythumContainer input {background:<?php echo get_theme_mod('button_id','#222')?>;}
-
-.gallerydescription > div input {background:<?php echo get_theme_mod('button_id','#222'); ?>;}
-
-.gallerydescription_static > div input {background:<?php echo get_theme_mod('button_id','#222'); ?>;}
-
-
-
-
-
-/*@media (max-width: 768px){
-
-}
-*/
-/* media_part_lte_500__qwe */
-
-/*@media (max-width: 500px){
-
-
-}
-
-*/
-
-/*text color*/
-/*text color*/
-/*text color*/
-/*text color*/
-/*text color*/
-
-/* all links color */
-
-a {color:#fff;/*<?php echo get_theme_mod('a_id','#fff'); ?>;*/}
-a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_id','#aaa'); ?>;*/}
-a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_id','#999'); ?>;*/}
-
-html {
-  color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
-
-p{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
-h1{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
-h2{color:#fff;/*<?php echo get_theme_mod('html_id','#fff'); ?>;*/}
-
-
-
-/* site title color*/
-
-section.site-title p a {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
-section.site-title p {color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;}
-
-/* site description color*/
-section .title-description a {color:<?php echo get_theme_mod('site_description_id','#fff'); ?>;}
-
-
-/* slideshow description and button colors*/
-
-.gallerydescription > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
-
-.gallerydescription > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
-
-.gallerydescription_static > div a {color:<?php echo get_theme_mod('slide_id','#fff'); ?>;}
-
-.gallerydescription_static > div input {color:<?php echo get_theme_mod('button_txt_id','#fff'); ?>;}
-
-.gallerythumContainer input {background:<?php echo get_theme_mod('button_txt_id','#222')?>;}
-
-
-/*
-***********************
-**     **********   ***
-**      *********   ***
-**   *   ********   ***
-**   **   *******   ***
-**   ***   ******   ***
-**   ****   *****   ***
-**   *****   ****   ***
-**   ******   ***   ***
-**   *******   **   ***
-**   ********   *   ***
-**   *********      ***
-***********************
-*/
-
-.qwe-nav li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
-.qwe-nav li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>;}
-/*.qwe-nav li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
-
-.qwe-nav-rtl li a {color:<?php echo get_theme_mod('nav_id','#fff');?>;}
-.qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_id','#ddd');?>}
-/*.qwe-nav-rtl li a:visited {<?php echo get_theme_mod('nav_visited_id','#aaa');?>;} */
-
-
-/* 3 indicators */
-
-/*sticky indicator 3 images*/
-
-
-.gallerythumContainer input {color:<?php echo get_theme_mod('button_id','#fff');?>;}
-
-
-
-
-/*page*/
-
-
-.page div.archive {color: #fff;}
-
-.page .rect .push_button a {color: #fff;}
-
-.page .rect .push_button a:hover {color:#ccc;}
-
-
-.page .rect h1 a{color:<?php echo get_theme_mod('page_titles_id','#fff'); ?>;}
-
-.postedby li , a , span {color:<?php echo get_theme_mod('postedby_txt_id','#fff'); ?>;}
-/****************************************************
- *  Push Button
- *****************************************************/
-.push_button{
-    color:#FFF;
-    border-radius:5px;
-    border:solid 1px #D94E3B;
-    background:#cb3b27;
-  
-    -webkit-box-shadow: 0px 9px 0px #84261a;
-        -moz-box-shadow: 0px 9px 0px #84261a;
-        box-shadow: 0px 9px 0px #84261a;
-}
-/*****************************************************/
-
-
-/*sidebar*/
-
-.sidebar a {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
-/*.sidebar h2 {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}*/
-.sidebar span {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
-.sidebar li {color:<?php echo get_theme_mod('sidebar_widget_txt_id','#fff'); ?>;}
-.sidebar li.widget {border-bottom:5px solid #fff;}
-.sidebar .widgettitle {color:<?php echo get_theme_mod('sidebar_titles_id','#fff'); ?>;}
-
-/*important components appear at widget >> search and find more */
-.sidebar select {color: #000;}
-.sidebar input {color: #000;}
-.sidebar #searchsubmit {color: #222;}
-.sidebar #s {color: #222;}
-
-
-
-/* ooopppsss */
-.oops h1 {color:<?php echo get_theme_mod('404_id','#D94E3B;'); ?>;}
-
-
-/*
-<?php 
-$bloginfoo=get_bloginfo('template_directory');
-$footerimg='url("'. $bloginfoo . '/images/blur4.png'.'")';
- ?>
-*/
-.footer3-rtl {position: relative;clear:both;
-}
-.footer-img {
-    background:url("https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png");/*<?php echo $footerimg; ?>;*/
-    /*background: linear-gradient(rgba(51% , 86% , 24% , 0.3), rgba(51% , 86% , 24% , 1));*/
-
-    background-size: cover, cover;
-    width:100%;
-    height: 200px;
-    /*position: relative;*/
-    /*background: rgba(0,0,0,0.6);*/
-    /*opacity: 0.3;*/
-    display: <?php echo get_theme_mod('disable_id','') ?>;
-}   
 
 </style>    
 

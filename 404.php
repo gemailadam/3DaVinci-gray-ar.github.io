@@ -1,9 +1,3 @@
-<?php 
-/*
-404.php
-The 404 Not Found template. Used when WordPress cannot find a post or page that matches the query. 
-*/
-?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -58,8 +52,8 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 						{ 
 					?>
 
-						<h1>الصفحة التي تبحث عنها ليسة موجوده , وسوف يتم توجيهك الى الصفحه الرئيسيه بعد 5 ثواني , او يمكنك الضغط على زر جوجل للبحث عن هذه الصفحه المفقوده في مخازن جوجل للصفحات المفقوده او الممسوحه</h1> 
-						<a href="http://www.google.com/"><button style="color:#fff;background:orange;width:100px;height:50px;padding:10px;margin:10px;box-shadow:4px 4px 8px #000;">جوجل</button></a>
+						<h1>oops rtl</h1> 
+						<a href="http://www.google.com/"><button style="color:#fff;background:orange;width:100px;height:50px;padding:10px;margin:10px;box-shadow:4px 4px 8px #000;">Google</button></a>
 
 
 					<?php } ?>

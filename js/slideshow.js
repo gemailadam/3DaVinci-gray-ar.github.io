@@ -165,6 +165,34 @@ $('.circrarrow').hover(function(){
 
 
 
+$(window).on('scroll', function(){
+    //creen width more than 100 for all devices like mobile tablet and pc
+    if (screen.width >= 100) {
+        stop = Math.round($(window).scrollTop());
+        if(stop<200){
+            $('div.sidebar3').removeClass('sidebar3-fixed-top2'); 
+            $('div.sidebar3').removeClass('sidebar3-fixed-top3'); 
+            $('div.sidebar3').addClass('sidebar3-fixed-top-0'); 
+        }
+
+        if (stop > 200 & stop <= 400){
+            $('div.sidebar3').addClass('sidebar3-fixed-top2');
+            $('div.sidebar3').removeClass('sidebar3-fixed-top-0');
+            $('div.sidebar3').removeClass('sidebar3-fixed-top3');
+        }
+
+
+        if (stop > 400 & stop <= 600){
+            $('div.sidebar3').addClass('sidebar3-fixed-top3');
+            $('div.sidebar3').removeClass('sidebar3-fixed-top2');
+            $('div.sidebar3').removeClass('sidebar3-fixed-top-0');      
+        }
+        // if(stop<100){
+        //     $('div.sidebar3').removeClass('sidebar3-fixed-top2'); 
+        // }
+    }
+});
+
     
 $(window).on('scroll', function(){
 

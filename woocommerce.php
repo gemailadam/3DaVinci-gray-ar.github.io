@@ -1,15 +1,3 @@
-<?php 
-/*woocommerce from page.php
-   The page template. 
-   Used when an individual Page is queried. 
-*/
-   ?>
-<?php/*
-// Date in the past
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Cache-Control: no-cache");
-header("Pragma: no-cache");
-*/?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>

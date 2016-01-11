@@ -88,7 +88,6 @@ elseif($qwe_dir=='rtl')
 
 <section class="blur footer-img">
 
- <!--img  style="margin-top:20px;" src="<?php bloginfo('template_directory'); ?>/images/blur4.png " alt=""-->	
 
 </section>
 </div>
@@ -109,7 +108,7 @@ elseif($qwe_dir=='rtl')
 	{ 
 ?>
 <section class="copyright">
-	<p><a href="http://inspiration-inspection.ml/">حقوق التأليف والنشر هشام حسين</a></p>
+	<p><a href="http://inspiration-inspection.ml/">copy ar rtl</a></p>
 </section>
 
 <?php } ?>
