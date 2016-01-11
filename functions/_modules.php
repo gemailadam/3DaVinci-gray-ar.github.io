@@ -149,16 +149,16 @@ function qwe_custom_comments($comment,$args,$depth){
 				<div class="comment-author vcard">
 					<?php /*$default2=get_bloginfo('template_directory');$default=$default2.'/images/o.ico';*/ echo get_avatar( $comment, $size='48', $default, $alt  ); ?>
 
-					<?php printf( __('<city class="fn">%s</city> <span class="says">says:</span>'),''); ?>
+					<?php printf( __('<city class="fn">%s</city> <span class="says">says:</span>', 'default'), ''); ?>
 				</div>
 
 				<?php if ($comment->comment_approved=='0') { ?> <!-- to approved waiting admin moderator befor it be visible-->
-					<em><?php _e('your comment is awaiting moderation' ); ?> </em>
+					<em><?php _e('your comment is awaiting moderation' , 'default'); ?> </em>
 					<br />
 				<?php } ?>
 				
 				<div class="comment-meta comment-metadata">
-					<a href="<?php echo htmlspecialchars(get_comment_link( $comment->comment_ID )) ?>"><?php printf(__('%1$s at %2$s'),get_comment_date( ),get_comment_time( )) ?></a><?php edit_comment_link(__('(Edit)'),' ','' ); ?>
+					<a href="<?php echo htmlspecialchars(get_comment_link( $comment->comment_ID )) ?>"><?php printf(__('%1$s at %2$s', 'default'),get_comment_date( ),get_comment_time( )) ?></a><?php edit_comment_link(__('(Edit)', 'default'),' ','' ); ?>
 				</div>
 
 				<?php comment_text( ); ?>
