@@ -8,6 +8,26 @@
 
 */
 
+/* max size for content like images and videos */
+if ( ! isset( $content_width ) ) {
+	$content_width = 600;
+}
+
+ 	$defaults_2 = array(
+		'before'           => '<p>' . 'Pages:',
+		'after'            => '</p>',
+		'link_before'      => '',
+		'link_after'       => '',
+		'next_or_number'   => 'number',
+		'separator'        => ' ',
+		'nextpagelink'     => 'Next page',
+		'previouspagelink' => 'Previous page',
+		'pagelink'         => '%',
+		'echo'             => 1
+	);
+ 
+        wp_link_pages( $defaults_2 );
+
 /* register widgets for sidebare*/
 
 /////////////////////////////////////////////
@@ -149,7 +169,7 @@ function qwe_custom_comments($comment,$args,$depth){
 				<div class="comment-author vcard">
 					<?php /*$default2=get_bloginfo('template_directory');$default=$default2.'/images/o.ico';*/ echo get_avatar( $comment, $size='48', $default, $alt  ); ?>
 
-					<?php printf( __('<city class="fn">%s</city> <span class="says">says:</span>', 'default'), ''); ?>
+					<?php printf('<city class="fn">%s</city> <span class="says">says:</span>',get_comment_author_link()); ?>
 				</div>
 
 				<?php if ($comment->comment_approved=='0') { ?> <!-- to approved waiting admin moderator befor it be visible-->
@@ -158,7 +178,7 @@ function qwe_custom_comments($comment,$args,$depth){
 				<?php } ?>
 				
 				<div class="comment-meta comment-metadata">
-					<a href="<?php echo htmlspecialchars(get_comment_link( $comment->comment_ID )) ?>"><?php printf(__('%1$s at %2$s', 'default'),get_comment_date( ),get_comment_time( )) ?></a><?php edit_comment_link(__('(Edit)', 'default'),' ','' ); ?>
+					<a href="<?php echo htmlspecialchars(get_comment_link( $comment->comment_ID )) ?>"><?php printf('%1$s at %2$s',get_comment_date( ),get_comment_time( )); ?></a><?php edit_comment_link( ); ?>
 				</div>
 
 				<?php comment_text( ); ?>
@@ -173,6 +193,90 @@ function qwe_custom_comments($comment,$args,$depth){
 	<?php
 
 }
+function custom_theme_setup_qwe() {
+	// add_theme_support( $feature, $arguments );
+	add_theme_support( 'post-thumbnails', array( 'post', 'movie' ,'page') ); // Posts and Movies
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe' );
 
 
+
+
+function custom_theme_setup_qwe2() {
+add_theme_support( 'automatic-feed-links' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe2' );
+
+
+
+
+
+function custom_theme_setup_qwe3() {
+
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe3' );
+
+
+
+
+
+
+function custom_theme_setup_qwe4() {
+$defaults = array(
+	'default-color'          => '',
+	'default-image'          => '',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $defaults );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe4' );
+
+
+
+
+
+
+function custom_theme_setup_qwe5() {
+add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe5' );
+
+
+
+
+function custom_theme_setup_qwe6() {
+$defaults = array(
+	'default-image'          => '',
+	'random-default'         => false,
+	'width'                  => 0,
+	'height'                 => 0,
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'default-text-color'     => '',
+	'header-text'            => true,
+	'uploads'                => true,
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe6' );
+
+
+
+
+
+function custom_theme_setup_qwe7() {
+add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup_qwe7' );
+
+
+/* to add style sheet to editor make your own style-sheet.css and pass it through $stylesheet > add_editor_style( $stylesheet ); */
+
+add_editor_style(  );
  ?>

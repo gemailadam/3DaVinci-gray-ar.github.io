@@ -119,6 +119,16 @@ a img.aligncenter {
     z-index: 100000; /* Above WP toolbar. */
 }
 
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .sticky{}
 
 .gallery-caption{}
