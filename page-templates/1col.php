@@ -25,35 +25,35 @@
 
 	<!-- 1) header-->
 	<header>
-                 <?php get_header(); ?>
+        <?php get_header(); ?>
     </header>
-		<!-- 2 ) main -->
-		<div class="main">
-		<div class="row">
-			<!-- 2-1 ) page part -->
-			<div class="page">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<!-- 2 ) main -->
+	<div class="main">
+	<div class="row">
+		<!-- 2-1 ) page part -->
+		<div class="page">
+		<div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
 
-						<?php get_template_part('main-structure/main_page'); ?>
-
-				</div>
-		    </div>
-		    <!-- 2-2 ) sidebar part if you want -->
-
+		<?php get_template_part('main-structure/main_page'); ?>
 
 		</div>
-		<!--End Row -->
-		</div>
-		<!--End main -->
+	    </div>
+	    <!-- 2-2 ) sidebar part if you want -->
 
-		<!-- 3 ) footer-->
-		<footer>
-						<?php get_footer(); ?>
-		</footer>
-		<!-- End footer-->
-	
+
 	</div>
-	<!-- End Container-->
+	<!--End Row -->
+	</div>
+	<!--End main -->
+
+	<!-- 3 ) footer-->
+	<footer>
+		<?php get_footer(); ?>
+	</footer>
+	<!-- End footer-->
+	
+</div>
+<!-- End Container-->
 		<?php get_template_part('main-structure/script'); ?>
 
 </body>

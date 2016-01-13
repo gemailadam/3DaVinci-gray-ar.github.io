@@ -5,9 +5,7 @@ while ( have_posts() ) {
 
 the_post();
 
-?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'class-adam' ); ?>>
-<?php
+echo ' <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>';
 
 echo '<div class="rect">';
 echo '<h1 class="qwe-page-title"><a href="';
@@ -61,17 +59,16 @@ elseif($qwe_dir=='rtl'){
 the_date( get_option( 'date_format', 'F Y'));
 echo '</a>';
 the_category();
-echo "<a style='display:none;''> , Tags :";
+echo '<a style="display:none;"> , Tags :';
 the_tags();
 echo "</a>";
 echo '<br/>';
 echo '</div>';
 // echo '</div>';//col-xs .... col-vs
 
-echo '</div>';//post-id and post-class
 
 
-
+echo '</div>';//end post class
 }
 }else { echo "No Content Found , or there is nothing posted By you yet";}					            
 ?>	

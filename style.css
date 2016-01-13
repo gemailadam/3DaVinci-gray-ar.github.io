@@ -200,3 +200,14 @@ a img.aligncenter {
 .qwe-table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:80%;border-radius: 10px;border: 0px solid #777;}
 
 }
+
+/*POST FORMAT*/
+
+.format-status .post-title {
+display:none;
+}
+/* Gallery */
+.format-gallery {
+    background-color: #fbca3c;
+}
+.vcard img {width: 32px;height: 32px;}

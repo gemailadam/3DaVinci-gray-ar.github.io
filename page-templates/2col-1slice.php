@@ -72,7 +72,7 @@
 						<div class="row">
 
 							<?php 
-					 		$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
+							$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
 
 							if ($qwe_dir=='ltr'){
 								?>
@@ -116,8 +116,15 @@
 									</div>
 								</div>
 								<!-- end page part -->   
+								<!--End page-->
+								<!-- 2-2 ) sidebar part if you want -->
+								<div class="sidebar">
+									<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
 
-
+										<?php get_sidebar(); ?>
+									</div>	
+								</div>
+								<!--End sidebar-->
 							</div>
 							<!--End Row -->
 						</div>
@@ -125,7 +132,7 @@
 						<br>
 						<!-- 3 ) footer-->
 						<footer>
-									<?php get_footer(); ?>
+							<?php get_footer(); ?>
 						</footer>
 						<!-- End footer-->
 

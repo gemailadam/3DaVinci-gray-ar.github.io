@@ -13,6 +13,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
+
+
+
  	$defaults_2 = array(
 		'before'           => '<p>' . 'Pages:',
 		'after'            => '</p>',
@@ -271,7 +274,7 @@ add_action( 'after_setup_theme', 'custom_theme_setup_qwe6' );
 
 
 function custom_theme_setup_qwe7() {
-add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+add_theme_support( 'post-formats', array( 'aside', 'gallery','image' ) );
 }
 add_action( 'after_setup_theme', 'custom_theme_setup_qwe7' );
 

@@ -73,8 +73,6 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 						<div class="col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
 							
 							<div class="rect">
-								<!-- <h1 style="color:#2288BD;"><u>HOME</u></h1> -->
-
 
 									<?php //get_template_part('main-structure/main_index'); ?>
 								
@@ -85,8 +83,12 @@ echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" /
 					
 					<!-- 2-2 ) sidebar part if you want -->
 					<div class="sidebar">
-							<?php get_sidebar(); ?>
+						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+
+		                	<?php get_sidebar(); ?>
+		                </div>	
 					</div>
+				
 
 				</div>
 				<!-- end columns -->

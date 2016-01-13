@@ -1,10 +1,7 @@
 <?php
 if(have_posts()) : 
 	while ( have_posts() ) : the_post();
-
-?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'class-adam' ); ?>>
-<?php							
+echo ' <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>';
 
 echo '<div class="rect">';
 echo '<h1 class="qwe-page-title"><a>';
@@ -13,7 +10,9 @@ echo '</a></h1>';
 echo '<br/>';
 echo '<br/>';
 if ( has_post_thumbnail() ) {
+	echo '<div class="image-format-qwe">';
 	the_post_thumbnail();
+	echo "</div>";
 }
 the_content('<br/>Read more >>');
 echo "</div>";
@@ -29,13 +28,12 @@ echo '">  ';
 the_date( get_option( 'date_format', 'F Y'));
 echo '</a>';
 the_category();
-echo "<a style='display:none;''> , Tags :";
+echo '<a style="display:none;"> , Tags :';
 the_tags();
 echo "</a>";
 echo '</div>';
 
-echo '</div>';//post-id and post-class
-
+echo '</div>';//post class 
 endwhile;
 else :
 	echo "No Content Found , or there is nothing Page By you yet";

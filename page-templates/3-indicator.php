@@ -284,12 +284,15 @@ Template Name: 3 indicator images & links
 
 						</div>
 					</div>
-
+					<!--End page-->
 					<!-- 2-2 ) sidebar part if you want -->
 					<div class="sidebar">
-							<?php get_sidebar(); ?>
-					</div>
+						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
 
+		                	<?php get_sidebar(); ?>
+		                </div>	
+					</div>
+					<!--End sidebar-->
 				</div>
 				<!--End Row -->
 			</div>

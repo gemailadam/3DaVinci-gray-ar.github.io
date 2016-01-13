@@ -29,9 +29,7 @@
 
 					<!-- 2-1 ) page part -->
 					<div class="page">
-						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
-
-
+						<div class="col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
 						<?php get_template_part('main-structure/main_single'); ?>
 
 						</div>
@@ -39,8 +37,12 @@
 
 					<!-- 2-2 ) sidebar part if you want -->
 					<div class="sidebar">
-							<?php get_sidebar(); ?>
+						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+
+		                	<?php get_sidebar(); ?>
+		                </div>	
 					</div>
+				
 				</div>
 				<!-- end columns -->
 				</div>

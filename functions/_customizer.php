@@ -1310,13 +1310,14 @@ function qwe_select_css()
 
 /*main background change*/
 
-body {background-color:<?php echo get_theme_mod('body_id','#222'); ?>;}
+body {background-color:<?php echo get_theme_mod('body_id','#222'); ?>;}/*#00ffffff*/
 
 /*change row_id to container_id*/
 
 .container .contain{
     background-color:<?php echo get_theme_mod('container_id','#222'); ?>;
-    /*box-shadow: 3px 3px 8px <?php echo get_theme_mod('shadow_id','#000'); ?> , -3px -3px 8px <?php echo get_theme_mod('shadow_id','#000'); ?>;*/
+    box-shadow: 3px 3px 8px <?php echo get_theme_mod('shadow_id',''); ?> , -3px -3px 8px <?php echo get_theme_mod('shadow_id',''); ?>;
+    border-radius: 10px;
 } 
 
 /*page*/
@@ -2381,18 +2382,21 @@ position: absolute;width:150px;
 /*page*/
 
 /*Very Important for images , to not exceed page width [ Wordpress test ]*/
+
 .page .rect img {max-width:100%;height:auto;overflow: auto;}
 .page .rect iframe {max-width:100%;overflow: auto;}
 .page .rect div {max-width:100%;overflow: auto;}
 
-
 .page {margin-top: 50px;}
 
 .page .rect {
+    max-width: 94%;
     margin:0 1%;
-    padding: 0 2%;
+    padding: 0 1%;
     border-bottom:1px solid #fff;/*<?php echo get_theme_mod('page_border_id','#fff'); ?>;*/
     border-radius: 15px;
+    width: 94%;
+display:block;float: left;
 }
 
 .page .rect .qwe-page-title {  

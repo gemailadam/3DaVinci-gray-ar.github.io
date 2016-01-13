@@ -32,7 +32,10 @@
 		    </div>
 		    <!-- 2-2 ) sidebar part if you want -->
 			<div class="sidebar">
+				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+
                 	<?php get_sidebar(); ?>
+                </div>	
 			</div>
 		
 		</div>
