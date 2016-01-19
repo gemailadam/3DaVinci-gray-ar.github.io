@@ -14,41 +14,49 @@
 <html <?php language_attributes(); ?> >
 <!--<![endif]-->
 <head>
-
-
 		<?php get_template_part('main-structure/head_html'); ?>
-
 </head>
 <body <?php body_class(); ?> >
-<div class="container">
-		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
-
+<div class="qwe-container">
+<div class="contain qwe-col-lg-12 qwe-col-md-12 qwe-col-sm-12 qwe-col-xs-12 qwe-col-vs-12">
 			<!-- 1) header-->
 			<header>
 					<?php get_header(); ?>
 			</header>
 			<!-- 2 ) main -->
 			<div class="main">
-				<div class="row">
-				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
+				<div class="qwe-row">
+				<div class=" qwe-col-xs-12 qwe-col-lg-12 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
 
 					<!-- 2-1 ) page part -->
 					<div class="page">
-						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9 col-vs-12">
+						<div class="qwe-col-xs-9 qwe-col-lg-9 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
 							
 <!--______________________________________________________________________________________________-->
 <!--______________________________________________________________________________________________-->
 
+<?php
+if ( post_password_required() ) {
+  return;
+}
+
+?>
 
 <?php if (have_comments()) {
 
 ?>
- <h4 id="comments"><?php comments_number( 'No comments', 'One Comment', '% Comments' , 'Strange Strange Strange'); ?></h4>
+ <h4 id="comments"><?php comments_number( 'No Support', 'One Support', '% Supports' , 'Strange Strange Strange'); ?> , in &#8220;<?php the_title( ); ?>&#8221; </h4>
 <?php
 echo '<ul class="comment-list">';
-wp_list_comments('callback=qwe_custom_comments');
+ wp_list_comments();
 echo "</ul>";
+
+next_comments_link(); 
+previous_comments_link(); 
+
 } 
+else {echo "<h2>Support</h2>";}
+
 
 $fields =  array(
 
@@ -79,16 +87,16 @@ $args = array(
   'title_reply'            => 'Leave a Reply',
   'title_reply_to'         => 'Leave a Reply to %s',
   'cancel_reply_link'      => 'Cancel Reply',
-  'label_submit'           => 'Post Comment',
+  'label_submit'           => 'Submit',
   'format'                 => 'xhtml',
 
-  'comment_field'          =>  '<p class="comment-form-comment"><label for="comment">' . 'Comment' .
+  'comment_field'          =>  '<p class="comment-form-comment"><label for="comment">' . 'Write your Question or a Problem' .
     '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
     '</textarea></p>',
 
   'must_log_in'            => '<p class="must-log-in">' .
     sprintf(
-      'You must be <a href="%s">logged in</a> to post a comment.',
+      'You must be <a href="%s">logged in</a> to post a question.',
       wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
     ) . '</p>',
 
@@ -116,7 +124,6 @@ $args = array(
 comment_form( $args ); 
 
  ?>
-
 <!--______________________________________________________________________________________________-->
 <!--______________________________________________________________________________________________-->
 						
@@ -127,10 +134,10 @@ comment_form( $args );
           <!--End page-->
           <!-- 2-2 ) sidebar part if you want -->
           <div class="sidebar">
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+            <div class="qwe-col-xs-3 qwe-col-lg-3 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
 
                       <?php get_sidebar(); ?>
-                    </div>  
+            </div>  
           </div>
           <!--End sidebar-->
 				</div>
@@ -145,11 +152,9 @@ comment_form( $args );
 						<?php get_footer(); ?>
 			</footer>
 			<!-- End footer-->
-	</div>			
+</div>			
 </div>
 <!-- End Container-->
-	
-	<?php get_template_part('main-structure/script'); ?>
-
-	</body>
-	</html>
+<?php get_template_part('main-structure/script'); ?>
+</body>
+</html>

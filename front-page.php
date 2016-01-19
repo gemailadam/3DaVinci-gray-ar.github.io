@@ -1,8 +1,3 @@
-<?php 
-/*
-Template Name: 3 indicator images & links
-*/
-?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>

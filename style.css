@@ -1,7 +1,7 @@
 /**
 * Theme Name: 3DaVinci-one
 * Theme URI: http://inspiration-inspection.ml/3DaVinci 
-* Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
+* Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others.the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
 * Version: 1.0.0
 * Author: Hesham Hussain [adam adam]
 * Author URI: http://inspiration-inspection.ml/adam-curriculum-vitae/
@@ -208,6 +208,16 @@ display:none;
 }
 /* Gallery */
 .format-gallery {
-    background-color: #fbca3c;
+    padding-top: 10px;
+    /*background-color: #fbca3c;*/
+    border-radius: 20px;
+    border:1px solid #fbca3c;
 }
+.format-gallery figcaption {color:#222;}
+
+/*post format image*/
+.attachment-post-thumbnail {border-radius: 10px;border:5px solid #fbca3c;} 
+.size-post-thumbnail {}
+.wp-post-image {}
+
 .vcard img {width: 32px;height: 32px;}

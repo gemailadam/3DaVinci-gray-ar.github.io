@@ -1,7 +1,7 @@
 <?php
 if(have_posts()) : 
 	while ( have_posts() ) : the_post();
-echo ' <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>';
+echo '<div id="post-';the_ID();echo '"';post_class();echo '>';
 
 echo '<div class="rect">';
 echo '<h1 class="qwe-page-title"><a>';
@@ -44,17 +44,13 @@ endif;
 <span class="qwe-prev-post">
 	<?php previous_post_link(); ?>
 </span>
-
 <span class="qwe-next-post">
-	
 	<?php next_post_link(); ?>
 </span>  
 
 <div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
 	<div class="qwe-comments">
-		<?php comments_template();//if no comment.php use wordpress default file */?> 
-<?php /*get_template_part('comments'); */?>
-		
-	</div>
+ <?php comments_template( $file, $separate_comments ); ?>
+ 	</div>
 </div>
 

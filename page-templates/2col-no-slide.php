@@ -1,4 +1,3 @@
-
 <?php
 /*
  * Template Name: 2 column no slideshow
@@ -16,103 +15,51 @@
 <html <?php language_attributes(); ?> >
 <!--<![endif]-->
 <head>
-
 	<?php get_template_part('main-structure/head_html'); ?>
-	
 </head>
 <body <?php body_class( ); ?> >
-	
-	<div class="container">
-		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+<div class="qwe-container">
+<div class="contain qwe-col-lg-12 qwe-col-md-12 qwe-col-sm-12 qwe-col-xs-12 qwe-col-vs-12">
+	<!-- 1) header-->
+	<header>
+				<?php get_template_part('page-templates/sliceno'); ?>
+	</header>
+	<!-- 2 ) main -->
+	<div class="main">
+		<div class="qwe-row">
 
-			<!-- 1) header-->
-			<header>
-				<div class="row">
-					<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12">
-						<section class="site-title" >
-							<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
-							<?php echo '<div class="title-description"><a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a></div>'; ?>
+			<!-- 2-1 ) page part -->
+			<div class="page">
+				<div class=" qwe-col-xs-9 qwe-col-lg-9 qwe-col-md-12 qwe-col-sm-12 ">
 
-						</section>
-						<br/>
-
-						<section class="one-image-only banner col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12" >
-							<?php dynamic_sidebar('banner'); ?>
-						</section>
-						
-						<div class="row-xs-5 row-lg-5 row-md-5 row-sm-5 row-vs-5"></div> 
-						<!-- <div class="clearfix"></div> -->
-						<br/>
-						<div class="row">
-
-							<?php 
-							$qwe_dir=get_theme_mod( 'qwe-rtl', 'ltr' );
-
-							if ($qwe_dir=='ltr'){
-								?>
-
-								<section class="qwe-nav row col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12 " >
-									<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
-
-								</section>
-
-								<?php 
-							}
-							elseif($qwe_dir=='rtl')
-							{ 
-								?>
-
-								<section class="qwe-nav-rtl row col-xs-12 col-lg-12 col-md-12 col-sm-12 col-vs-12 " >
-									<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
-
-								</section>
-
-
-								<?php } ?>
-
-							</div>
-							<br/>
-							<br/>
-
-						</div>
-					</header>
-					<!-- 2 ) main -->
-					<div class="main">
-						<div class="row">
-
-							<!-- 2-1 ) page part -->
-							<div class="page">
-								<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
-
-									<?php get_template_part('main-structure/main_page'); ?>
-
-								</div>
-							</div>
-							<!-- end page part -->   
-							<!--End page-->
-							<!-- 2-2 ) sidebar part if you want -->
-							<div class="sidebar">
-								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
-
-									<?php get_sidebar(); ?>
-								</div>	
-							</div>
-							<!--End sidebar-->
-						</div>
-						<!--End Row -->
-					</div>
-					<!--End main -->
-					<br>
-					<!-- 3 ) footer-->
-					<footer>
-						<?php get_footer(); ?>
-					</footer>
-					<!-- End footer-->
+					<?php get_template_part('main-structure/main_page'); ?>
 
 				</div>
-				<!-- End Container-->
-				<?php get_template_part('main-structure/script'); ?>
+			</div>
+			<!-- end page part -->   
+			<!--End page-->
+			<!-- 2-2 ) sidebar part if you want -->
+			<div class="sidebar">
+				<div class="qwe-col-lg-3 qwe-col-md-12 qwe-col-sm-12 qwe-col-xs-3">
 
-				<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
-			</body>
-			</html>
+					<?php get_sidebar(); ?>
+				</div>	
+			</div>
+			<!--End sidebar-->
+		</div>
+		<!--End qwe-row -->
+	</div>
+	<!--End main -->
+	<br>
+	<!-- 3 ) footer-->
+	<footer>
+		<?php get_footer(); ?>
+	</footer>
+	<!-- End footer-->
+</div>
+</div>
+<!-- End Container-->
+<?php get_template_part('main-structure/script'); ?>
+<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
+</body>
+</html>

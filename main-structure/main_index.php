@@ -5,7 +5,7 @@ while ( have_posts() ) {
 
 the_post();
 
-echo ' <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>';
+echo '<div id="post-';the_ID();echo '"';post_class();echo '>';
 
 echo '<div class="rect">';
 echo '<h1 class="qwe-page-title"><a href="';
@@ -64,29 +64,24 @@ the_tags();
 echo "</a>";
 echo '<br/>';
 echo '</div>';
-// echo '</div>';//col-xs .... col-vs
+// echo '</div>';//qwe-col-xs .... qwe-col-vs
 
 
 
 echo '</div>';//end post class
 }
 }else { echo "No Content Found , or there is nothing posted By you yet";}					            
-?>	
 
+?>	
 
 <span class="qwe-prev-post">
 	 <?php previous_posts_link(); ?> 
 </span>
-
 <span class="qwe-next-post">
-	
 	<?php next_posts_link(); ?>
 </span>  
-
-<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
+<div class=" qwe-col-xs-9 qwe-col-lg-9 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
 <div class="qwe-comments">
-<!-- <?php comments_template(); ?>  -->
-<?php get_template_part('comments'); ?>
-
-</div>
+ <?php comments_template('comments.php'); ?>
+ </div>
 </div>

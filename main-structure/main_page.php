@@ -20,8 +20,6 @@ endif;
 
 <div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 col-vs-12">
 	<div class="qwe-comments">
-		<?php /* comments_template();if no comment.php use wordpress default file */ ?> 
-<?php get_template_part('comments'); ?>
-		
+ <?php comments_template( $file, $separate_comments ); ?>		
 	</div>
 </div>

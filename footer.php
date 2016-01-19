@@ -1,5 +1,5 @@
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
+<div class="qwe-row">
+<div class="qwe-col-lg-12 qwe-col-md-12 qwe-col-sm-12 qwe-col-xs-12 qwe-col-vs-12">
 <br/>					
 
 
@@ -74,7 +74,7 @@ elseif($qwe_dir=='rtl')
 	{ 
 ?>
 
-<div class="col-lg-12 col-xs-12">
+<div class="qwe-col-lg-12 qwe-col-xs-12">
 <section class="footer3-rtl">
 	<?php $index='footer 3'; dynamic_sidebar( 'footer 3' ); ?>
 </section>
@@ -84,7 +84,7 @@ elseif($qwe_dir=='rtl')
 
 <!-- End footer 3 -->
 
-<div class="col-lg-12 col-xs-12">
+<div class="qwe-col-lg-12 qwe-col-xs-12">
 
 <section class="blur footer-img">
 

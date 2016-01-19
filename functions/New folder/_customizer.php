@@ -62,6 +62,9 @@ $wp_customize->add_panel( 'panel_qwe', array(
         $qwe_logo=$qwe_image . '/images/logo.png';
     
 
+        // $qwe_image=get_bloginfo('template_directory');
+        // $qwe_logo=$qwe_image . '/images/logo.png';
+
         $wp_customize->add_setting('logo_qwe',array('default' => $qwe_logo ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo_qwe',array(
             'label' =>'Upload Logo Image',
@@ -69,11 +72,11 @@ $wp_customize->add_panel( 'panel_qwe', array(
             'priority'=>1,
             'section' => 'slideshow' ,
             'settings' => 'logo_qwe' ,
-            'active_callback' => 'is_front_page', )));
+            'active_callback' => 'is_front_page',)));
 
 // slide 1
 
-        $wp_customize->add_setting('image1_qwe',array('default' => $qwe_image . '/images/image1.jpg','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('image1_qwe',array('default' => $qwe_image . '/images/image1.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image1_qwe',array(
             'label' =>'Upload Image 1',
             'priority'=>1,
@@ -81,7 +84,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
             'settings' => 'image1_qwe' ,
             'active_callback' => 'is_front_page',)));
 
-        $wp_customize->add_setting('description1_qwe',array('default' => 'write your description' ,'sanitize_callback'=>'esc_textarea'));
+        $wp_customize->add_setting('description1_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc1_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description1_qwe', 
@@ -90,13 +93,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>2,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',   
+                'active_callback' => 'is_front_page',
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link1_qwe',array('default' => '#','sanitize_callback'=>'esc_url' ));
+        $wp_customize->add_setting('text_description_link1_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('txt_description_link1_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
@@ -107,12 +110,11 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
                 'active_callback' => 'is_front_page',
-                
             )
         );
 
 
-        $wp_customize->add_setting('button1_qwe',array('default' => 'link 1','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button1_qwe',array('default' => 'link 1' ));
         $wp_customize->add_control('btn1_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button1_qwe', 
@@ -127,7 +129,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
         );
                 
 
-        $wp_customize->add_setting('button_description_link1_qwe',array('default' => '#' ,'sanitize_callback'=>'esc_url'));
+        $wp_customize->add_setting('button_description_link1_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('btn_description_link1_qwe',array(
                 'description' =>'add hyperlink to your button',        
@@ -137,7 +139,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>5,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -145,15 +147,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 //slide 2
 
-        $wp_customize->add_setting('image2_qwe', array('default' => $qwe_image . '/images/image2.jpg','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('image2_qwe', array('default' => $qwe_image . '/images/image2.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image2_qwe',array(
             'label' =>'Upload Image 2',
             'priority'=>6,
             'section' => 'slideshow' ,
-            'settings' => 'image2_qwe',
-            'active_callback' => 'is_front_page',)));
+            'settings' => 'image2_qwe',)));
 
-        $wp_customize->add_setting('description2_qwe',array('default' => 'write your description' ,'sanitize_callback'=>'esc_textarea'));
+        $wp_customize->add_setting('description2_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc2_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description2_qwe', 
@@ -162,13 +163,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>7,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link2_qwe',array('default' => '#','sanitize_callback'=>'esc_url' ));
+        $wp_customize->add_setting('text_description_link2_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('txt_description_link2_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
@@ -178,13 +179,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>8,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('button2_qwe',array('default' => 'link 2','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button2_qwe',array('default' => 'link 2' ));
         $wp_customize->add_control('btn2_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button2_qwe', 
@@ -193,13 +194,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>9,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
                 
 
-        $wp_customize->add_setting('button_description_link2_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_description_link2_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('btn_description_link2_qwe',array(
                 'description' =>'add hyperlink to your button',        
@@ -209,7 +210,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>10,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -217,15 +218,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 // slide 3
                         
-        $wp_customize->add_setting('image3_qwe',array('default' => $qwe_image . '/images/image3.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('image3_qwe',array('default' => $qwe_image . '/images/image3.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image3_qwe',array(
             'label' =>'Upload Image 3',
             'priority'=>11,
             'section' => 'slideshow' ,
-            'settings' => 'image3_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image3_qwe' )));
 
-        $wp_customize->add_setting('description3_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description3_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc3_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description3_qwe', 
@@ -234,13 +234,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>12,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link3_qwe',array('default' => '#' ,'sanitize_callback'=>'esc_url' ));
+        $wp_customize->add_setting('text_description_link3_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('txt_description_link3_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
@@ -250,14 +250,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>13,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
                 
-        $wp_customize->add_setting('button3_qwe',array('default' => 'link 3','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button3_qwe',array('default' => 'link 3' ));
         $wp_customize->add_control('btn3_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button3_qwe', 
@@ -266,13 +266,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>14,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('button_description_link3_qwe',array('default' => '#' ,'sanitize_callback'=>'esc_url' ));
+        $wp_customize->add_setting('button_description_link3_qwe',array('default' => '#' ));
 
         $wp_customize->add_control('btn_description_link3_qwe',array(
                 'description' =>'add hyperlink to your button',        
@@ -282,7 +282,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>15,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -290,15 +290,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 //slide 4
 
-        $wp_customize->add_setting('image4_qwe',array('default' => $qwe_image . '/images/image4.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('image4_qwe',array('default' => $qwe_image . '/images/image4.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image4_qwe',array(
             'label' =>'Upload Image 4',
             'priority'=>16,
             'section' => 'slideshow' ,
-            'settings' => 'image4_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image4_qwe' )));
 
-        $wp_customize->add_setting('description4_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description4_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc4_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description4_qwe', 
@@ -307,12 +306,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>17,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
                 
-        $wp_customize->add_setting('text_description_link4_qwe',array('default' => '#' ,'sanitize_callback'=>'esc_url' ));
+        $wp_customize->add_setting('text_description_link4_qwe',array('default' => '#' ));
         $wp_customize->add_control('txt_description_link4_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
                 'settings' => 'text_description_link4_qwe', 
@@ -321,13 +320,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>18,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('button_description_link4_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_description_link4_qwe',array('default' => '#' ));
         $wp_customize->add_control('btn_description_link4_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_description_link4_qwe', 
@@ -336,14 +335,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>19,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
 
-        $wp_customize->add_setting('button4_qwe',array('default' => 'link 4','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button4_qwe',array('default' => 'link 4' ));
         $wp_customize->add_control('btn4_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button4_qwe', 
@@ -352,7 +351,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>20,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -360,16 +359,15 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 //slide 5
 
-        $wp_customize->add_setting('image5_qwe',array('default' => $qwe_image . '/images/image5.jpg','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('image5_qwe',array('default' => $qwe_image . '/images/image5.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image5_qwe',array(
             'label' =>'Upload Image 5',
             'priority'=>21,
             'section' => 'slideshow' ,
-            'settings' => 'image5_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image5_qwe' )));
 
 
-        $wp_customize->add_setting('description5_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description5_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc5_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description5_qwe', 
@@ -378,13 +376,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>22,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link5_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('text_description_link5_qwe',array('default' => '#' ));
         $wp_customize->add_control('txt_description_link5_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
                 'settings' => 'text_description_link5_qwe', 
@@ -393,13 +391,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>23,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
                 
-        $wp_customize->add_setting('button5_qwe',array('default' => 'link 5','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button5_qwe',array('default' => 'link 5' ));
         $wp_customize->add_control('btn5_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button5_qwe', 
@@ -408,12 +406,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>24,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button_description_link5_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_description_link5_qwe',array('default' => '#' ));
         $wp_customize->add_control('btn_description_link5_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_description_link5_qwe', 
@@ -422,7 +420,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>25,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -433,15 +431,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 //slide 6
 
-        $wp_customize->add_setting('image6_qwe',array('default' => $qwe_image . '/images/image6.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('image6_qwe',array('default' => $qwe_image . '/images/image6.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image6_qwe',array(
             'label' =>'Upload Image 6',
             'priority'=>26,
             'section' => 'slideshow' ,
-            'settings' => 'image6_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image6_qwe' )));
 
-        $wp_customize->add_setting('description6_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description6_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc6_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description6_qwe', 
@@ -450,13 +447,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>27,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link6_qwe',array('default' => '#','sanitize_callback'=>'esc_url'));
+        $wp_customize->add_setting('text_description_link6_qwe',array('default' => '#' ));
         $wp_customize->add_control('txt_description_link6_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
                 'settings' => 'text_description_link6_qwe', 
@@ -465,12 +462,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>28,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button6_qwe',array('default' => 'link 6','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button6_qwe',array('default' => 'link 6' ));
         $wp_customize->add_control('btn6_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button6_qwe', 
@@ -479,12 +476,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>29,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button_description_link6_qwe',array('default' => '#','sanitize_callback'=>'esc_url'));
+        $wp_customize->add_setting('button_description_link6_qwe',array('default' => '#' ));
         $wp_customize->add_control('btn_description_link6_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_description_link6_qwe', 
@@ -493,7 +490,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>30,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -505,15 +502,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 //slide 7
 
 
-        $wp_customize->add_setting('image7_qwe',array('default' => $qwe_image . '/images/image7.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('image7_qwe',array('default' => $qwe_image . '/images/image7.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image7_qwe',array(
             'label' =>'Upload Image 7',
             'priority'=>31,
             'section' => 'slideshow' ,
-            'settings' => 'image7_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image7_qwe' )));
 
-        $wp_customize->add_setting('description7_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description7_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc7_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description7_qwe', 
@@ -522,13 +518,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>32,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link7_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('text_description_link7_qwe',array('default' => '#' ));
         $wp_customize->add_control('txt_description_link7_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
                 'settings' => 'text_description_link7_qwe', 
@@ -537,13 +533,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>33,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('button7_qwe',array('default' => 'link 7','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button7_qwe',array('default' => 'link 7' ));
         $wp_customize->add_control('btn7_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button7_qwe', 
@@ -552,14 +548,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>34,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
 
-        $wp_customize->add_setting('button_description_link7_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_description_link7_qwe',array('default' => '#' ));
         $wp_customize->add_control('btn_description_link7_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_description_link7_qwe', 
@@ -568,7 +564,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>35,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -579,16 +575,15 @@ $wp_customize->add_panel( 'panel_qwe', array(
 //slide 8  
 
 
-        $wp_customize->add_setting('image8_qwe',array('default' => $qwe_image . '/images/image8.jpg','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('image8_qwe',array('default' => $qwe_image . '/images/image8.jpg' ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image8_qwe',array(
             'label' =>'Upload Image 8',         
             'priority'=>36,
             'section' => 'slideshow' ,
-            'settings' => 'image8_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'image8_qwe' )));
 
     
-        $wp_customize->add_setting('description8_qwe',array('default' => 'write your description','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('description8_qwe',array('default' => 'write your description' ));
         $wp_customize->add_control('desc8_qwe',array(
                 'description' =>'add one line description to your image',        
                 'settings' => 'description8_qwe', 
@@ -597,13 +592,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>37,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('text_description_link8_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('text_description_link8_qwe',array('default' => '#' ));
         $wp_customize->add_control('txt_description_link8_qwe',array(
                 'description' =>'add hyperlink to your slideshow gray text area',        
                 'settings' => 'text_description_link8_qwe', 
@@ -612,12 +607,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>38,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button8_qwe',array('default' => 'link 8','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button8_qwe',array('default' => 'link 8' ));
         $wp_customize->add_control('btn8_qwe',array(
                 'description' =>'add link text to your button',        
                 'settings' => 'button8_qwe', 
@@ -626,14 +621,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>39,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
 
-        $wp_customize->add_setting('button_description_link8_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_description_link8_qwe',array('default' => '#' ));
         $wp_customize->add_control('btn_description_link8_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_description_link8_qwe', 
@@ -642,7 +637,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>40,
                 'section' => 'slideshow',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -677,21 +672,19 @@ $wp_customize->add_panel( 'panel_qwe', array(
         'description' => 'To Change Sticky Images and there descriptions and buttons titles you must use 3 indicator Template First',
         'priority' => '3' ,
         'panel'=> 'panel_qwe',
-        'active_callback' => 'is_front_page',
  ));
 
 
 
 //1
-        $wp_customize->add_setting('indicator_image1_qwe',array('default' => $qwe_image . '/images/image1.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('indicator_image1_qwe',array('default' => $qwe_image . '/images/image1.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image1_qwe',array(
             'label' =>'Upload Indicator Image 1',         
             'priority'=>41,
             'section' => 'sticky' ,
-            'settings' => 'indicator_image1_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'indicator_image1_qwe' )));
 
-        $wp_customize->add_setting('indicator1_description_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('indicator1_description_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('indi1_description_qwe',array(
                 'description' =>'add hyperlink to your image',        
                 'settings' => 'indicator1_description_link_qwe', 
@@ -700,13 +693,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>42,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('indicator1_qwe',array('default' => 'write your indicator description here','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('indicator1_qwe',array('default' => 'write your indicator description here' ));
         $wp_customize->add_control('indi1_qwe',array(
                 'description' =>'add your description for image 1',        
                 'settings' => 'indicator1_qwe', 
@@ -715,12 +708,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>43,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button_indicator1_qwe',array('default' => 'button1','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button_indicator1_qwe',array('default' => 'button1' ));
         $wp_customize->add_control('button_indi1_qwe',array(
                 'description' =>'add button 1 text',        
                 'settings' => 'button_indicator1_qwe', 
@@ -730,11 +723,11 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'section' => 'sticky',
                 'transport' => 'postMessage',
                 'default' => 'button1',
-                'active_callback' => 'is_front_page',
+                
             )
         );
  
-        $wp_customize->add_setting('button_indicator1_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_indicator1_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('button_indi1_link_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_indicator1_link_qwe', 
@@ -743,7 +736,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>45,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
@@ -753,15 +746,14 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 // 2
 
-        $wp_customize->add_setting('indicator_image2_qwe',array('default' => $qwe_image . '/images/image2.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('indicator_image2_qwe',array('default' => $qwe_image . '/images/image2.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image2_qwe',array(
             'label' =>'Upload Indicator Image 2',         
             'priority'=>46,
             'section' => 'sticky' ,
-            'settings' => 'indicator_image2_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'indicator_image2_qwe' )));
 
-        $wp_customize->add_setting('indicator2_description_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('indicator2_description_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('indi2_description_qwe',array(
                 'description' =>'add hyperlink to your image',        
                 'settings' => 'indicator2_description_link_qwe', 
@@ -770,13 +762,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>47,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('indicator2_qwe',array('default' => 'write your indicator description here','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('indicator2_qwe',array('default' => 'write your indicator description here' ));
         $wp_customize->add_control('indi2_qwe',array(
                 'description' =>'add your description for image 2',        
                 'settings' => 'indicator2_qwe', 
@@ -785,12 +777,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>48,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
-        $wp_customize->add_setting('button_indicator2_qwe',array('default' => 'button2','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button_indicator2_qwe',array('default' => 'button2' ));
         $wp_customize->add_control('button_indi2_qwe',array(
                 'description' =>'add button 2 text',        
                 'settings' => 'button_indicator2_qwe', 
@@ -800,12 +792,12 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'section' => 'sticky',
                 'transport' => 'postMessage',
                 'default' => 'button2',
-                'active_callback' => 'is_front_page',
+                
             )
         );
  
 
-        $wp_customize->add_setting('button_indicator2_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_indicator2_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('button_indi2_link_qwe',array(
                 'description' =>'add hyperlink to your button',        
                 'settings' => 'button_indicator2_link_qwe', 
@@ -814,8 +806,8 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>50,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'default' => '#',
-                'active_callback' => 'is_front_page',
+                'default' => '#'
+                
             )
         );
 
@@ -823,16 +815,15 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 //3
 
-        $wp_customize->add_setting('indicator_image3_qwe',array('default' => $qwe_image . '/images/image3.jpg','sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('indicator_image3_qwe',array('default' => $qwe_image . '/images/image3.jpg'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'indicator_image3_qwe',array(
             'label' =>'Upload Indicator Image 3',         
             'priority'=>51,
             'section' => 'sticky' ,
-            'settings' => 'indicator_image3_qwe',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'indicator_image3_qwe' )));
 
 
-        $wp_customize->add_setting('indicator3_description_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('indicator3_description_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('indi3_description_qwe',array(
                 'description' =>'add hyperlink to your image',        
                 'settings' => 'indicator3_description_link_qwe', 
@@ -841,13 +832,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>52,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('indicator3_qwe',array('default' => 'write your indicator description here','sanitize_callback'=>'esc_textarea' ));
+        $wp_customize->add_setting('indicator3_qwe',array('default' => 'write your indicator description here' ));
         $wp_customize->add_control('indi3_qwe',array(
                 'description' =>'add your description for image 3',        
                 'settings' => 'indicator3_qwe', 
@@ -856,13 +847,13 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'priority'=>53,
                 'section' => 'sticky',
                 'transport' => 'postMessage',
-                'active_callback' => 'is_front_page',
+                
                 
             )
         );
 
 
-        $wp_customize->add_setting('button_indicator3_qwe',array('default' => 'button3','sanitize_callback'=>'sanitize_text_field' ));
+        $wp_customize->add_setting('button_indicator3_qwe',array('default' => 'button3' ));
         $wp_customize->add_control('button_indi3_qwe',array(
                 'description' =>'add button 3 text',        
                 'settings' => 'button_indicator3_qwe', 
@@ -872,11 +863,11 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'section' => 'sticky',
                 'transport' => 'postMessage',
                 'default' => 'button3',
-                'active_callback' => 'is_front_page',
+                
             )
         );
  
-        $wp_customize->add_setting('button_indicator3_link_qwe',array('default' => '#','sanitize_callback'=>'esc_url'  ));
+        $wp_customize->add_setting('button_indicator3_link_qwe',array('default' => '#' ));
         $wp_customize->add_control('button_indi3_link_qwe',array(
                 'description' =>'add hyperlink text to your button',        
                 'settings' => 'button_indicator3_link_qwe', 
@@ -886,7 +877,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
                 'section' => 'sticky',
                 'transport' => 'postMessage',
                 'default' => '#',
-                'active_callback' => 'is_front_page',
+                
             )
         );
 
@@ -895,7 +886,7 @@ $wp_customize->add_panel( 'panel_qwe', array(
 
 
 
-$wp_customize->add_section('rtl_qwe', array('title' => 'language direction' ,'panel'=> 'panel_qwe','active_callback' => 'is_front_page',)); 
+$wp_customize->add_section('rtl_qwe', array('title' => 'language direction' ,'panel'=> 'panel_qwe',)); 
 $wp_customize->add_setting(
     'qwe-rtl',
     array(
@@ -911,7 +902,6 @@ $wp_customize->add_control(
         'section' => 'rtl_qwe',
         'priority'=>499 ,
         'transport' => 'postMessage',
-        'active_callback' => 'is_front_page',
         'choices' => array(
             'ltr' => 'ltr',
             'rtl' => 'rtl',
@@ -925,14 +915,21 @@ $wp_customize->add_control(
         $qwe_imagewww=get_template_directory_uri();
         $qwe_logowww=$qwe_imagewww . '/images/blur4.png';
 
-        $wp_customize->add_setting('footerwww',array('default' => $qwe_logowww ,'sanitize_callback'=>'sanitize_text_field'));
+        $wp_customize->add_setting('footerwww',array('default' => $qwe_logowww));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'footerwww',array(
             'label' =>'Upload Footer Image',         
             'priority'=>51,
             'section' => 'sticky' ,
-            'settings' => 'footerwww',
-            'active_callback' => 'is_front_page', )));
+            'settings' => 'footerwww' )));
 
+
+
+// $qwe_strang="url('".$qwe_logowww."');";
+
+//         array('logowww' =>$qwe_logowww , );
+//         $logowww="https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png";
+//  
+   
 
 
 /* _slideshow.php end*/
@@ -963,31 +960,39 @@ $wp_customize->add_control(
         'description' => 'Change any part of the theme color',
         'priority' => '88' ,
         'panel'  => 'panel_qwe',
-        'active_callback' => 'is_front_page',
         ));
 
 
+//HTML color
+
+    // $wp_customize->add_setting('html_qwe',array('default' => '#fff' ));
+
+    // $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'html_qwe',array(
+    //     'label' =>'all site font default color',
+    //     'section' => 'colors' ,
+    //     'settings' => 'html_qwe' )));
+
 //body color
 
-    $wp_customize->add_setting('body_qwe',array('default' => '#222' ,'sanitize_callback'=>'sanitize_text_field'));
+    $wp_customize->add_setting('body_qwe',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'body_qwe',array(
         'label' =>'Background Color',
+        // 'description' =>'Change Background Color',
         'section' => 'colors' ,
-        'settings' => 'body_qwe',
-        'active_callback' => 'is_front_page', )));
+        'settings' => 'body_qwe' )));
 
 
 // container_qwe
 
 
-    $wp_customize->add_setting('container_qwe',array('default' => 'transperent' ,'sanitize_callback'=>'sanitize_text_field'));
+    $wp_customize->add_setting('container_qwe',array('default' => 'transperent' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'container_qwe',array(
         'label' =>'Container Background Color',
+        // 'description' =>'Change Container Background Color',
         'section' => 'colors' ,
-        'settings' => 'container_qwe',
-        'active_callback' => 'is_front_page', )));
+        'settings' => 'container_qwe' )));
 
 
 //container shadow 
@@ -995,7 +1000,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
     'shadow_qwe',
     array(
-        'default' => 'transperent','sanitize_callback'=>'sanitize_text_field'
+        'default' => 'transperent',
     )
 );
  
@@ -1007,7 +1012,6 @@ $wp_customize->add_control(
         'section' => 'colors',
         'priority'=>499 ,
         'transport' => 'postMessage',
-        'active_callback' => 'is_front_page',
         'choices' => array(
             '#000' => 'enable',
             'transperent' => 'disable',
@@ -1021,87 +1025,89 @@ $wp_customize->add_control(
 
 //page_qwe
 
-    $wp_customize->add_setting('page_qwe',array('default' => 'transperent','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('page_qwe',array('default' => 'transperent' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'page_qwe',array(
         'label' =>'Pages & Posts Background Colors',
+        // 'description' =>'Change posts and pages Background Color',
         'section' => 'colors' ,
-        'settings' => 'page_qwe' ,
-        'active_callback' => 'is_front_page',)));
+        'settings' => 'page_qwe' )));
 
 
 //postedby_qwe
 
-    $wp_customize->add_setting('postedby_qwe',array('default' => 'transperent','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('postedby_qwe',array('default' => 'transperent' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'postedby_qwe',array(
         'label' =>'Posts footer tail',
         'description' =>'Change posts tails [ that contain Posted By and Date of Post ] Background Color',
         'section' => 'colors' ,
-        'settings' => 'postedby_qwe',
-        'active_callback' => 'is_front_page', )));
+        'settings' => 'postedby_qwe' )));
 
 
 //sidebar_qwe background
 
 
-    $wp_customize->add_setting('sidebar_qwe',array('default' => 'transperent','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('sidebar_qwe',array('default' => 'transperent' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_qwe',array(
         'label' =>'Sidebar Background Colors',
+        // 'description' =>'Change Sidebar Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'sidebar_qwe',
-        'active_callback' => 'is_front_page', )));
+        'settings' => 'sidebar_qwe' )));
 
 
 // footer background footer_qwe
-    $wp_customize->add_setting('footer_qwe',array('default' => 'transperent','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('footer_qwe',array('default' => 'transperent' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_qwe',array(
         'label' =>'Footers background Colors',
+        // 'description' =>'Change Footers Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'footer_qwe',
-        'active_callback' => 'is_front_page', )));
+        'settings' => 'footer_qwe' )));
 
 
 
 // bullets background bullets_qwe
-    $wp_customize->add_setting('bullets_qwe',array('default' => '#222','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('bullets_qwe',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'bullets_qwe',array(
         'label' =>'bullets Colors',
+        // 'description' =>'Change Footers Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'bullets_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'bullets_qwe' )));
 
 
 // bullets background bullets_active_qwe
-    $wp_customize->add_setting('bullets_active_qwe',array('default' => '#222','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('bullets_active_qwe',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'bullets_active_qwe',array(
         'label' =>'bullets active Colors',
+        // 'description' =>'Change Footers Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'bullets_active_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'bullets_active_qwe' )));
 
 
 
 // button background button_qwe
-    $wp_customize->add_setting('button_qwe',array('default' => '#222','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('button_qwe',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'button_qwe',array(
         'label' =>'buttons Colors',
+        // 'description' =>'Change Footers Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'button_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'button_qwe' )));
 
 
 
 // button text button_txt_qwe
-    $wp_customize->add_setting('button_txt_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('button_txt_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'button_txt_qwe',array(
         'label' =>'buttons text Color',
         // 'description' =>'Change Footers Background Colors',                
         'section' => 'colors' ,
-        'settings' => 'button_txt_qwe' ,'active_callback' => 'is_front_page',)));
+        'settings' => 'button_txt_qwe' )));
 
 
 //page links [a]
@@ -1109,126 +1115,137 @@ $wp_customize->add_control(
 
 // site title color
     
-    $wp_customize->add_setting('site_title_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('site_title_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_qwe',array(
         'label' =>'Site Title Colors',
         'section' => 'colors' ,
-        'settings' => 'site_title_qwe' ,'active_callback' => 'is_front_page',)));
+        'settings' => 'site_title_qwe' )));
 
 
 
 
 // site description color
     
-    $wp_customize->add_setting('site_description_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('site_description_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_description_qwe',array(
         'label' =>'Site Description Colors',
         'section' => 'colors' ,
-        'settings' => 'site_description_qwe','active_callback' => 'is_front_page', )));
-
-//slide show description
+        'settings' => 'site_description_qwe' )));
 
 
-    $wp_customize->add_setting('slide_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'slide_qwe',array(
-        'label' =>'Slideshow Description Colors',
-        'section' => 'colors' ,
-        'settings' => 'slide_qwe','active_callback' => 'is_front_page', )));
-
-//page description
-
-    $wp_customize->add_setting('page_titles_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('page_titles_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'page_titles_qwe',array(
         'label' =>'Page Title',
         'description' =>'Change Page Title Color',        
         'section' => 'colors' ,
-        'settings' => 'page_titles_qwe','active_callback' => 'is_front_page', )));
-
-
-// posted by text color
-    $wp_customize->add_setting('postedby_txt_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'postedby_txt_qwe',array(
-        'label' =>'Post Tails Texts',
-        'description' =>'Change Posted By Texts Color',        
-        'section' => 'colors' ,
-        'settings' => 'postedby_txt_qwe' ,'active_callback' => 'is_front_page',)));
+        'settings' => 'page_titles_qwe' )));
 
 
 
 // sidebar_txt_qwe color
 
 
-    $wp_customize->add_setting('sidebar_widget_txt_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('sidebar_widget_txt_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_widget_txt_qwe',array(
         'label' =>'Sidebar Widget text color',
         'section' => 'colors' ,
-        'settings' => 'sidebar_widget_txt_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'sidebar_widget_txt_qwe' )));
 
-    $wp_customize->add_setting('sidebar_titles_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('sidebar_titles_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_titles_qwe',array(
         'label' =>'Sidebar Titles Colors',
         'description' =>'',        
         'section' => 'colors' ,
-        'settings' => 'sidebar_titles_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'sidebar_titles_qwe' )));
 
 
 //top widget strange place
 
 
-    $wp_customize->add_setting('widjet_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('widjet_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widjet_qwe',array(
         'label' =>'Top Widgets Colors',
         'section' => 'colors' ,
-        'settings' => 'widjet_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'widjet_qwe' )));
+
+
+
+// sidebar_txt_qwe color
+
+
+    $wp_customize->add_setting('sidebar_widget_txt_qwe',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_widget_txt_qwe',array(
+        'label' =>'Sidebar Widget text color',
+        'section' => 'colors' ,
+        'settings' => 'sidebar_widget_txt_qwe' )));
+
+//sidebar widget title
+    $wp_customize->add_setting('sidebar_titles_qwe',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'sidebar_titles_qwe',array(
+        'label' =>'Sidebar Titles Colors',
+        'description' =>'',        
+        'section' => 'colors' ,
+        'settings' => 'sidebar_titles_qwe' )));
+
+
+//top widget strange place
+
+
+    $wp_customize->add_setting('widjet_qwe',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widjet_qwe',array(
+        'label' =>'Top Widgets Colors',
+        'section' => 'colors' ,
+        'settings' => 'widjet_qwe' )));
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // navbar //////////////////////////////////////////////////////////////////////////////////////////////////////
 
    // nav bg color 
-    $wp_customize->add_setting('nav_bg_qwe',array('default' => '#444','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('nav_bg_qwe',array('default' => '#444' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_bg_qwe',array(
         'label' =>'menu background color',
         'section' => 'colors' ,
-        'settings' => 'nav_bg_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'nav_bg_qwe' )));
 
     // nav text color
-    $wp_customize->add_setting('nav_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('nav_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_qwe',array(
         'label' =>'menu text link color',
         'section' => 'colors' ,
-        'settings' => 'nav_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'nav_qwe' )));
 
     // nav a hover
-    $wp_customize->add_setting('nav_hover_qwe',array('default' => '#ddd','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('nav_hover_qwe',array('default' => '#ddd' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_hover_qwe',array(
         'label' =>'menu text hover color',
         'section' => 'colors' ,
-        'settings' => 'nav_hover_qwe','active_callback' => 'is_front_page', )));
+        'settings' => 'nav_hover_qwe' )));
 
 
 
 // 404 oops color
 
 
-    $wp_customize->add_setting('404_qwe',array('default' => '#fff','sanitize_callback'=>'sanitize_text_field' ));
+    $wp_customize->add_setting('404_qwe',array('default' => '#fff' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'404_qwe',array(
         'label' =>'404 Redirected',
         'description' =>'Wrong Page That any user Search from any search engine like google ',        
         'section' => 'colors' ,
-        'settings' => '404_qwe','active_callback' => 'is_front_page', )));
+        'settings' => '404_qwe' )));
 
 
 
@@ -1273,11 +1290,10 @@ add_action( 'customize_preview_init', 'qwe_customizer_live_preview' );
         // 'description' => 'disable end footer image',
         'priority' => '88' ,
         'panel'  => 'panel_qwe',
-        'active_callback' => 'is_front_page',
         ));
 
 
-$wp_customize->add_setting('disable_qwe',array('default' => '','sanitize_callback'=>'sanitize_text_field'));
+$wp_customize->add_setting('disable_qwe',array('default' => ''));
 
 
  // 'enable' => 'initial',
@@ -1291,7 +1307,6 @@ $wp_customize->add_control(
         'priority'=>499 ,
         'transport' => 'postMessage',
         'default'=>'',
-        'active_callback' => 'is_front_page',
         'choices' => array(
             'block' => 'enable',
             'none' => 'disable',
@@ -1323,7 +1338,9 @@ function qwe_select_css()
 
 /*background-color*/
 /*background-color*/
-
+/*background-color*/
+/*background-color*/
+/*background-color*/
 
 /*main background change*/
 
@@ -1381,6 +1398,14 @@ section.footer3-rtl {background-color:<?php echo get_theme_mod('footer_qwe','tra
 /* end main background change*/
 
 
+/*
+.galleryPreviewarrow a {background-color:rgba(0,0,0,0.3);}
+
+.galleryPreviewarrow a:hover {background-color: #000;}
+
+.gallerydescription .desbg{background-color:rgba(0, 0, 0, 0.4);}
+*/
+
 /*add button_qwe color */
 .gallerydescription > div input {background: <?php echo get_theme_mod('button_qwe','#222'); ?>;}
 
@@ -1393,11 +1418,12 @@ section.footer3-rtl {background-color:<?php echo get_theme_mod('footer_qwe','tra
     background-color:<?php echo get_theme_mod('bullets_active_qwe','#fff'); ?>;;
 }
 
+/*.gallerydescription_static .desbg{background-color:rgba(0, 0, 0, 0.4);}*/
 
-.gallerydescription_static > div input {background-color: <?php echo get_theme_mod('button_qwe','#222'); ?>;}
+.gallerydescription_static > div input {<?php echo get_theme_mod('button_qwe','#222'); ?>;}
 
 /*add upper widget banner bg if used */
-section.qwe-banner {background-color: <?php echo get_theme_mod('widjet_qwe','#222'); ?>;}
+section.qwe-banner {<?php echo get_theme_mod('widjet_qwe','#222'); ?>;}
 
 
 /*
@@ -1437,26 +1463,45 @@ section.qwe-banner {background-color: <?php echo get_theme_mod('widjet_qwe','#22
 .gallerydescription_static > div input {background:<?php echo get_theme_mod('button_qwe','#222'); ?>;}
 
 
-/*text color*/
-/*text color*/
 
+
+
+/*@media (max-width: 768px){
+
+}
+*/
+/* media_part_lte_500__qwe */
+
+/*@media (max-width: 500px){
+
+
+}
+
+*/
+
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
+/*text color*/
 
 /* all links color */
 
-a {color:#fff;}
-a:visited {color:#aaa;}
-a:hover {color:#999;}
+a {color:#fff;/*<?php echo get_theme_mod('a_qwe','#fff'); ?>;*/}
+a:visited {color:#aaa;/*<?php echo get_theme_mod('a_visited_qwe','#aaa'); ?>;*/}
+a:hover {color:#999;/*<?php echo get_theme_mod('a_hover_qwe','#999'); ?>;*/}
 
 html {
-  color:#fff;
+  color:#fff;/*<?php echo get_theme_mod('html_qwe','#fff'); ?>;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
-p {color:#fff;}
-h1{color:#fff;}
-h2{color:#fff;}
+p{color:#fff;/*<?php echo get_theme_mod('html_qwe','#fff'); ?>;*/}
+h1{color:#fff;/*<?php echo get_theme_mod('html_qwe','#fff'); ?>;*/}
+h2{color:#fff;/*<?php echo get_theme_mod('html_qwe','#fff'); ?>;*/}
 
+/*.container {background-color: transparent;}*/
 
 /* site title color*/
 
@@ -1497,9 +1542,11 @@ section .title-description a {color:<?php echo get_theme_mod('site_description_q
 
 .qwe-nav li a {color:<?php echo get_theme_mod('nav_qwe','#fff');?>;}
 .qwe-nav li a:hover {color:<?php echo get_theme_mod('nav_hover_qwe','#ddd');?>;}
+/*.qwe-nav li a:visited {<?php echo get_theme_mod('nav_visited_qwe','#aaa');?>;} */
 
 .qwe-nav-rtl li a {color:<?php echo get_theme_mod('nav_qwe','#fff');?>;}
 .qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_qwe','#ddd');?>}
+/*.qwe-nav-rtl li a:visited {<?php echo get_theme_mod('nav_visited_qwe','#aaa');?>;} */
 
 
 /* 3 indicators */
@@ -1544,6 +1591,7 @@ section .title-description a {color:<?php echo get_theme_mod('site_description_q
 /*sidebar*/
 
 .sidebar a {color:<?php echo get_theme_mod('sidebar_widget_txt_qwe','#fff'); ?>;}
+/*.sidebar h2 {color:<?php echo get_theme_mod('sidebar_widget_txt_qwe','#fff'); ?>;}*/
 .sidebar span {color:<?php echo get_theme_mod('sidebar_widget_txt_qwe','#fff'); ?>;}
 .sidebar li {color:<?php echo get_theme_mod('sidebar_widget_txt_qwe','#fff'); ?>;}
 .sidebar li.widget {border-bottom:5px solid #fff;}
@@ -1566,6 +1614,8 @@ section .title-description a {color:<?php echo get_theme_mod('site_description_q
 .footer-img {
     /*background:<?php printf($qwe_strang); ?> */
     background:url("<?php echo get_theme_mod('footerwww','') ?>"); 
+    /*background:<?php printf('url(" %s ")',$qwe_logowww); ?>*//* "https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/blur4.png");/*<?php echo $footerimg; ?>;*/
+
     background-size: cover, cover;
     width:100%;
     height: 100px;
@@ -1614,7 +1664,6 @@ h1{color:#fff;}
 h2{color:#fff;}
 
 
-:focus {background: linear-gradient(rgba(251, 202, 60, 0.9), rgba(251, 202, 60, 0.1));  outline: 0;}
 input:focus{background-color:#fbca3c;}
 textarea:focus{background-color:#fbca3c;}
 select:focus{background-color:#fbca3c;}
@@ -1703,10 +1752,6 @@ section .title-description a {
 .galleryPreviewContainer {
     position: relative;
 }
-
-/*.galleryPreviewContainer input:focus{background-color: yellow ,linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));}*/
-/*.galleryPreviewContainer .desbg a:focus{background-color:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));}*/
-
 .galleryPreviewImage img{/*that mean all images disappear exept img.previewImage1 [Next]*/
     display: none;
     width: 90%;
@@ -1835,8 +1880,6 @@ img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-in
     box-shadow: 3px 3px 8px #000;
 }
 
-.galleryNavigationBullets a:focus {background-color:#fbca3c;}
-
 /*for static image page template*/
 
 .galleryPreviewImage_static img{/*that mean all images disappear exept img.previewImage1 [Next]*/
@@ -1948,9 +1991,8 @@ position: relative;
 
 .qwe-nav li a {padding: 10px 15px;float: none;width:auto;white-space:nowrap; }
 
-/*.qwe-nav li {contenteditable:true;tabindex:1;}*/
-/*.qwe-nav ul {contenteditable:true;tabindex:1;}*/
 .qwe-nav li a {}
+.qwe-nav li a:hover {}
 .qwe-nav li a:visited {} 
 
 .qwe-nav > nav > div > ul > li li {position: relative;}
@@ -1971,9 +2013,8 @@ position: relative;
 
 /* 1st level */
 /*display:none problem is the next step to show menu because i will use display:block and that make problems */
-.qwe-nav > nav > div > ul > li >       ul {margin: 0;padding: 0;position: absolute;display: none; background-color:transparent; }
-.qwe-nav > nav > div > ul > li:hover > ul {right:auto;display: inherit;list-style: none;}/* :nth-child(odd) */
-.qwe-nav > nav > div > ul > li:active > ul {}/* :nth-child(odd) */
+.qwe-nav > nav > div > ul > li >       ul {margin: 0;padding: 0;position: absolute;right:-9999px;background-color:transparent; }
+.qwe-nav > nav > div > ul > li:hover > ul {right:auto;}/* :nth-child(odd) */
 .qwe-nav > nav > div > ul > li >       ul  > li     {margin: 0;padding: 0;background-color:#444;border-top:solid 1px orange;}
 .qwe-nav > nav > div > ul > li >       ul  > li     {border-bottom:solid 1px #fff;box-shadow: 0px 6px 0px #444,0px 20px 15px #111;}
 .qwe-nav > nav > div > ul > li >       ul  > li > a {background-color:#444;}
@@ -2312,7 +2353,7 @@ position: absolute;width:150px;
 .thumbwrapper{float: left;width: 33%;}
 
 
-.gallerythumContainer a:focus {background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0 ));}
+
 .gallerythumContainer input {
     margin-left: 4%;
     /*margin-bottom: 0;*/

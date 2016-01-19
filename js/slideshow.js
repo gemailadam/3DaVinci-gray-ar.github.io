@@ -1,6 +1,4 @@
 
-
-
   //variables
   //var imageTotal=<?php echo $imageTotal; ?>;
   var currentImage=1;
@@ -149,15 +147,6 @@ $('.circrarrow').hover(function(){
 
             nextSlideTimer = setInterval(nextSlide, 9000)
             setTimeout(nextSlideTimer, 9000)
-            // $(".galleryPreviewImage > img:first")
-            // .fadeOut(1000)
-            // .next()
-            // .fadeIn(1000)
-            // .end()
-            // .appendTo(".galleryPreviewImage");
-
-            // nextSlideTimer = setInterval(nextSlide, 9000)
-            // setTimeout(nextSlideTimer, 9000)
 
         });
 
@@ -187,27 +176,13 @@ $(window).on('scroll', function(){
             $('div.sidebar3').removeClass('sidebar3-fixed-top2');
             $('div.sidebar3').removeClass('sidebar3-fixed-top-0');      
         }
-        // if(stop<100){
-        //     $('div.sidebar3').removeClass('sidebar3-fixed-top2'); 
-        // }
+
     }
 });
 
     
 $(window).on('scroll', function(){
 
-    // if (screen.width >= 748) {
-    //     stop = Math.round($(window).scrollTop());
-    //     if (stop > 540){
-    //         $('nav').addClass('navbar-fixed-top');
-      
-    //     }
-    //     if(stop<540){
-    //         $('nav').removeClass('navbar-fixed-top'); 
-    //     }
-    // }
 });
 
-
-// more menu
-
+$('.qwe-nav ul li li a:focus').prev('ul').css( 'right', '0' );

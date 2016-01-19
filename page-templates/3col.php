@@ -15,67 +15,57 @@
 <html <?php language_attributes(); ?> >
 <!--<![endif]-->
 <head>
-
 	<?php get_template_part('main-structure/head_html'); ?>
-
-
 </head>
 <body <?php body_class( ); ?> >
-	<div class="container">
-		<div class="contain col-lg-12 col-md-12 col-sm-12 col-xs-12 col-vs-12">
-			<!-- 1) header-->
-			<header>
-				<?php get_header(); ?>
-			</header>
-			<!-- 2 ) main -->
-			<div class="main">
-				<div class="row">
-					
-					<!-- 2-2 ) left sidebar  -->
-					<div class="sidebar">
-						<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-							<aside>
-								<?php dynamic_sidebar('sidebar2'); ?>
-								<a href="#" class="push_button"></a>
-							</aside>
-							<br/>
-						</div>
-					</div>
-					<!-- end left sidebar part -->
-
-					<!-- 2-1 ) page part -->
-					<div class="page">
-						<div class=" col-xs-6 col-lg-6 col-md-12 col-sm-12 ">
-							
-							<?php get_template_part('main-structure/main_page'); ?>
-
-						</div>
-					</div>
-					<!-- end page part -->   
-
-					<!--End page-->
-					<!-- 2-2 ) sidebar part if you want -->
-					<div class="sidebar">
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
-
-							<?php get_sidebar(); ?>
-						</div>	
-					</div>
-					<!--End sidebar-->
+<div class="qwe-container">
+<div class="contain qwe-col-lg-12 qwe-col-md-12 qwe-col-sm-12 qwe-col-xs-12 qwe-col-vs-12">
+	<!-- 1) header-->
+	<header>
+		<?php get_header(); ?>
+	</header>
+	<!-- 2 ) main -->
+	<div class="main">
+		<div class="qwe-row">
+			<!-- 2-2 ) left sidebar  -->
+			<div class="sidebar">
+				<div class=" qwe-col-xs-3 qwe-col-lg-3 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
+					<aside>
+						<?php dynamic_sidebar('sidebar2'); ?>
+						<a href="#" class="push_button"></a>
+					</aside>
+					<br/>
 				</div>
-				<!--End Row -->
 			</div>
-			<!--End main -->
-			<br>
-			<!-- 3 ) footer-->
-			<footer>
-				<?php get_footer(); ?>
-			</footer>
-			<!-- End footer-->
-			
+			<!-- end left sidebar part -->
+			<!-- 2-1 ) page part -->
+			<div class="page">
+				<div class=" qwe-col-xs-6 qwe-col-lg-6 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
+					<?php get_template_part('main-structure/main_page'); ?>
+				</div>
+			</div>
+			<!-- end page part -->   
+			<!--End page-->
+			<!-- 2-2 ) sidebar part if you want -->
+			<div class="sidebar">
+				<div class="qwe-col-xs-3 qwe-col-lg-3 qwe-col-md-12 qwe-col-sm-12 qwe-col-vs-12">
+					<?php get_sidebar(); ?>
+				</div>	
+			</div>
+			<!--End sidebar-->
 		</div>
-		<!-- End Container-->
-		<?php get_template_part('main-structure/script'); ?>
-
-	</body>
-	</html>
+		<!--End Row -->
+	</div>
+	<!--End main -->
+	<br>
+	<!-- 3 ) footer-->
+	<footer>
+		<?php get_footer(); ?>
+	</footer>
+	<!-- End footer-->
+</div>
+</div>
+<!-- End Container-->
+<?php get_template_part('main-structure/script'); ?>
+</body>
+</html>

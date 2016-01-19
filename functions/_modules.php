@@ -152,13 +152,13 @@ function qwe_register_nav_menu(){
 add_action('after_setup_theme','qwe_register_nav_menu' );
 
 
-function theme_queue_js_qwe(){
+function qwe_theme_queue_js_qwe(){
   if (!is_admin()){
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
       wp_enqueue_script( 'comment-reply' );
   }
 }
-add_action('get_header', 'theme_queue_js_qwe');
+add_action('get_header', 'qwe_theme_queue_js_qwe');
 
 
 function qwe_custom_comments($comment,$args,$depth){
@@ -196,36 +196,40 @@ function qwe_custom_comments($comment,$args,$depth){
 	<?php
 
 }
-function custom_theme_setup_qwe() {
+
+
+// function qwe_custom_theme_setup() 
+
+function qwe_post_thumbnails() {
 	// add_theme_support( $feature, $arguments );
 	add_theme_support( 'post-thumbnails', array( 'post', 'movie' ,'page') ); // Posts and Movies
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe' );
+add_action( 'after_setup_theme', 'qwe_post_thumbnails' );
 
 
 
 
-function custom_theme_setup_qwe2() {
+function qwe_feed_links() {
 add_theme_support( 'automatic-feed-links' );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe2' );
+add_action( 'after_setup_theme', 'qwe_feed_links' );
 
 
 
 
 
-function custom_theme_setup_qwe3() {
+function qwe_html5() {
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe3' );
+add_action( 'after_setup_theme', 'qwe_html5' );
 
 
 
 
 
 
-function custom_theme_setup_qwe4() {
+function qwe_custom_background() {
 $defaults = array(
 	'default-color'          => '',
 	'default-image'          => '',
@@ -235,51 +239,52 @@ $defaults = array(
 );
 add_theme_support( 'custom-background', $defaults );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe4' );
+add_action( 'after_setup_theme', 'qwe_custom_background' );
 
 
 
 
 
 
-function custom_theme_setup_qwe5() {
+function qwe_title_tag() {
 add_theme_support( 'title-tag' );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe5' );
+add_action( 'after_setup_theme', 'qwe_title_tag' );
 
 
 
 
-function custom_theme_setup_qwe6() {
+function qwe_custom_header() {
 $defaults = array(
-	'default-image'          => '',
 	'random-default'         => false,
-	'width'                  => 0,
-	'height'                 => 0,
-	'flex-height'            => false,
-	'flex-width'             => false,
-	'default-text-color'     => '',
+	'width'                  => 1200,
+	'height'                 => 100,
+	'flex-height'            => true,
+	'flex-width'             => true,
+	'default-text-color'     => 'white',
 	'header-text'            => true,
 	'uploads'                => true,
-	'wp-head-callback'       => '',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => '',
+	// 'wp-head-callback'       => '',
+	// 'admin-head-callback'    => '',
+	// 'admin-preview-callback' => '',
+
 );
 add_theme_support( 'custom-header', $defaults );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe6' );
+add_action( 'after_setup_theme', 'qwe_custom_header' );
 
 
 
 
 
-function custom_theme_setup_qwe7() {
+function qwe_post_formats() {
 add_theme_support( 'post-formats', array( 'aside', 'gallery','image' ) );
 }
-add_action( 'after_setup_theme', 'custom_theme_setup_qwe7' );
+add_action( 'after_setup_theme', 'qwe_post_formats' );
 
 
 /* to add style sheet to editor make your own style-sheet.css and pass it through $stylesheet > add_editor_style( $stylesheet ); */
 
-add_editor_style(  );
- ?>
+add_editor_style();
+
+?>
