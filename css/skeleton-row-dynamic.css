@@ -1,10 +1,13 @@
-.qwe-row-xs-1, .qwe-row-xs-2, .qwe-row-xs-3, .qwe-row-xs-4, .qwe-row-xs-5, .qwe-row-xs-6, .qwe-row-xs-7, .qwe-row-xs-8, .qwe-row-xs-9, .qwe-row-xs-10, .qwe-row-xs-11, .qwe-row-xs-12 { }
-.qwe-row-lg-1, .qwe-row-lg-2, .qwe-row-lg-3, .qwe-row-lg-4, .qwe-row-lg-5, .qwe-row-lg-6, .qwe-row-lg-7, .qwe-row-lg-8, .qwe-row-lg-9, .qwe-row-lg-10, .qwe-row-lg-11, .qwe-row-lg-12 { }
-.qwe-row-md-1, .qwe-row-md-2, .qwe-row-md-3, .qwe-row-md-4, .qwe-row-md-5, .qwe-row-md-6, .qwe-row-md-7, .qwe-row-md-8, .qwe-row-md-9, .qwe-row-md-10, .qwe-row-md-11, .qwe-row-md-12 { }
-.qwe-row-sm-1, .qwe-row-sm-2, .qwe-row-sm-3, .qwe-row-sm-4, .qwe-row-sm-5, .qwe-row-sm-6, .qwe-row-sm-7, .qwe-row-sm-8, .qwe-row-sm-9, .qwe-row-sm-10, .qwe-row-sm-11, .qwe-row-sm-12 { }
-.qwe-row-vs-1, .qwe-row-vs-2, .qwe-row-vs-3, .qwe-row-vs-4, .qwe-row-vs-5, .qwe-row-vs-6, .qwe-row-vs-7, .qwe-row-vs-8, .qwe-row-vs-9, .qwe-row-vs-10, .qwe-row-vs-11, .qwe-row-vs-12 { }
-/*.container {margin-left:auto;margin-right:auto;}  if you want fixed height add qwe-row height beside any element div or qwe-row */
-/*.qwe-row {margin:0;} remmber [qwe-row important for separat design only]*/
+/*.qwe-row-xs-1, .qwe-row-xs-2, .qwe-row-xs-3, .qwe-row-xs-4, .qwe-row-xs-5, .qwe-row-xs-6, .qwe-row-xs-7, .qwe-row-xs-8, .qwe-row-xs-9, .qwe-row-xs-10, .qwe-row-xs-11, .qwe-row-xs-12 ,
+.qwe-row-lg-1, .qwe-row-lg-2, .qwe-row-lg-3, .qwe-row-lg-4, .qwe-row-lg-5, .qwe-row-lg-6, .qwe-row-lg-7, .qwe-row-lg-8, .qwe-row-lg-9, .qwe-row-lg-10, .qwe-row-lg-11, .qwe-row-lg-12 ,
+.qwe-row-md-1, .qwe-row-md-2, .qwe-row-md-3, .qwe-row-md-4, .qwe-row-md-5, .qwe-row-md-6, .qwe-row-md-7, .qwe-row-md-8, .qwe-row-md-9, .qwe-row-md-10, .qwe-row-md-11, .qwe-row-md-12 ,
+.qwe-row-sm-1, .qwe-row-sm-2, .qwe-row-sm-3, .qwe-row-sm-4, .qwe-row-sm-5, .qwe-row-sm-6, .qwe-row-sm-7, .qwe-row-sm-8, .qwe-row-sm-9, .qwe-row-sm-10, .qwe-row-sm-11, .qwe-row-sm-12 ,
+.qwe-row-vs-1, .qwe-row-vs-2, .qwe-row-vs-3, .qwe-row-vs-4, .qwe-row-vs-5, .qwe-row-vs-6, .qwe-row-vs-7, .qwe-row-vs-8, .qwe-row-vs-9, .qwe-row-vs-10, .qwe-row-vs-11, .qwe-row-vs-12 
+{}
+.container {margin-left:auto;margin-right:auto;}  if you want fixed height add qwe-row height beside any element div or qwe-row 
+.qwe-row {margin:0;} remmber [qwe-row important for separat design only]
+
+*/
 
 @media (min-width: 1201px){
 

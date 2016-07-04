@@ -1499,7 +1499,7 @@ section .title-description a {color:<?php echo get_theme_mod('site_description_q
 .qwe-nav li a:hover {color:<?php echo get_theme_mod('nav_hover_qwe','#ddd');?>;}
 
 .qwe-nav-rtl li a {color:<?php echo get_theme_mod('nav_qwe','#fff');?>;}
-.qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_qwe','#ddd');?>}
+.qwe-nav-rtl li a:hover {color:<?php echo get_theme_mod('nav_hover_qwe','#ddd');?>;}
 
 
 /* 3 indicators */
@@ -1738,7 +1738,7 @@ img#btn { width:12%;margin:10px 5%;position:absolute;left:75%;top:460px;}
 img#logo {position: absolute;width:12%;left:5%;box-shadow:5px 5px 40px #000;z-index: 10;}
 
 
-.galleryPreviewarrow{width: 90%}
+.galleryPreviewarrow{width: 90%;}
 .galleryPreviewarrow a {
     font-family: arial,sans-serif;
     /*font-size: 30px;*/
@@ -2546,7 +2546,7 @@ box-shadow: 0px 1px 1px #000,0px -1px 1px #000;
 
 /* float sidebar*/
 .sidebar3 {position: absolute;right: -160px;}
-.sidebar3 .col-width{width:200px}
+.sidebar3 .col-width{width:200px;}
 .sidebar3 li {list-style: none;}
 .sidebar3 .subside {width: 15%;float: left;margin:auto auto;height: 100%;padding: 20px 0;background-color: transparent;}
 .sidebar3 .subside p{box-shadow: -3px 3px 8px #000; text-align: center; font-size: 2em;background-color:#dd3333; color: white;line-height: 40px;float: none;border-radius: 10px 0 0 10px;}
